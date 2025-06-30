@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -179,7 +180,7 @@ const Index = () => {
       <section className="py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
-            合规 & 安全 (Compliance & Security)
+            Compliance & Security
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -187,13 +188,13 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Scale className="text-blue-600" size={24} />
-                  Law 法律依据
+                  Legal Basis
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-700">
-                  PIPL 第 13 条第 2/3 款<br/>
-                  合同必要 + 法定义务
+                  PIPL Article 13, Items (2) & (3)<br/>
+                  Contractual necessity + legal obligation
                 </CardDescription>
               </CardContent>
             </Card>
@@ -202,13 +203,13 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Cpu className="text-green-600" size={24} />
-                  Tech 技术架构
+                  Architecture
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-700">
-                  大陆查询 → HK 存储<br/>
-                  SHA-256 哈希 + TLS 1.3 / AES-256
+                  Mainland lookup → HK storage<br/>
+                  SHA-256 hashed + TLS 1.3 / AES-256
                 </CardDescription>
               </CardContent>
             </Card>
@@ -217,13 +218,13 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <FileCheck className="text-purple-600" size={24} />
-                  Audit 认证状态
+                  Certifications
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-700">
-                  ISO 27001 (进行中)<br/>
-                  ACA Membership (Q4 2025 预期)
+                  ISO 27001 (underway)<br/>
+                  ACA Membership (Q4 2025 expected)
                 </CardDescription>
               </CardContent>
             </Card>
@@ -232,41 +233,41 @@ const Index = () => {
           <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
             <AccordionItem value="legal-basis">
               <AccordionTrigger className="text-lg font-semibold">
-                法律依据详情 (Legal Basis Details)
+                Legal Basis Details
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-4 text-gray-700">
-                  <p><strong>PIPL 第 13 条第 2 款：</strong>为订立、履行个人作为一方当事人的合同所必需</p>
-                  <p><strong>PIPL 第 13 条第 3 款：</strong>为履行法定职责或者法定义务所必需</p>
-                  <p>我们基于合同履行和法定义务处理债务人个人信息，确保催收活动的合法性。</p>
+                  <p><strong>PIPL Article 13, Item (2):</strong> Processing necessary for the performance of a contract to which the individual is party</p>
+                  <p><strong>PIPL Article 13, Item (3):</strong> Processing necessary for compliance with a legal obligation</p>
+                  <p>We process debtor personal information based on contractual performance and legal obligations, ensuring the legitimacy of collection activities.</p>
                 </div>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="tech-architecture">
               <AccordionTrigger className="text-lg font-semibold">
-                技术架构说明 (Technical Architecture)
+                Technical Architecture
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-4 text-gray-700">
-                  <p><strong>数据流程：</strong>大陆实时查询 → 香港数据中心存储 → 加密传输</p>
-                  <p><strong>加密标准：</strong>SHA-256 哈希算法保护敏感信息</p>
-                  <p><strong>传输安全：</strong>TLS 1.3 协议 + AES-256 端到端加密</p>
-                  <p><strong>地理隔离：</strong>香港托管确保数据跨境合规</p>
+                  <p><strong>Data Flow:</strong> Mainland real-time lookup → Hong Kong data center storage → encrypted transmission</p>
+                  <p><strong>Encryption Standards:</strong> SHA-256 hashing algorithm protects sensitive information</p>
+                  <p><strong>Transit Security:</strong> TLS 1.3 protocol + AES-256 end-to-end encryption</p>
+                  <p><strong>Geographic Isolation:</strong> Hong Kong hosting ensures cross-border data compliance</p>
                 </div>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="certifications">
               <AccordionTrigger className="text-lg font-semibold">
-                认证与审计 (Certifications & Audits)
+                Certifications & Audits
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-4 text-gray-700">
-                  <p><strong>ISO 27001：</strong>信息安全管理体系认证 (进行中)</p>
-                  <p><strong>ACA Membership：</strong>美国催收协会会员资格 (Q4 2025 预期)</p>
-                  <p><strong>定期审计：</strong>第三方安全审计与合规性评估</p>
-                  <p><strong>数据保护：</strong>PIPL 与 GDPR 双重合规标准</p>
+                  <p><strong>ISO 27001:</strong> Information Security Management System certification (underway)</p>
+                  <p><strong>ACA International:</strong> American Collectors Association membership (Q4 2025 expected)</p>
+                  <p><strong>Regular Audits:</strong> Third-party security audits and compliance assessments</p>
+                  <p><strong>Data Protection:</strong> Dual compliance with PIPL and GDPR standards</p>
                 </div>
               </AccordionContent>
             </AccordionItem>
