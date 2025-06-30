@@ -3,7 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { CheckCircle, Phone, Shield, Clock, DollarSign } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck } from "lucide-react";
 
 const Index = () => {
   const scrollToContact = () => {
@@ -171,6 +172,105 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Compliance & Security Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+            合规 & 安全 (Compliance & Security)
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Card className="hover:shadow-lg transition-shadow border-2 border-blue-200">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-3">
+                  <Scale className="text-blue-600" size={24} />
+                  Law 法律依据
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-700">
+                  PIPL 第 13 条第 2/3 款<br/>
+                  合同必要 + 法定义务
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-2 border-green-200">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-3">
+                  <Cpu className="text-green-600" size={24} />
+                  Tech 技术架构
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-700">
+                  大陆查询 → HK 存储<br/>
+                  SHA-256 哈希 + TLS 1.3 / AES-256
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-2 border-purple-200">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-3">
+                  <FileCheck className="text-purple-600" size={24} />
+                  Audit 认证状态
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-700">
+                  ISO 27001 (进行中)<br/>
+                  ACA Membership (Q4 2025 预期)
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
+            <AccordionItem value="legal-basis">
+              <AccordionTrigger className="text-lg font-semibold">
+                法律依据详情 (Legal Basis Details)
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-4 text-gray-700">
+                  <p><strong>PIPL 第 13 条第 2 款：</strong>为订立、履行个人作为一方当事人的合同所必需</p>
+                  <p><strong>PIPL 第 13 条第 3 款：</strong>为履行法定职责或者法定义务所必需</p>
+                  <p>我们基于合同履行和法定义务处理债务人个人信息，确保催收活动的合法性。</p>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="tech-architecture">
+              <AccordionTrigger className="text-lg font-semibold">
+                技术架构说明 (Technical Architecture)
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-4 text-gray-700">
+                  <p><strong>数据流程：</strong>大陆实时查询 → 香港数据中心存储 → 加密传输</p>
+                  <p><strong>加密标准：</strong>SHA-256 哈希算法保护敏感信息</p>
+                  <p><strong>传输安全：</strong>TLS 1.3 协议 + AES-256 端到端加密</p>
+                  <p><strong>地理隔离：</strong>香港托管确保数据跨境合规</p>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="certifications">
+              <AccordionTrigger className="text-lg font-semibold">
+                认证与审计 (Certifications & Audits)
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-4 text-gray-700">
+                  <p><strong>ISO 27001：</strong>信息安全管理体系认证 (进行中)</p>
+                  <p><strong>ACA Membership：</strong>美国催收协会会员资格 (Q4 2025 预期)</p>
+                  <p><strong>定期审计：</strong>第三方安全审计与合规性评估</p>
+                  <p><strong>数据保护：</strong>PIPL 与 GDPR 双重合规标准</p>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
