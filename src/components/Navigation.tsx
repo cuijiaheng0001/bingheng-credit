@@ -10,9 +10,7 @@ const Navigation = () => {
     { label: 'Eligibility', href: '#eligibility-section' },
     { label: 'Why Us', href: '#whyus-section' },
     { label: 'Performance', href: '#performance-section' },
-    { label: 'Workflow', href: '#workflow-section' },
-    { label: 'Pricing', href: '#pricing-section' },
-    { label: 'Case Studies', href: '#case-section' },
+    { label: 'Compliance & Security', href: '#compliance-section' },
     { label: 'Contact', href: '#contact-section' },
   ];
 
