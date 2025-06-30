@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -173,6 +172,48 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Performance at a Glance Section */}
+      <section className="container max-w-6xl mx-auto px-6 py-20 bg-white">
+        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+          Performance at a Glance
+        </h2>
+        
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <Card className="text-center hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <CardTitle className="text-3xl font-bold text-blue-600 mb-2">
+                70%
+              </CardTitle>
+              <CardDescription className="text-lg font-medium text-gray-700">
+                Contact Rate
+              </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="text-center hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <CardTitle className="text-3xl font-bold text-green-600 mb-2">
+                25%
+              </CardTitle>
+              <CardDescription className="text-lg font-medium text-gray-700">
+                Average Recovery
+              </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="text-center hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <CardTitle className="text-3xl font-bold text-orange-600 mb-2">
+                48h
+              </CardTitle>
+              <CardDescription className="text-lg font-medium text-gray-700">
+                First Contact
+              </CardDescription>
+            </CardHeader>
+          </Card>
         </div>
       </section>
 
