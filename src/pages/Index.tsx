@@ -218,7 +218,7 @@ const Index = () => {
       </section>
 
       {/* Compliance & Security Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="compliance-section" className="py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
             Compliance & Security
