@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -24,31 +25,29 @@ const Index = () => {
     const formData = new FormData(event.currentTarget);
     
     try {
-      const response = await fetch('https://forms.lovable.dev/f/abcd1234', {
+      const response = await fetch('https://formspree.io/f/jiahengc@binghengcredit.com', {
         method: 'POST',
         body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
       
       if (response.ok) {
         toast({
-          title: "Thank you — we'll be in touch soon!",
+          title: "Thank you! Your message has been sent.",
           duration: 5000,
+          className: "bg-green-50 border-green-200 text-green-800"
         });
         
         // Reset form
         event.currentTarget.reset();
-        
-        // Scroll back to contact section
-        setTimeout(() => {
-          scrollToContact();
-        }, 100);
       } else {
         throw new Error('Form submission failed');
       }
     } catch (error) {
       toast({
-        title: "Sorry, there was an error sending your message.",
-        description: "Please try again or contact us directly.",
+        title: "Sorry, something went wrong. Please try again.",
         variant: "destructive",
         duration: 5000,
       });
@@ -414,6 +413,8 @@ const Index = () => {
             </CardHeader>
             <CardContent>
               <form 
+                action="https://formspree.io/f/jiahengc@binghengcredit.com"
+                method="POST"
                 onSubmit={handleFormSubmit}
                 className="space-y-6"
               >
