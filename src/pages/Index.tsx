@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -5,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
   const scrollToContact = () => {
@@ -16,6 +18,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+      
       {/* Hero Banner */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-700 to-blue-400 text-white">
         <div className="container max-w-4xl mx-auto px-6 text-center">
@@ -33,7 +37,11 @@ const Index = () => {
             >
               Contact Us
             </Button>
-            <Button size="lg" className="text-lg px-8 py-4 bg-white text-blue-900 hover:bg-blue-50">
+            <Button 
+              onClick={scrollToContact}
+              size="lg" 
+              className="text-lg px-8 py-4 bg-white text-blue-900 hover:bg-blue-50"
+            >
               Schedule Demo
             </Button>
           </div>
