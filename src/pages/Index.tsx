@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -36,13 +35,6 @@ const Index = () => {
               className="text-lg px-8 py-4 bg-white text-blue-900 hover:bg-blue-50"
             >
               Contact Us
-            </Button>
-            <Button 
-              onClick={scrollToContact}
-              size="lg" 
-              className="text-lg px-8 py-4 bg-white text-blue-900 hover:bg-blue-50"
-            >
-              Schedule Demo
             </Button>
           </div>
         </div>
