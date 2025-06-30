@@ -41,7 +41,7 @@ const Index = () => {
       </section>
 
       {/* Eligibility Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="eligibility-section" className="py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
             Eligibility — What We Can Collect
@@ -109,7 +109,7 @@ const Index = () => {
       </section>
 
       {/* Why Us Section */}
-      <section className="py-20 bg-white">
+      <section id="whyus-section" className="py-20 bg-white">
         <div className="container max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
             Why Choose Bingheng Credit?
@@ -176,7 +176,7 @@ const Index = () => {
       </section>
 
       {/* Performance at a Glance Section */}
-      <section className="container max-w-6xl mx-auto px-6 py-20 bg-white">
+      <section id="performance-section" className="container max-w-6xl mx-auto px-6 py-20 bg-white">
         <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
           Performance at a Glance
         </h2>
