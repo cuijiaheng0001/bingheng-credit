@@ -6,12 +6,52 @@ import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
+  const { toast } = useToast();
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-section');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    
+    const formData = new FormData(event.currentTarget);
+    
+    try {
+      const response = await fetch('https://forms.lovable.dev/f/abcd1234', {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (response.ok) {
+        toast({
+          title: "Thank you — we'll be in touch soon!",
+          duration: 5000,
+        });
+        
+        // Reset form
+        event.currentTarget.reset();
+        
+        // Scroll back to contact section
+        setTimeout(() => {
+          scrollToContact();
+        }, 100);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      toast({
+        title: "Sorry, there was an error sending your message.",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+        duration: 5000,
+      });
     }
   };
 
@@ -374,8 +414,7 @@ const Index = () => {
             </CardHeader>
             <CardContent>
               <form 
-                action="https://formspree.io/f/sales@binghengcredit.com" 
-                method="POST"
+                onSubmit={handleFormSubmit}
                 className="space-y-6"
               >
                 <div className="space-y-2">
