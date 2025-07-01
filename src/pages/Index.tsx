@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -20,33 +21,38 @@ const Index = () => {
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
 
     try {
       const resp = await fetch("https://formspree.io/f/xzzgoype", {
         method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
       });
 
-      if (resp.status === 200 || resp.status === 302) {
+      if (resp.ok) {
         toast({
           title: "Thank you!",
           description: "Your message has been sent. We'll reply shortly.",
           duration: 5000,
-          className: "bg-green-50 border-green-200 text-green-800",
+          className: "bg-green-50 border-green-200 text-green-800"
         });
-        e.currentTarget.reset();
-        return;
+        form.reset();
+      } else {
+        const data = await resp.json().catch(() => ({}));
+        throw new Error(data?.errors?.[0]?.message || `Status ${resp.status}`);
       }
-
-      throw new Error(`Formspree returned status ${resp.status}`);
     } catch (err) {
       toast({
         title: "Submission failed",
         description: "Sorry, something went wrong. Please try again later.",
         variant: "destructive",
-        duration: 5000,
+        duration: 5000
       });
     }
   };
