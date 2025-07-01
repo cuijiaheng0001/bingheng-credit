@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -19,52 +18,33 @@ const Index = () => {
     }
   };
 
-  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    
-    const formData = new FormData(event.currentTarget);
-    
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
     try {
-      const response = await fetch('https://formspree.io/f/xzzgoype', {
-        method: 'POST',
+      const resp = await fetch("https://formspree.io/f/xzzgoype", {
+        method: "POST",
         body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
+        headers: { Accept: "application/json" },
       });
-      
-      console.log('Response status:', response.status);
-      console.log('Response ok:', response.ok);
-      
-      // Formspree returns 200 for success, but we need to check the response body
-      if (response.ok) {
-        const responseData = await response.json();
-        console.log('Response data:', responseData);
-        
-        // Check if it's actually a success (Formspree may return 200 with error details)
-        if (!responseData.error) {
-          toast({
-            title: "Success!",
-            description: "Your message has been sent successfully. We'll get back to you soon.",
-            duration: 5000,
-            className: "bg-green-50 border-green-200 text-green-800"
-          });
-          
-          // Reset form
-          event.currentTarget.reset();
-        } else {
-          throw new Error(responseData.error || 'Form submission failed');
-        }
-      } else {
-        const errorData = await response.text();
-        console.log('Error response:', errorData);
-        throw new Error(`Submission failed with status: ${response.status}`);
+
+      if (resp.status === 200 || resp.status === 302) {
+        toast({
+          title: "Thank you!",
+          description: "Your message has been sent. We'll reply shortly.",
+          duration: 5000,
+          className: "bg-green-50 border-green-200 text-green-800",
+        });
+        e.currentTarget.reset();
+        return;
       }
-    } catch (error) {
-      console.error('Form submission error:', error);
+
+      throw new Error(`Formspree returned status ${resp.status}`);
+    } catch (err) {
       toast({
-        title: "Submission Failed",
-        description: "Sorry, something went wrong. Please try again.",
+        title: "Submission failed",
+        description: "Sorry, something went wrong. Please try again later.",
         variant: "destructive",
         duration: 5000,
       });
