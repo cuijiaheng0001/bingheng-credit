@@ -1,5 +1,3 @@
-
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -34,7 +32,7 @@ const Index = () => {
         }
       });
       
-      if (response.ok) {
+      if (response.status === 200 || response.status === 302) {
         toast({
           title: "Thank you! Your message has been sent.",
           duration: 5000,
@@ -414,8 +412,6 @@ const Index = () => {
             </CardHeader>
             <CardContent>
               <form 
-                action="https://formspree.io/f/xzzgoype"
-                method="POST"
                 onSubmit={handleFormSubmit}
                 className="space-y-6"
               >
@@ -477,4 +473,3 @@ const Index = () => {
 };
 
 export default Index;
-
