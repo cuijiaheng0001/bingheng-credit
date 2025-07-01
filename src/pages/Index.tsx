@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -35,28 +36,35 @@ const Index = () => {
       console.log('Response status:', response.status);
       console.log('Response ok:', response.ok);
       
-      // Formspree considers 200 and sometimes redirects as success
-      if (response.ok || response.status === 200 || response.status === 302) {
-        toast({
-          title: "提交成功！",
-          description: "您的消息已成功发送，我们会尽快回复您。",
-          duration: 5000,
-          className: "bg-green-50 border-green-200 text-green-800"
-        });
+      // Formspree returns 200 for success, but we need to check the response body
+      if (response.ok) {
+        const responseData = await response.json();
+        console.log('Response data:', responseData);
         
-        // Reset form
-        event.currentTarget.reset();
+        // Check if it's actually a success (Formspree may return 200 with error details)
+        if (!responseData.error) {
+          toast({
+            title: "Success!",
+            description: "Your message has been sent successfully. We'll get back to you soon.",
+            duration: 5000,
+            className: "bg-green-50 border-green-200 text-green-800"
+          });
+          
+          // Reset form
+          event.currentTarget.reset();
+        } else {
+          throw new Error(responseData.error || 'Form submission failed');
+        }
       } else {
-        // Try to get error details
         const errorData = await response.text();
         console.log('Error response:', errorData);
-        throw new Error(`提交失败，状态码: ${response.status}`);
+        throw new Error(`Submission failed with status: ${response.status}`);
       }
     } catch (error) {
       console.error('Form submission error:', error);
       toast({
-        title: "提交失败",
-        description: "抱歉，提交过程中出现问题，请稍后重试。",
+        title: "Submission Failed",
+        description: "Sorry, something went wrong. Please try again.",
         variant: "destructive",
         duration: 5000,
       });
