@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -25,7 +26,7 @@ const Index = () => {
     const formData = new FormData(event.currentTarget);
     
     try {
-      const response = await fetch('https://formspree.io/f/jiahengc@binghengcredit.com', {
+      const response = await fetch('https://formspree.io/f/xzzgoype', {
         method: 'POST',
         body: formData,
         headers: {
@@ -413,7 +414,7 @@ const Index = () => {
             </CardHeader>
             <CardContent>
               <form 
-                action="https://formspree.io/f/jiahengc@binghengcredit.com"
+                action="https://formspree.io/f/xzzgoype"
                 method="POST"
                 onSubmit={handleFormSubmit}
                 className="space-y-6"
@@ -476,3 +477,4 @@ const Index = () => {
 };
 
 export default Index;
+
