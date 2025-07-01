@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Toaster } from "sonner";
 
 import type {
   ToastActionElement,
@@ -188,16 +187,5 @@ function useToast() {
     dismiss: (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId }),
   }
 }
-
-export const CenteredToaster = () => (
-  <Toaster
-    position="top-center"
-    richColors
-    toastOptions={{
-      className:
-        "font-medium text-base max-w-md flex items-center justify-center",
-    }}
-  />
-);
 
 export { useToast, toast }

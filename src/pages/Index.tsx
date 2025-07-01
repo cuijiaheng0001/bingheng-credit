@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -6,9 +7,11 @@ import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck } from "lucide-react";
 import Navigation from "@/components/Navigation";
-import { toast } from "sonner";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
+  const { toast } = useToast();
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-section');
     if (contactSection) {
@@ -33,8 +36,11 @@ const Index = () => {
       });
 
       if (resp.ok) {
-        toast.success("Thank you! Your message has been sent.", {
-          duration: 3000
+        toast({
+          title: "Thank you!",
+          description: "Your message has been sent. We'll reply shortly.",
+          duration: 5000,
+          className: "bg-green-50 border-green-200 text-green-800"
         });
         form.reset();
       } else {
@@ -42,8 +48,11 @@ const Index = () => {
         throw new Error(data?.errors?.[0]?.message || `Status ${resp.status}`);
       }
     } catch (err) {
-      toast.error("Submission failed. Please try again later.", {
-        duration: 3000
+      toast({
+        title: "Submission failed",
+        description: "Sorry, something went wrong. Please try again later.",
+        variant: "destructive",
+        duration: 5000
       });
     }
   };
