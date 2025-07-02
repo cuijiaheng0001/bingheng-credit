@@ -36,7 +36,7 @@ const Navigation = () => {
                   e.preventDefault();
                   scrollToSection(item.href);
                 }}
-                className="text-sm font-medium text-blue-900 hover:text-blue-600 transition-colors cursor-pointer"
+                className="text-sm font-medium text-[#2A3470] hover:text-[#1A2450] transition-colors cursor-pointer"
               >
                 {item.label}
               </a>
@@ -68,7 +68,7 @@ const Navigation = () => {
                     e.preventDefault();
                     scrollToSection(item.href);
                   }}
-                  className="text-lg font-medium text-blue-900 hover:text-blue-600 transition-colors cursor-pointer"
+                  className="text-lg font-medium text-[#2A3470] hover:text-[#1A2450] transition-colors cursor-pointer"
                 >
                   {item.label}
                 </a>

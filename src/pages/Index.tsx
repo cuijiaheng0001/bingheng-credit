@@ -61,8 +61,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Banner */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-700 to-blue-400 text-white">
+      {/* Hero Banner with brand gradient */}
+      <section className="relative min-h-screen flex items-center justify-center bg-brand-gradient text-white">
         <div className="container max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             We bridge U.S. claims with China-ID-backed collection.
@@ -74,7 +74,7 @@ const Index = () => {
             <Button 
               onClick={scrollToContact}
               size="lg" 
-              className="text-lg px-8 py-4 bg-white text-blue-900 hover:bg-blue-50"
+              className="text-lg px-8 py-4 bg-white text-[#2A3470] hover:bg-blue-50"
             >
               Contact Us
             </Button>
@@ -90,10 +90,10 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12 mb-12">
-            <Card className="border-2 border-blue-200">
+            <Card className="border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2">
-                  <CheckCircle className="text-blue-600" />
+                  <CheckCircle className="text-primary" />
                   Claim File Requirements
                 </CardTitle>
               </CardHeader>
@@ -141,9 +141,9 @@ const Index = () => {
             </CardContent>
           </Card>
 
-          <div className="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500">
-            <h3 className="text-2xl font-bold mb-4 text-blue-900">Why ID Matters</h3>
-            <p className="text-lg text-blue-800">
+          <div className="bg-primary/10 p-8 rounded-lg border-l-4 border-primary">
+            <h3 className="text-2xl font-bold mb-4 text-primary">Why ID Matters</h3>
+            <p className="text-lg text-primary/80">
               Chinese ID unlocks legal phone & credit data — if we can reach the debtor, we can recover the cash.
             </p>
           </div>
@@ -161,7 +161,7 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
-                  <Phone className="text-blue-600" size={24} />
+                  <Phone className="text-primary" size={24} />
                   Real-time Phone Matching
                 </CardTitle>
               </CardHeader>
@@ -226,7 +226,7 @@ const Index = () => {
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <Card className="text-center hover:shadow-lg transition-shadow">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold text-blue-600 mb-2">
+              <CardTitle className="text-3xl font-bold text-primary mb-2">
                 70%
               </CardTitle>
               <CardDescription className="text-lg font-medium text-gray-700">
@@ -267,10 +267,10 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="hover:shadow-lg transition-shadow border-2 border-blue-200">
+            <Card className="hover:shadow-lg transition-shadow border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
-                  <Scale className="text-blue-600" size={24} />
+                  <Scale className="text-primary" size={24} />
                   Legal Basis
                 </CardTitle>
               </CardHeader>
@@ -359,8 +359,8 @@ const Index = () => {
           {/* Logo Grid */}
           <div className="flex flex-wrap justify-center gap-6 opacity-70">
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                <Scale className="w-8 h-8 text-blue-600" />
+              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <Scale className="w-8 h-8 text-primary" />
               </div>
               <span className="text-sm text-gray-600 font-medium">PIPL Compliant</span>
             </div>
@@ -398,8 +398,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Us Section */}
-      <section id="contact-section" className="py-20 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-400">
+      {/* Contact Us Section with brand gradient */}
+      <section id="contact-section" className="py-20 bg-brand-gradient">
         <div className="container max-w-2xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12 text-white">
             Contact Us
@@ -407,10 +407,10 @@ const Index = () => {
           
           <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-xl">
             <CardHeader>
-              <CardTitle className="text-2xl text-center text-blue-900">
+              <CardTitle className="text-2xl text-center text-[#2A3470]">
                 Get in Touch
               </CardTitle>
-              <CardDescription className="text-center text-blue-700">
+              <CardDescription className="text-center text-[#2A3470]/70">
                 Ready to recover your claims? Let's discuss your case.
               </CardDescription>
             </CardHeader>
@@ -420,7 +420,7 @@ const Index = () => {
                 className="space-y-6"
               >
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-blue-900 font-medium">
+                  <Label htmlFor="name" className="text-[#2A3470] font-medium">
                     Name
                   </Label>
                   <Input
@@ -428,13 +428,13 @@ const Index = () => {
                     name="name"
                     type="text"
                     required
-                    className="rounded-lg border-blue-200 focus:border-blue-500 focus:ring-blue-500"
+                    className="rounded-lg border-primary/20 focus:border-primary focus:ring-primary"
                     placeholder="Your full name"
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-blue-900 font-medium">
+                  <Label htmlFor="email" className="text-[#2A3470] font-medium">
                     Email
                   </Label>
                   <Input
@@ -442,13 +442,13 @@ const Index = () => {
                     name="email"
                     type="email"
                     required
-                    className="rounded-lg border-blue-200 focus:border-blue-500 focus:ring-blue-500"
+                    className="rounded-lg border-primary/20 focus:border-primary focus:ring-primary"
                     placeholder="your.email@example.com"
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-blue-900 font-medium">
+                  <Label htmlFor="message" className="text-[#2A3470] font-medium">
                     Message
                   </Label>
                   <Textarea
@@ -456,14 +456,14 @@ const Index = () => {
                     name="message"
                     required
                     rows={4}
-                    className="rounded-lg border-blue-200 focus:border-blue-500 focus:ring-blue-500"
+                    className="rounded-lg border-primary/20 focus:border-primary focus:ring-primary"
                     defaultValue="Hi Bingheng team, I have a claim against a Chinese debtor. Please reach out to me."
                   />
                 </div>
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="w-full bg-[#2A3470] hover:bg-[#1A2450] text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   Send Message
                 </Button>
