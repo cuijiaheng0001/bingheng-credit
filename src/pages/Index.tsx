@@ -194,16 +194,41 @@ const Index = () => {
           </h2>
           
           {/* Introductory text highlighting expertise and cultural understanding */}
-          <div className="max-w-4xl mx-auto text-center mb-16 space-y-4">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              We've spent 10 years navigating China's collection landscape, mastering not just the legal system but the cultural nuances of Chinese business communication.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Your Chinese debtors aren't malicious—they simply believe: "U.S. companies can't reach me here."
-            </p>
-            <p className="text-xl font-semibold text-primary leading-relaxed">
-              We make them understand: <span className="text-2xl font-bold">This debt has landed in China.</span>
-            </p>
+          <div className="max-w-4xl mx-auto text-center mb-16 space-y-8">
+            {/* First paragraph with Shield icon */}
+            <div className="max-w-xl mx-auto flex items-start gap-4">
+              <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <Shield className="w-5 h-5 text-primary" />
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed text-left">
+                We've spent 10 years navigating China's collection landscape, mastering not just the legal system but the cultural nuances of Chinese business communication.
+              </p>
+            </div>
+            
+            {/* Second paragraph with Gavel icon */}
+            <div className="max-w-xl mx-auto flex items-start gap-4">
+              <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <Gavel className="w-5 h-5 text-primary" />
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed text-left">
+                Your Chinese debtors aren't malicious—they simply believe: <em>"U.S. companies can't reach me here."</em>
+              </p>
+            </div>
+            
+            {/* Third paragraph with Phone icon and emphasized conclusion */}
+            <div className="max-w-xl mx-auto flex items-start gap-4">
+              <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <Phone className="w-5 h-5 text-primary" />
+              </div>
+              <div className="text-left">
+                <p className="text-lg text-gray-700 leading-relaxed mb-2">
+                  We make them understand:
+                </p>
+                <p className="text-2xl font-bold text-primary leading-tight">
+                  This debt has landed in China.
+                </p>
+              </div>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
