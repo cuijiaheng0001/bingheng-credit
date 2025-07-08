@@ -80,7 +80,7 @@ const Index = () => {
       </section>
 
       {/* Why Us Section */}
-      <section id="whyus-section" className="py-20 bg-white">
+      <section id="whyus-section" className="py-12 md:py-20 bg-white">
         <div className="container max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-primary">
             Why Choose Bingheng Credit?
@@ -180,7 +180,7 @@ const Index = () => {
       </div>
 
       {/* What We Can Collect Section */}
-      <section id="eligibility-section" className="py-20 bg-gray-50">
+      <section id="eligibility-section" className="py-12 md:py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-primary">
             What We Can Collect
@@ -247,7 +247,7 @@ const Index = () => {
       </div>
 
       {/* Easy to Start Section */}
-      <section className="py-20 bg-green-50 border-y-2 border-green-100">
+      <section className="py-12 md:py-20 bg-green-50 border-y-2 border-green-100">
         <div className="container max-w-4xl mx-auto px-6 text-center">
           <div className="inline-flex items-center justify-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6">
             <Shield className="w-4 h-4 mr-2" />
@@ -268,11 +268,11 @@ const Index = () => {
                 <ul className="space-y-3 text-left text-gray-700">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    Try us with just 5 claims
+                    Try 1 claim
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    Single claims welcome (from $200)
+                    Start from $200
                   </li>
                 </ul>
               </CardContent>
@@ -307,7 +307,7 @@ const Index = () => {
       </div>
 
       {/* Performance at a Glance Section */}
-      <section id="performance-section" className="container max-w-6xl mx-auto px-6 py-20 bg-white">
+      <section id="performance-section" className="container max-w-6xl mx-auto px-6 py-12 md:py-20 bg-white">
         <h2 className="text-4xl font-bold text-center mb-16 text-primary">
           Performance at a Glance
         </h2>
@@ -364,7 +364,7 @@ const Index = () => {
       </div>
 
       {/* Compliance & Security Section */}
-      <section id="compliance-section" className="py-20 bg-gray-50">
+      <section id="compliance-section" className="py-12 md:py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-primary">
             Compliance & Security
@@ -462,40 +462,40 @@ const Index = () => {
           </Accordion>
 
           {/* Logo Grid */}
-          <div className="grid grid-cols-6 gap-8 opacity-70 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-4 gap-x-2 opacity-70 max-w-5xl mx-auto">
             <div className="flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
                 <Gavel className="w-6 h-6 text-primary" />
               </div>
-              <span className="text-sm text-gray-600 font-medium">Licensed Attorneys</span>
+              <span className="text-sm font-medium text-gray-600">Licensed Attorneys</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
                 <Scale className="w-6 h-6 text-primary" />
               </div>
-              <span className="text-sm text-gray-600 font-medium">PIPL Compliant</span>
+              <span className="text-sm font-medium text-gray-600">PIPL Compliant</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
                 <Shield className="w-6 h-6 text-primary" />
               </div>
-              <span className="text-sm text-gray-600 font-medium">TLS 1.3</span>
+              <span className="text-sm font-medium text-gray-600">TLS 1.3</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
                 <Shield className="w-6 h-6 text-primary" />
               </div>
-              <span className="text-sm text-gray-600 font-medium">AES-256</span>
+              <span className="text-sm font-medium text-gray-600">AES-256</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
                 <FileCheck className="w-6 h-6 text-primary" />
               </div>
-              <span className="text-sm text-gray-600 font-medium">ISO 27001</span>
+              <span className="text-sm font-medium text-gray-600">ISO 27001</span>
               <span className="text-xs text-gray-500">(in progress)</span>
             </div>
             
@@ -503,7 +503,7 @@ const Index = () => {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
                 <FileCheck className="w-6 h-6 text-primary" />
               </div>
-              <span className="text-sm text-gray-600 font-medium">ACA International</span>
+              <span className="text-sm font-medium text-gray-600">ACA International</span>
               <span className="text-xs text-gray-500">(applying)</span>
             </div>
           </div>
@@ -521,7 +521,7 @@ const Index = () => {
       </div>
 
       {/* FAQ Section */}
-      <section id="faq-section" className="py-20 bg-white">
+      <section id="faq-section" className="py-12 md:py-20 bg-white">
         <div className="container max-w-4xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-primary">
             Frequently Asked Questions
@@ -560,7 +560,7 @@ const Index = () => {
       </section>
 
       {/* Contact Us Section with brand gradient */}
-      <section id="contact-section" className="py-20 bg-brand-gradient">
+      <section id="contact-section" className="py-12 md:py-20 bg-brand-gradient">
         <div className="container max-w-2xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12 text-white">
             Contact Us
