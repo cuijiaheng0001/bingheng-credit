@@ -109,7 +109,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-y-4 md:gap-8">
             <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
@@ -186,7 +186,7 @@ const Index = () => {
             What We Can Collect
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-y-4 md:gap-8">
             <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow flex flex-col">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2">
@@ -262,7 +262,7 @@ const Index = () => {
             Not sure where to begin? Start small — we're built for flexibility.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-y-4 md:gap-8 max-w-3xl mx-auto">
             <Card className="border-2 border-green-200 hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <ul className="space-y-3 text-left text-gray-700">
@@ -312,7 +312,7 @@ const Index = () => {
           Performance at a Glance
         </h2>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-y-4 md:gap-8 max-w-4xl mx-auto">
           <Card className="text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
             <CardHeader>
               <CardTitle className="text-3xl font-bold text-primary mb-2">
@@ -370,7 +370,7 @@ const Index = () => {
             Compliance & Security
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-y-4 md:gap-8 mb-12">
             <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
