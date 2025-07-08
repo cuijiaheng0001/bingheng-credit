@@ -425,44 +425,44 @@ const Index = () => {
           {/* Logo Grid */}
           <div className="flex flex-wrap justify-center gap-6 opacity-70">
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <Gavel className="w-8 h-8 text-primary" />
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <Gavel className="w-6 h-6 text-primary" />
               </div>
               <span className="text-sm text-gray-600 font-medium">Licensed Attorneys</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <Scale className="w-8 h-8 text-primary" />
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <Scale className="w-6 h-6 text-primary" />
               </div>
               <span className="text-sm text-gray-600 font-medium">PIPL Compliant</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <Shield className="w-8 h-8 text-primary" />
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <Shield className="w-6 h-6 text-primary" />
               </div>
               <span className="text-sm text-gray-600 font-medium">TLS 1.3</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <Shield className="w-8 h-8 text-primary" />
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <Shield className="w-6 h-6 text-primary" />
               </div>
               <span className="text-sm text-gray-600 font-medium">AES-256</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <FileCheck className="w-8 h-8 text-primary" />
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <FileCheck className="w-6 h-6 text-primary" />
               </div>
               <span className="text-sm text-gray-600 font-medium">ISO 27001</span>
               <span className="text-xs text-gray-500">(in progress)</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <FileCheck className="w-8 h-8 text-primary" />
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <FileCheck className="w-6 h-6 text-primary" />
               </div>
               <span className="text-sm text-gray-600 font-medium">ACA International</span>
               <span className="text-xs text-gray-500">(applying)</span>
