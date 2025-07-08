@@ -509,9 +509,25 @@ const Index = () => {
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                <p className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
-                  Yes. We operate entirely within China following Chinese legal procedures through licensed professionals. Since the collection activities occur in China with Chinese residents, U.S. collection laws don't apply. Your company simply assigns the debt to our Hong Kong entity—we handle everything else under local law.
-                </p>
+                <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
+                  <p><strong>Yes.</strong></p>
+                  
+                  <p>
+                    We operate entirely within China's legal framework through our licensed PRC law firm partners. Since collection activities occur in China with Chinese residents, U.S. collection laws (like FDCPA) don't apply.
+                  </p>
+                  
+                  <p><strong>Our legal structure:</strong></p>
+                  
+                  <ul className="list-disc list-inside space-y-2 ml-4">
+                    <li>Your company assigns the debt to our Hong Kong affiliate</li>
+                    <li>We activate claims through licensed Chinese attorneys</li>
+                    <li>All actions follow PRC legal procedures</li>
+                  </ul>
+                  
+                  <p>
+                    This model is already used by international education institutions and financial companies worldwide. It's the established, compliant way to recover debts from Chinese nationals.
+                  </p>
+                </div>
               </AccordionContent>
             </AccordionItem>
             
