@@ -88,7 +88,7 @@ const Index = () => {
           
           {/* Professional legal-style introduction */}
           <div className="max-w-3xl mx-auto mb-16">
-            <div className="border-l-2 border-primary pl-4 py-4 space-y-6">
+            <div className="border-l-2 border-primary pl-4 py-2 space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed text-left">
                 We've spent 10 years navigating China's collection landscape, mastering not just the legal system but the cultural nuances of Chinese business communication.
               </p>
