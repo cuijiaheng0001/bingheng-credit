@@ -132,13 +132,16 @@ const Index = () => {
             <CardHeader>
               <CardTitle className="text-xl flex items-center gap-2">
                 <Shield className="text-purple-600" />
-                Minimum Thresholds
+                No High Barriers to Entry
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700">
-                Single claim ≥ USD 200 <span className="font-semibold">OR</span> batch ≥ 50 accounts
-              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Test with as few as 5 cases</li>
+                <li>• Single claims welcome (starting at $200)</li>
+                <li>• Volume discounts for 50+ accounts</li>
+                <li>• Let's discuss what works for your portfolio</li>
+              </ul>
             </CardContent>
           </Card>
 
