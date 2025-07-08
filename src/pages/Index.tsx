@@ -162,12 +162,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Gavel className="text-primary" size={24} />
-                  Licensed Law Firm Network
+                  China Collection Network
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Partner attorneys issue legal notices in Mandarin with full jurisdictional authority
+                  Legal notices in Mandarin that get real responses
                 </CardDescription>
               </CardContent>
             </Card>
@@ -176,12 +176,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <FileText className="text-green-600" size={24} />
-                  72-hour Legal Notice Delivery
+                  5-Day Legal Action
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Formal demand letters tracked through Beijing business hours
+                  Thorough case review for higher success rates
                 </CardDescription>
               </CardContent>
             </Card>
@@ -195,7 +195,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Legal inquiry channels unavailable to foreign entities
+                  Reaching the 70% that U.S. companies can't find
                 </CardDescription>
               </CardContent>
             </Card>
@@ -209,7 +209,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  No cure, no pay — zero upfront cost
+                  No cure, no pay—zero upfront cost
                 </CardDescription>
               </CardContent>
             </Card>
