@@ -88,11 +88,11 @@ const Navigation = () => {
           <div className="lg:hidden">
             <Button
               variant="ghost"
-              size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:bg-white/10"
+              className="text-white hover:bg-white/10 p-3"
+              aria-label="Toggle Menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
 
             {/* Mobile Menu Dropdown */}

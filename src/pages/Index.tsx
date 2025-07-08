@@ -71,8 +71,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Banner with brand gradient */}
-      <section className="relative min-h-screen flex items-center justify-center bg-brand-gradient text-white">
-        <div className="container max-w-4xl mx-auto px-6 text-center">
+      <section className="relative h-[85vh] sm:min-h-screen flex items-center justify-center bg-brand-gradient text-white">
+        <div className="container max-w-4xl mx-auto px-6 text-center pt-10">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
             We Connect U.S. Claims to China's Legal Collection System
           </h1>
