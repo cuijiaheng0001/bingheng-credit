@@ -544,7 +544,7 @@ const Index = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <p className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
-                  Most cases see first contact within 5 days and resolution within 30–60 days, depending on the debt amount and the debtor's responsiveness. We keep you updated throughout the process.
+                  Most cases see first contact within <strong>5 days</strong> and resolution within <strong>30–60 days</strong>, depending on the debt amount and the debtor's responsiveness. We keep you updated throughout the process.
                 </p>
               </AccordionContent>
             </AccordionItem>
