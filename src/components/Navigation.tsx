@@ -24,6 +24,25 @@ const Navigation = () => {
 
   return (
     <>
+      {/* Logo and Brand */}
+      <div className="fixed top-4 left-4 z-50">
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="flex items-center space-x-3 cursor-pointer"
+        >
+          <img 
+            src="/lovable-uploads/d2d8cdb7-b770-4276-b014-09f143685eca.png" 
+            alt="Bingheng Credit Logo" 
+            className="w-10 h-10"
+          />
+          <span className="text-lg font-semibold text-white">Bingheng Credit</span>
+        </a>
+      </div>
+
       {/* Desktop Navigation - Horizontal */}
       <nav className="hidden md:block fixed top-4 right-4 z-50">
         <div className="bg-white/95 backdrop-blur-lg shadow-lg rounded-xl px-6 py-3">
