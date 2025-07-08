@@ -415,6 +415,30 @@ const Index = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq-section" className="py-20 bg-white">
+        <div className="container max-w-4xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+            Frequently Asked Questions
+          </h2>
+          
+          <Card className="border-2 border-primary/20">
+            <CardContent className="p-8">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-primary mb-4">
+                    Q: Will my company be directly involved in Chinese legal proceedings?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    A: No. Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Contact Us Section with brand gradient */}
       <section id="contact-section" className="py-20 bg-brand-gradient">
         <div className="container max-w-2xl mx-auto px-6">
