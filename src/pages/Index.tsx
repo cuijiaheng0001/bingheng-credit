@@ -462,7 +462,7 @@ const Index = () => {
           </Accordion>
 
           {/* Logo Grid */}
-          <div className="flex flex-wrap justify-center gap-6 opacity-70">
+          <div className="grid grid-cols-6 gap-8 opacity-70 max-w-5xl mx-auto">
             <div className="flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
                 <Gavel className="w-6 h-6 text-primary" />
