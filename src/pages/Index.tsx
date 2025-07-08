@@ -280,11 +280,11 @@ const Index = () => {
                 <ul className="space-y-3 text-left text-gray-700">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    Try 1 claim
+                    Minimum 5 claims
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    Start from $200
+                    Low-value debt accepted
                   </li>
                 </ul>
               </CardContent>
