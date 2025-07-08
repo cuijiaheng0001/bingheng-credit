@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -12,6 +12,15 @@ import { useToast } from "@/hooks/use-toast";
 const Index = () => {
   const { toast } = useToast();
   const [formSubmitted, setFormSubmitted] = useState(false);
+
+  // SEO 设置
+  React.useEffect(() => {
+    document.title = "China Debt Collection | Bingheng Credit";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'We help U.S. creditors recover debt from Chinese nationals through licensed PRC legal procedures and skip tracing.');
+    }
+  }, []);
 
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-section');
@@ -561,6 +570,8 @@ const Index = () => {
                 onSubmit={handleFormSubmit}
                 className="space-y-6"
               >
+                {/* Honeypot field for spam protection */}
+                <input type="text" name="_gotcha" style={{ display: "none" }} />
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-primary font-medium">
                     Name
