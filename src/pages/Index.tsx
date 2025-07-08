@@ -114,14 +114,15 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2">
                   <DollarSign className="text-green-600" />
-                  Supported Claim Types
+                  We Handle All Types of China-Linked Debts
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• E-commerce receivables (Amazon / eBay sellers)</li>
-                  <li>• Student housing rent defaults</li>
-                  <li>• B2B fees such as logistics, warehousing, agency charges</li>
+                  <li>• B2B: Unpaid invoices, service fees, commercial disputes</li>
+                  <li>• B2C: Rent defaults, medical bills, consumer debts</li>
+                  <li>• E-commerce: Seller balances, platform fees, chargebacks</li>
+                  <li>• Professional Services: Any unpaid fees from Chinese nationals</li>
                 </ul>
               </CardContent>
             </Card>
