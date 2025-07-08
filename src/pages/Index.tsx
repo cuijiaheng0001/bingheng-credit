@@ -195,7 +195,7 @@ const Index = () => {
       <section id="eligibility-section" className="py-12 md:py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-primary">
-            What We Can Collect
+            What We Handle
           </h2>
           
           <div className="grid md:grid-cols-2 gap-y-4 md:gap-8">
@@ -258,70 +258,10 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Easy to Start Section */}
-      <section className="py-12 md:py-20 bg-green-50 border-y-2 border-green-100">
-        <div className="container max-w-4xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center justify-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6">
-            <Shield className="w-4 h-4 mr-2" />
-            Low Barrier Entry
-          </div>
-          
-          <h2 className="text-4xl font-bold mb-4 text-primary">
-            Easy to Start — No High Barriers
-          </h2>
-          
-          <p className="text-lg text-gray-600 mb-12">
-            Not sure where to begin? Start small — we're built for flexibility.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-y-4 md:gap-8 max-w-3xl mx-auto">
-            <Card className="border-2 border-green-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <ul className="space-y-3 text-left text-gray-700">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    Minimum 5 claims
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    Low-value debt accepted
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-green-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <ul className="space-y-3 text-left text-gray-700">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    Discounts for 50+ accounts
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    We'll customize based on your portfolio
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Decorative Divider */}
-      <div className="relative py-8">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-gray-200"></div>
-        </div>
-        <div className="relative flex justify-center">
-          <span className="px-4 bg-white text-gray-500 animate-fade-in">•••</span>
-        </div>
-      </div>
-
       {/* Performance at a Glance Section */}
       <section id="performance-section" className="container max-w-6xl mx-auto px-6 py-12 md:py-20 bg-white">
         <h2 className="text-4xl font-bold text-center mb-16 text-primary">
-          Performance at a Glance
+          How We Perform
         </h2>
         
         <div className="grid md:grid-cols-3 gap-y-4 md:gap-8 max-w-4xl mx-auto">
@@ -362,6 +302,66 @@ const Index = () => {
         <div className="max-w-md mx-auto p-4 bg-gray-50 rounded-md text-center text-gray-600 text-sm mt-6">
           <p>*Actual average recovery rate: 12.6%</p>
           <p>Premium portfolios can achieve 20%+</p>
+        </div>
+      </section>
+
+      {/* Decorative Divider */}
+      <div className="relative py-8">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-gray-200"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <span className="px-4 bg-white text-gray-500 animate-fade-in">•••</span>
+        </div>
+      </div>
+
+      {/* Easy to Start Section */}
+      <section className="py-12 md:py-20 bg-green-50 border-y-2 border-green-100">
+        <div className="container max-w-4xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center justify-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6">
+            <Shield className="w-4 h-4 mr-2" />
+            Low Barrier Entry
+          </div>
+          
+          <h2 className="text-4xl font-bold mb-4 text-primary">
+            Getting Started Is Easy
+          </h2>
+          
+          <p className="text-lg text-gray-600 mb-12">
+            Not sure where to begin? Start small — we're built for flexibility.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-y-4 md:gap-8 max-w-3xl mx-auto">
+            <Card className="border-2 border-green-200 hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <ul className="space-y-3 text-left text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary" />
+                    Minimum 5 claims
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary" />
+                    Low-value debt accepted
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-green-200 hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <ul className="space-y-3 text-left text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary" />
+                    Discounts for 50+ accounts
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary" />
+                    We'll customize based on your portfolio
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -408,7 +408,7 @@ const Index = () => {
       <section id="compliance-section" className="py-12 md:py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-primary">
-            Compliance & Security
+            Legal & Compliance Infrastructure
           </h2>
           
           <div className="grid md:grid-cols-3 gap-y-4 md:gap-8 mb-12">
