@@ -131,7 +131,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Legal notices in Mandarin that get real responses
+                  China's enforcement tools — licensed PRC channels accessible to U.S. creditors
                 </CardDescription>
               </CardContent>
             </Card>
@@ -140,12 +140,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <FileText className="text-primary" size={24} />
-                  5-Day Legal Action
+                  Legal Action in 5 Days
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Thorough case review for higher success rates
+                  Claims activated within five days through in-China legal workflow
                 </CardDescription>
               </CardContent>
             </Card>
@@ -154,7 +154,7 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Phone className="text-primary" size={24} />
-                  Attorney-Verified Skip Tracing
+                  Verified Skip Tracing
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -173,7 +173,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  No cure, no pay—zero upfront cost
+                  No cure, no pay — zero upfront cost
                 </CardDescription>
               </CardContent>
             </Card>
