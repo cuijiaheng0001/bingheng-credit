@@ -110,7 +110,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Gavel className="text-primary" size={24} />
@@ -124,7 +124,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <FileText className="text-primary" size={24} />
@@ -138,7 +138,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Phone className="text-primary" size={24} />
@@ -152,7 +152,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <DollarSign className="text-orange-600" size={24} />
@@ -313,7 +313,7 @@ const Index = () => {
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
             <CardHeader>
               <CardTitle className="text-3xl font-bold text-primary mb-2">
                 70%
@@ -324,7 +324,7 @@ const Index = () => {
             </CardHeader>
           </Card>
 
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
             <CardHeader>
               <CardTitle className="text-3xl font-bold text-primary mb-2">
                 25%
@@ -335,7 +335,7 @@ const Index = () => {
             </CardHeader>
           </Card>
 
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
             <CardHeader>
               <CardTitle className="text-3xl font-bold text-orange-600 mb-2">
                 5 Days
@@ -371,7 +371,7 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="hover:shadow-lg transition-shadow border-2 border-primary/20">
+            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Scale className="text-primary" size={24} />
@@ -385,7 +385,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-2 border-primary/20">
+            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Cpu className="text-primary" size={24} />
@@ -400,7 +400,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-2 border-primary/20">
+            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <FileCheck className="text-primary" size={24} />
