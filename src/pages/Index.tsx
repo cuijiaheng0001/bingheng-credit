@@ -89,8 +89,8 @@ const Index = () => {
           {/* Professional legal-style introduction */}
           <div className="max-w-3xl mx-auto mb-16">
             <div className="relative">
-              {/* Blue accent line - absolutely positioned */}
-              <div className="absolute left-0 top-0 bottom-0 w-px bg-primary"></div>
+              {/* Blue accent line - absolutely positioned with limited height */}
+              <div className="absolute left-0 top-2 w-px bg-primary h-32"></div>
               
               {/* Text content with left margin */}
               <div className="ml-6 space-y-6">
