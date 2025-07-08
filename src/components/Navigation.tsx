@@ -7,10 +7,11 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Eligibility', href: '#eligibility-section' },
     { label: 'Why Us', href: '#whyus-section' },
+    { label: 'What We Collect', href: '#eligibility-section' },
     { label: 'Performance', href: '#performance-section' },
-    { label: 'Compliance & Security', href: '#compliance-section' },
+    { label: 'Compliance', href: '#compliance-section' },
+    { label: 'FAQ', href: '#faq-section' },
     { label: 'Contact', href: '#contact-section' },
   ];
 
@@ -22,6 +23,13 @@ const Navigation = () => {
     setIsOpen(false);
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -30,7 +38,7 @@ const Navigation = () => {
     <>
       {/* Sticky Navigation Container */}
       <div className="sticky top-0 left-0 right-0 z-50 bg-[#2A3470] h-16 shadow-md">
-        <div className="relative w-full h-full flex items-center justify-between px-4">
+        <div className="container mx-auto h-full flex items-center justify-between px-6">
           {/* Logo Section - Left */}
           <a
             href="/"
@@ -47,41 +55,49 @@ const Navigation = () => {
             />
           </a>
 
-          {/* Desktop Navigation - Right */}
-          <nav className="hidden md:block">
-            <div className="bg-white/95 backdrop-blur-lg shadow-lg rounded-xl px-6 py-3">
-              <div className="flex items-center space-x-6">
-                {menuItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection(item.href);
-                    }}
-                    className="text-sm font-medium text-[#2A3470] hover:text-[#1A2450] transition-colors cursor-pointer"
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </div>
+          {/* Desktop Navigation - Center */}
+          <nav className="hidden lg:block">
+            <div className="flex items-center space-x-8">
+              {menuItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                  }}
+                  className="text-sm font-medium text-white hover:text-blue-200 transition-colors cursor-pointer"
+                >
+                  {item.label}
+                </a>
+              ))}
             </div>
           </nav>
 
+          {/* Contact Us Button - Right */}
+          <div className="hidden lg:block">
+            <Button 
+              onClick={scrollToContact}
+              className="bg-white text-[#2A3470] hover:bg-blue-50 font-semibold px-6 py-2"
+            >
+              Contact Us
+            </Button>
+          </div>
+
           {/* Mobile Navigation - Right */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="bg-white/95 backdrop-blur-lg shadow-lg rounded-xl"
+              className="text-white hover:bg-white/10"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
 
             {/* Mobile Menu Dropdown */}
             {isOpen && (
-              <div className="absolute top-full right-4 mt-2 bg-white/95 backdrop-blur-lg shadow-lg rounded-xl py-4 px-6 min-w-[200px]">
+              <div className="absolute top-full right-4 mt-2 bg-white shadow-lg rounded-xl py-4 px-6 min-w-[200px]">
                 <div className="flex flex-col space-y-3">
                   {menuItems.map((item) => (
                     <a
@@ -91,11 +107,18 @@ const Navigation = () => {
                         e.preventDefault();
                         scrollToSection(item.href);
                       }}
-                      className="text-lg font-medium text-[#2A3470] hover:text-[#1A2450] transition-colors cursor-pointer"
+                      className="text-sm font-medium text-[#2A3470] hover:text-[#1A2450] transition-colors cursor-pointer"
                     >
                       {item.label}
                     </a>
                   ))}
+                  <hr className="my-2" />
+                  <Button 
+                    onClick={scrollToContact}
+                    className="bg-[#2A3470] text-white hover:bg-[#1A2450] font-semibold px-4 py-2 w-full"
+                  >
+                    Contact Us
+                  </Button>
                 </div>
               </div>
             )}
