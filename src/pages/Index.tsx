@@ -300,8 +300,8 @@ const Index = () => {
         </div>
         
         <div className="max-w-md mx-auto p-4 bg-gray-50 rounded-md text-center text-gray-600 text-sm mt-6">
-          <p>*Actual average recovery rate: 12.6%</p>
-          <p>Premium portfolios can achieve 20%+</p>
+          <p className="font-semibold text-gray-700">Industry-Leading Results</p>
+          <p>12.6% average recovery • Premium portfolios exceed 20%</p>
         </div>
       </section>
 
