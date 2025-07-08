@@ -79,6 +79,90 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Why Us Section */}
+      <section id="whyus-section" className="py-20 bg-white">
+        <div className="container max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16 text-primary">
+            Why Choose Bingheng Credit?
+          </h2>
+          
+          {/* Professional legal-style introduction */}
+          <div className="max-w-3xl mx-auto mb-16">
+            <div className="border-l-4 border-primary pl-8 py-6 space-y-6">
+              <p className="text-lg text-gray-700 leading-relaxed text-left">
+                We've spent 10 years navigating China's collection landscape, mastering not just the legal system but the cultural nuances of Chinese business communication.
+              </p>
+              
+              <p className="text-lg text-gray-700 leading-relaxed text-left italic">
+                Your Chinese debtors aren't malicious—they simply believe: "U.S. companies can't reach me here."
+              </p>
+              
+              <p className="text-2xl font-bold text-primary leading-loose text-left">
+                We make them understand: This debt has landed in China.
+              </p>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-3">
+                  <Gavel className="text-primary" size={24} />
+                  China Collection Network
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Legal notices in Mandarin that get real responses
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-3">
+                  <FileText className="text-green-600" size={24} />
+                  5-Day Legal Action
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Thorough case review for higher success rates
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-3">
+                  <Phone className="text-purple-600" size={24} />
+                  Attorney-Verified Skip Tracing
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Reaching the 70% that U.S. companies can't find
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-3">
+                  <DollarSign className="text-orange-600" size={24} />
+                  Success-Fee Pricing
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  No cure, no pay—zero upfront cost
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* What We Can Collect Section */}
       <section id="eligibility-section" className="py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
@@ -186,89 +270,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Us Section */}
-      <section id="whyus-section" className="py-20 bg-white">
-        <div className="container max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-primary">
-            Why Choose Bingheng Credit?
-          </h2>
-          
-          {/* Professional legal-style introduction */}
-          <div className="max-w-3xl mx-auto mb-16">
-            <div className="border-l-4 border-primary pl-8 py-6 space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed text-left">
-                We've spent 10 years navigating China's collection landscape, mastering not just the legal system but the cultural nuances of Chinese business communication.
-              </p>
-              
-              <p className="text-lg text-gray-700 leading-relaxed text-left italic">
-                Your Chinese debtors aren't malicious—they simply believe: "U.S. companies can't reach me here."
-              </p>
-              
-              <p className="text-2xl font-bold text-primary leading-loose text-left">
-                We make them understand: This debt has landed in China.
-              </p>
-            </div>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-xl flex items-center gap-3">
-                  <Gavel className="text-primary" size={24} />
-                  China Collection Network
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Legal notices in Mandarin that get real responses
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-xl flex items-center gap-3">
-                  <FileText className="text-green-600" size={24} />
-                  5-Day Legal Action
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Thorough case review for higher success rates
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-xl flex items-center gap-3">
-                  <Phone className="text-purple-600" size={24} />
-                  Attorney-Verified Skip Tracing
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Reaching the 70% that U.S. companies can't find
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-xl flex items-center gap-3">
-                  <DollarSign className="text-orange-600" size={24} />
-                  Success-Fee Pricing
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  No cure, no pay—zero upfront cost
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Performance at a Glance Section */}
       <section id="performance-section" className="container max-w-6xl mx-auto px-6 py-20 bg-white">
