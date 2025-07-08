@@ -88,12 +88,12 @@ const Index = () => {
           
           {/* Professional legal-style introduction */}
           <div className="max-w-3xl mx-auto mb-16">
-            <div className="flex gap-4">
-              {/* Blue accent line */}
-              <div className="w-px bg-primary mt-2 mb-2 flex-shrink-0" style={{height: 'calc(100% - 1rem)'}}></div>
+            <div className="relative">
+              {/* Blue accent line - absolutely positioned */}
+              <div className="absolute left-0 top-0 bottom-0 w-px bg-primary"></div>
               
-              {/* Text content */}
-              <div className="space-y-6">
+              {/* Text content with left margin */}
+              <div className="ml-6 space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed text-left">
                   We've spent 10 years navigating China's collection landscape, mastering not just the legal system but the cultural nuances of Chinese business communication.
                 </p>
