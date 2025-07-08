@@ -108,4 +108,8 @@ All colors MUST be HSL.
   .bg-brand-gradient {
     background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 50%, var(--brand-light) 100%);
   }
+  
+  .feature-card {
+    @apply hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
+  }
 }

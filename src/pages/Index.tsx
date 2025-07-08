@@ -1,17 +1,18 @@
 
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck, Gavel, FileText, IdCard, CreditCard, Plus } from "lucide-react";
+import { CheckCircle, Phone, Shield, DollarSign, Scale, Cpu, FileCheck, Gavel, FileText, IdCard, Plus } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
   const { toast } = useToast();
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // SEO 设置
   React.useEffect(() => {
@@ -22,21 +23,22 @@ const Index = () => {
     }
   }, []);
 
-  const scrollToContact = () => {
+  const scrollToContact = useCallback(() => {
     const contactSection = document.getElementById('contact-section');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
-  };
+  }, []);
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
     const form = e.currentTarget;
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
 
     try {
-      const resp = await fetch("https://formspree.io/f/xzzgoype", {
+      const resp = await fetch(`https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ID}`, {
         method: "POST",
         headers: {
           "Accept": "application/json",
@@ -74,6 +76,8 @@ const Index = () => {
         variant: "destructive",
         duration: 5000
       });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -131,7 +135,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-y-4 md:gap-8">
-            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <Card className="feature-card">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Gavel className="text-primary" size={24} />
@@ -145,7 +149,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <Card className="feature-card">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <FileText className="text-primary" size={24} />
@@ -159,7 +163,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <Card className="feature-card">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Phone className="text-primary" size={24} />
@@ -173,7 +177,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <Card className="feature-card">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <DollarSign className="text-orange-600" size={24} />
@@ -274,7 +278,7 @@ const Index = () => {
         </h2>
         
         <div className="grid md:grid-cols-3 gap-y-4 md:gap-8 max-w-4xl mx-auto">
-          <Card className="text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <Card className="text-center feature-card">
             <CardHeader>
               <CardTitle className="text-3xl font-bold text-primary mb-2">
                 70%
@@ -285,7 +289,7 @@ const Index = () => {
             </CardHeader>
           </Card>
 
-          <Card className="text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <Card className="text-center feature-card">
             <CardHeader>
               <CardTitle className="text-3xl font-bold text-primary mb-2">
                 25%
@@ -296,7 +300,7 @@ const Index = () => {
             </CardHeader>
           </Card>
 
-          <Card className="text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <Card className="text-center feature-card">
             <CardHeader>
               <CardTitle className="text-3xl font-bold text-orange-600 mb-2">
                 5 Days
@@ -383,7 +387,7 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-y-4 md:gap-8 mb-12">
-            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-2 border-primary/20">
+            <Card className="feature-card border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Scale className="text-primary" size={24} />
@@ -397,7 +401,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-2 border-primary/20">
+            <Card className="feature-card border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Cpu className="text-primary" size={24} />
@@ -411,7 +415,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-2 border-primary/20">
+            <Card className="feature-card border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <FileCheck className="text-primary" size={24} />
@@ -636,9 +640,10 @@ const Index = () => {
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-[#2A3470] hover:bg-[#1A2450] text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  disabled={loading}
+                  className="w-full bg-[#2A3470] hover:bg-[#1A2450] text-white font-semibold py-3 px-6 rounded-lg transition-colors disabled:opacity-50"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
