@@ -92,7 +92,7 @@ const Index = () => {
             <Button 
               onClick={scrollToContact}
               size="lg" 
-              className="text-lg px-8 py-4 bg-white text-[#2A3470] hover:bg-blue-50"
+              className="text-lg px-8 py-4 bg-white text-[#2A3470] hover:bg-blue-50 transition duration-300 ease-in-out transform hover:scale-[1.03]"
             >
               Start Recovery
             </Button>
