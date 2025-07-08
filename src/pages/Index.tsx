@@ -97,7 +97,7 @@ const Index = () => {
                 Your Chinese debtors aren't malicious—they simply believe: "U.S. companies can't reach me here."
               </p>
               
-              <p className="text-2xl font-bold text-primary leading-loose text-left">
+              <p className="text-lg text-[#2A3470] leading-loose tracking-wide text-left">
                 We make them understand: This debt has landed in China.
               </p>
             </div>
