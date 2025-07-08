@@ -126,12 +126,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Gavel className="text-primary" size={24} />
-                  China Collection Network
+                  Cross-Border Enforcement Network
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  China's enforcement tools — licensed PRC channels accessible to U.S. creditors
+                  Bridging your U.S. claims to China's enforcement system
                 </CardDescription>
               </CardContent>
             </Card>
