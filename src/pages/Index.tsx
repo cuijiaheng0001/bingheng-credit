@@ -1,18 +1,19 @@
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, Phone, Shield, DollarSign, Scale, Cpu, FileCheck, Gavel, FileText, IdCard, Plus } from "lucide-react";
+import { CheckCircle, Phone, Shield, DollarSign, Scale, Cpu, FileCheck, Gavel, FileText, IdCard, Plus, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
   const { toast } = useToast();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [faqSearch, setFaqSearch] = useState("");
 
   // SEO 设置
   React.useEffect(() => {
@@ -29,6 +30,59 @@ const Index = () => {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   }, []);
+
+  // FAQ data for filtering
+  const faqData = [
+    {
+      value: "faq-1",
+      question: "Will my company be directly involved in Chinese legal proceedings?",
+      content: (
+        <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
+          <p><strong>No.</strong></p>
+          <p>
+            Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
+          </p>
+        </div>
+      )
+    },
+    {
+      value: "faq-2", 
+      question: "Is it legal to hire your team to collect from Chinese debtors?",
+      content: (
+        <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
+          <p><strong>Yes.</strong></p>
+          <p>
+            We operate entirely within China's legal framework through our licensed PRC law firm partners. Since collection activities occur in China with Chinese residents, U.S. collection laws (like FDCPA) don't apply.
+          </p>
+          <p><strong>Our legal structure:</strong></p>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>Your company assigns the debt to our Hong Kong affiliate</li>
+            <li>We activate claims through licensed Chinese attorneys</li>
+            <li>All actions follow PRC legal procedures</li>
+          </ul>
+          <p>
+            This model is already used by international education institutions and financial companies worldwide. It's the established, compliant way to recover debts from Chinese nationals.
+          </p>
+        </div>
+      )
+    },
+    {
+      value: "faq-3",
+      question: "How long does the collection process typically take?", 
+      content: (
+        <p className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
+          Most cases see first contact within <strong>5 days</strong> and resolution within <strong>30–60 days</strong>, depending on the debt amount and the debtor's responsiveness. We keep you updated throughout the process.
+        </p>
+      )
+    }
+  ];
+
+  const filteredFAQs = useMemo(() => {
+    if (!faqSearch.trim()) return faqData;
+    return faqData.filter(faq => 
+      faq.question.toLowerCase().includes(faqSearch.toLowerCase())
+    );
+  }, [faqSearch]);
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -84,12 +138,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Banner with brand gradient */}
-      <section className="relative h-[85vh] sm:min-h-screen flex items-center justify-center bg-brand-gradient text-white">
-        <div className="container max-w-4xl mx-auto px-6 text-center pt-10">
+      <section className="relative h-[85vh] sm:min-h-screen flex items-center justify-center bg-brand-gradient bg-opacity-90 text-white">
+        {/* Subtle noise texture overlay */}
+        <div className="absolute inset-0 opacity-30" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1,1 l1,0 l0,1 l-1,0 l0,-1 z' fill='%23ffffff' fill-opacity='0.1'/%3E%3C/svg%3E")`,
+          backgroundRepeat: 'repeat'
+        }}></div>
+        <div className="container max-w-4xl mx-auto px-6 text-center pt-10 relative z-10">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
             We Connect U.S. Claims to China's Legal Collection System
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100">
+          <p className="text-xl md:text-2xl mb-8 text-blue-200">
             5-day legal action • 70% contact rate • 25% recovery
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -432,7 +491,10 @@ const Index = () => {
 
           <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
             <AccordionItem value="legal-authority">
-              <AccordionTrigger className="text-lg font-semibold">
+              <AccordionTrigger 
+                className="text-lg font-semibold"
+                aria-expanded={false}
+              >
                 Legal Authority & Process
               </AccordionTrigger>
               <AccordionContent className="px-6 pt-6 pb-6">
@@ -445,7 +507,10 @@ const Index = () => {
             </AccordionItem>
 
             <AccordionItem value="data-security">
-              <AccordionTrigger className="text-lg font-semibold">
+              <AccordionTrigger 
+                className="text-lg font-semibold"
+                aria-expanded={false}
+              >
                 Data Security & Hosting
               </AccordionTrigger>
               <AccordionContent className="px-6 pt-6 pb-6">
@@ -458,7 +523,10 @@ const Index = () => {
             </AccordionItem>
 
             <AccordionItem value="certifications">
-              <AccordionTrigger className="text-lg font-semibold">
+              <AccordionTrigger 
+                className="text-lg font-semibold"
+                aria-expanded={false}
+              >
                 Professional Standards & Certifications
               </AccordionTrigger>
               <AccordionContent className="px-6 pt-6 pb-6">
@@ -490,69 +558,40 @@ const Index = () => {
             Frequently Asked Questions
           </h2>
           
+          {/* FAQ Search */}
+          <div className="mb-8">
+            <Input
+              placeholder="Search FAQ…"
+              value={faqSearch}
+              onChange={(e) => setFaqSearch(e.target.value)}
+              className="max-w-md mx-auto rounded-lg border-primary/20 focus:border-primary focus:ring-primary"
+            />
+          </div>
+          
           <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="faq-1" className="border border-gray-200 rounded-lg">
-              <AccordionTrigger className="text-left text-primary font-semibold py-4 px-6 cursor-pointer hover:bg-primary/5 transition-colors rounded-lg [&[data-state=open]]:rounded-b-none">
-                <span className="flex items-center gap-3">
-                  <Plus className="h-4 w-4 shrink-0 transition-transform duration-200 [&[data-state=open]]:rotate-45" />
-                  Will my company be directly involved in Chinese legal proceedings?
-                </span>
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
-                  <p><strong>No.</strong></p>
-                  
-                  <p>
-                    Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
-                  </p>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="faq-2" className="border border-gray-200 rounded-lg">
-              <AccordionTrigger className="text-left text-primary font-semibold py-4 px-6 cursor-pointer hover:bg-primary/5 transition-colors rounded-lg [&[data-state=open]]:rounded-b-none">
-                <span className="flex items-center gap-3">
-                  <Plus className="h-4 w-4 shrink-0 transition-transform duration-200 [&[data-state=open]]:rotate-45" />
-                  Is it legal to hire your team to collect from Chinese debtors?
-                </span>
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
-                  <p><strong>Yes.</strong></p>
-                  
-                  <p>
-                    We operate entirely within China's legal framework through our licensed PRC law firm partners. Since collection activities occur in China with Chinese residents, U.S. collection laws (like FDCPA) don't apply.
-                  </p>
-                  
-                  <p><strong>Our legal structure:</strong></p>
-                  
-                  <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>Your company assigns the debt to our Hong Kong affiliate</li>
-                    <li>We activate claims through licensed Chinese attorneys</li>
-                    <li>All actions follow PRC legal procedures</li>
-                  </ul>
-                  
-                  <p>
-                    This model is already used by international education institutions and financial companies worldwide. It's the established, compliant way to recover debts from Chinese nationals.
-                  </p>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="faq-3" className="border border-gray-200 rounded-lg">
-              <AccordionTrigger className="text-left text-primary font-semibold py-4 px-6 cursor-pointer hover:bg-primary/5 transition-colors rounded-lg [&[data-state=open]]:rounded-b-none">
-                <span className="flex items-center gap-3">
-                  <Plus className="h-4 w-4 shrink-0 transition-transform duration-200 [&[data-state=open]]:rotate-45" />
-                  How long does the collection process typically take?
-                </span>
-              </AccordionTrigger>
-              <AccordionContent>
-                <p className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
-                  Most cases see first contact within <strong>5 days</strong> and resolution within <strong>30–60 days</strong>, depending on the debt amount and the debtor's responsiveness. We keep you updated throughout the process.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
+            {filteredFAQs.map((faq) => (
+              <AccordionItem key={faq.value} value={faq.value} className="border border-gray-200 rounded-lg">
+                <AccordionTrigger 
+                  className="text-left text-primary font-semibold py-4 px-6 cursor-pointer hover:bg-primary/5 transition-colors rounded-lg [&[data-state=open]]:rounded-b-none"
+                  aria-expanded={false}
+                >
+                  <span className="flex items-center gap-3">
+                    <Plus className="h-4 w-4 shrink-0 transition-transform duration-200 [&[data-state=open]]:rotate-45" />
+                    {faq.question}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  {faq.content}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
+          
+          {filteredFAQs.length === 0 && (
+            <div className="text-center py-8 text-gray-500">
+              No FAQs found matching your search.
+            </div>
+          )}
         </div>
       </section>
 
@@ -641,8 +680,9 @@ const Index = () => {
                 <Button 
                   type="submit" 
                   disabled={loading}
-                  className="w-full bg-[#2A3470] hover:bg-[#1A2450] text-white font-semibold py-3 px-6 rounded-lg transition-colors disabled:opacity-50"
+                  className="w-full bg-[#2A3470] hover:bg-[#1A2450] text-white font-semibold py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
+                  {loading && <Loader2 className="w-4 h-4 animate-spin" />}
                   {loading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
