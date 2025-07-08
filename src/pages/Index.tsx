@@ -558,29 +558,6 @@ const Index = () => {
                 </p>
               </AccordionContent>
             </AccordionItem>
-            
-            <AccordionItem value="faq-3" className="border border-gray-200 rounded-lg">
-              <AccordionTrigger className="text-left text-primary font-semibold py-4 px-6 cursor-pointer hover:bg-primary/5 transition-colors rounded-lg [&[data-state=open]]:rounded-b-none">
-                <span className="flex items-center gap-3">
-                  <Plus className="h-4 w-4 shrink-0 transition-transform duration-200 [&[data-state=open]]:rotate-45" />
-                  What's the UX principle behind your FAQ layout?
-                </span>
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
-                  <p className="mb-4">
-                    We intentionally styled our FAQ answers with generous spacing—specifically padding-top and padding-bottom—to avoid the cramped feeling common in many accordions.
-                  </p>
-                  <p className="mb-4">Each &lt;AccordionContent&gt; uses:</p>
-                  <code className="block bg-gray-100 p-3 rounded text-sm font-mono mb-4">
-                    className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed"
-                  </code>
-                  <p>
-                    This ensures each answer is vertically balanced and easier to read. Consistent padding enhances clarity, making legal content feel more trustworthy and digestible.
-                  </p>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
           </Accordion>
         </div>
       </section>
