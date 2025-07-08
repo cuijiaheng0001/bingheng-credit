@@ -387,11 +387,9 @@ const Index = () => {
               alt="eBay" 
               className="h-8 w-auto opacity-80"
             />
-            <img 
-              src="src/assets/legal-services-icon.png" 
-              alt="Legal Services" 
-              className="h-8 w-auto opacity-80"
-            />
+            <div className="flex items-center justify-center">
+              <Gavel className="h-8 w-8 text-gray-400 opacity-80" />
+            </div>
           </div>
         </div>
       </section>
