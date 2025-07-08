@@ -24,27 +24,6 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Logo and Brand - Top Left */}
-      <div className="fixed top-4 left-4 z-50">
-        <a 
-          href="#" 
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="flex items-center gap-3 bg-white/95 backdrop-blur-lg shadow-lg rounded-xl px-4 py-3 hover:shadow-xl transition-shadow"
-        >
-          <img 
-            src="/lovable-uploads/2c646d42-1940-4740-9f13-4e4e4d24fcb1.png" 
-            alt="Bingheng Credit Logo" 
-            className="w-10 h-10"
-          />
-          <span className="text-lg font-bold text-[#2A3470] hidden sm:block">
-            Bingheng Credit
-          </span>
-        </a>
-      </div>
-
       {/* Desktop Navigation - Horizontal */}
       <nav className="hidden md:block fixed top-4 right-4 z-50">
         <div className="bg-white/95 backdrop-blur-lg shadow-lg rounded-xl px-6 py-3">
