@@ -618,7 +618,7 @@ const Index = () => {
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="w-full bg-[#2A3470] hover:bg-[#1A2450] text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   Send Message
                 </Button>
