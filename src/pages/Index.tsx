@@ -212,9 +212,8 @@ const Index = () => {
 
           <Card className="border border-primary/10 hover:shadow-lg transition-shadow mt-8 bg-white">
             <CardContent className="p-6 flex items-start gap-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex flex-col items-center justify-center flex-shrink-0 gap-1">
-                <IdCard className="w-5 h-5 text-primary" />
-                <CreditCard className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <IdCard className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-2 text-primary text-center">Why Chinese ID Matters</h3>
