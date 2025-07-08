@@ -65,10 +65,10 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center bg-brand-gradient text-white">
         <div className="container max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            We Connect U.S. Claims to China's Legal Collection System
+            Licensed Chinese Law Firms Bridge Your U.S. Claims
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-100">
-            5-day legal action • 70% contact rate • 25% recovery
+            72-hour legal notice • 70% reach • 25% recovery
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -114,15 +114,14 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2">
                   <DollarSign className="text-green-600" />
-                  We Handle All Types of China-Linked Debts
+                  Supported Claim Types
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• B2B: Unpaid invoices, service fees, commercial disputes</li>
-                  <li>• B2C: Rent defaults, medical bills, consumer debts</li>
-                  <li>• E-commerce: Seller balances, platform fees, chargebacks</li>
-                  <li>• Professional Services: Any unpaid fees from Chinese nationals</li>
+                  <li>• E-commerce receivables (Amazon / eBay sellers)</li>
+                  <li>• Student housing rent defaults</li>
+                  <li>• B2B fees such as logistics, warehousing, agency charges</li>
                 </ul>
               </CardContent>
             </Card>
@@ -132,16 +131,13 @@ const Index = () => {
             <CardHeader>
               <CardTitle className="text-xl flex items-center gap-2">
                 <Shield className="text-purple-600" />
-                No High Barriers to Entry
+                Minimum Thresholds
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Test with as few as 5 cases</li>
-                <li>• Single claims welcome (starting at $200)</li>
-                <li>• Volume discounts for 50+ accounts</li>
-                <li>• Let's discuss what works for your portfolio</li>
-              </ul>
+              <p className="text-gray-700">
+                Single claim ≥ USD 200 <span className="font-semibold">OR</span> batch ≥ 50 accounts
+              </p>
             </CardContent>
           </Card>
 
@@ -161,17 +157,6 @@ const Index = () => {
             Why Choose Bingheng Credit?
           </h2>
           
-          <div className="max-w-4xl mx-auto mb-12 text-center">
-            <p className="text-lg text-gray-700 mb-4">
-              We've spent 10 years navigating China's collection landscape, 
-              mastering not just the legal system but the cultural nuances of Chinese business communication.
-            </p>
-            <p className="text-lg text-gray-700">
-              Your Chinese debtors aren't malicious—they simply believe: "U.S. companies can't reach me here."<br/>
-              We make them understand: This debt has "landed in China."
-            </p>
-          </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -182,7 +167,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Professional legal notices in Mandarin that debtors take seriously—not ignored emails from 7,000 miles away
+                  Partner attorneys issue legal notices in Mandarin with full jurisdictional authority
                 </CardDescription>
               </CardContent>
             </Card>
@@ -191,12 +176,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <FileText className="text-green-600" size={24} />
-                  5-Day Legal Action
+                  72-hour Legal Notice Delivery
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Swift but thorough—proper case review ensures higher success rates than rushed attempts
+                  Formal demand letters tracked through Beijing business hours
                 </CardDescription>
               </CardContent>
             </Card>
@@ -210,7 +195,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Localized search through legitimate channels—reaching the 70% that U.S. companies can't find
+                  Legal inquiry channels unavailable to foreign entities
                 </CardDescription>
               </CardContent>
             </Card>
@@ -224,7 +209,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  No cure, no pay—we succeed only when you recover
+                  No cure, no pay — zero upfront cost
                 </CardDescription>
               </CardContent>
             </Card>
@@ -258,20 +243,16 @@ const Index = () => {
               <CardDescription className="text-lg font-medium text-gray-700">
                 Average Recovery
               </CardDescription>
-              <p className="text-sm text-gray-500 mt-2">
-                *Actual average recovery rate: 12.6%<br/>
-                Premium portfolios can achieve 20%+
-              </p>
             </CardHeader>
           </Card>
 
           <Card className="text-center hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="text-3xl font-bold text-orange-600 mb-2">
-                5 Days
+                48h
               </CardTitle>
               <CardDescription className="text-lg font-medium text-gray-700">
-                Legal Action Initiated
+                Legal Notice Issued
               </CardDescription>
             </CardHeader>
           </Card>
@@ -422,26 +403,6 @@ const Index = () => {
               <span className="text-xs text-gray-500">(applying)</span>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section id="faq-section" className="py-20 bg-white">
-        <div className="container max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
-            Frequently Asked Questions
-          </h2>
-          
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardContent className="pt-6">
-              <h3 className="text-lg font-semibold mb-4 text-gray-900">
-                Q: Will my company be directly involved in Chinese legal proceedings?
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                A: No. Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
-              </p>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
