@@ -94,12 +94,15 @@ const Index = () => {
       {/* Trust Section */}
       <section className="py-8 bg-white">
         <div className="container max-w-4xl mx-auto px-6 text-center">
-          <p className="text-sm text-gray-500 mb-4">
-            Trusted by U.S. e-commerce creditors, marketplace platforms, and commercial collectors.
+          <h3 className="text-xl font-semibold text-primary mb-2">
+            Built for Platforms Like
+          </h3>
+          <p className="text-sm text-gray-500 mb-6">
+            Designed for U.S. marketplace creditors and global e-commerce collection challenges.
           </p>
           
           {/* Logo Cloud */}
-          <div className="flex justify-center items-center gap-6 opacity-60">
+          <div className="flex justify-center items-center gap-6 opacity-50">
             <img 
               src="src/assets/amazon-logo.png" 
               alt="Amazon" 
