@@ -91,6 +91,32 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Trust Section */}
+      <section className="py-8 bg-white">
+        <div className="container max-w-4xl mx-auto px-6 text-center">
+          <p className="text-sm text-gray-500 mb-4">
+            Trusted by U.S. e-commerce creditors, marketplace platforms, and commercial collectors.
+          </p>
+          
+          {/* Logo Cloud */}
+          <div className="flex justify-center items-center gap-6 opacity-60">
+            <img 
+              src="src/assets/amazon-logo.png" 
+              alt="Amazon" 
+              className="h-6 grayscale"
+            />
+            <img 
+              src="src/assets/ebay-logo.png" 
+              alt="eBay" 
+              className="h-6 grayscale"
+            />
+            <div className="flex items-center justify-center">
+              <Gavel className="h-6 w-6 text-gray-400" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Us Section */}
       <section id="whyus-section" className="py-12 md:py-20 bg-white">
         <div className="container max-w-6xl mx-auto px-6">
