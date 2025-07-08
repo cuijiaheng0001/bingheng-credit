@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck, Gavel, FileText } from "lucide-react";
-import Navigation from "@/components/Navigation";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -59,8 +58,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
-      
       {/* Hero Banner with brand gradient */}
       <section className="relative min-h-screen flex items-center justify-center bg-brand-gradient text-white">
         <div className="container max-w-4xl mx-auto px-6 text-center">
