@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck, Gavel, FileText } from "lucide-react";
+import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck, Gavel, FileText, IdCard, CreditCard } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -212,8 +212,9 @@ const Index = () => {
 
           <Card className="border border-primary/10 hover:shadow-lg transition-shadow mt-8 bg-white">
             <CardContent className="p-6 flex items-start gap-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Shield className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex flex-col items-center justify-center flex-shrink-0 gap-1">
+                <IdCard className="w-5 h-5 text-primary" />
+                <CreditCard className="w-5 h-5 text-primary" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-2 text-primary text-center">Why Chinese ID Matters</h3>
