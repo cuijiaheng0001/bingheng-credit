@@ -177,7 +177,7 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow h-48 flex flex-col">
+            <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow flex flex-col">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2">
                   <FileCheck className="text-primary" />
