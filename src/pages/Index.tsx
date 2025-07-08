@@ -169,6 +169,16 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Decorative Divider */}
+      <div className="relative py-8">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-gray-200"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <span className="px-4 bg-white text-gray-500">•••</span>
+        </div>
+      </div>
+
       {/* What We Can Collect Section */}
       <section id="eligibility-section" className="py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
@@ -226,6 +236,16 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Decorative Divider */}
+      <div className="relative py-8 bg-gray-50">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-gray-200"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <span className="px-4 bg-gray-50 text-gray-500">•••</span>
+        </div>
+      </div>
+
       {/* Easy to Start Section */}
       <section className="py-20 bg-green-50 border-y-2 border-green-100">
         <div className="container max-w-4xl mx-auto px-6 text-center">
@@ -276,6 +296,15 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Decorative Divider */}
+      <div className="relative py-8">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-gray-200"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <span className="px-4 bg-white text-gray-500">•••</span>
+        </div>
+      </div>
 
       {/* Performance at a Glance Section */}
       <section id="performance-section" className="container max-w-6xl mx-auto px-6 py-20 bg-white">
@@ -323,6 +352,16 @@ const Index = () => {
           <p>Premium portfolios can achieve 20%+</p>
         </div>
       </section>
+
+      {/* Decorative Divider */}
+      <div className="relative py-8">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-gray-200"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <span className="px-4 bg-white text-gray-500">•••</span>
+        </div>
+      </div>
 
       {/* Compliance & Security Section */}
       <section id="compliance-section" className="py-20 bg-gray-50">
@@ -470,6 +509,16 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Decorative Divider */}
+      <div className="relative py-8 bg-gray-50">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-gray-200"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <span className="px-4 bg-gray-50 text-gray-500">•••</span>
+        </div>
+      </div>
 
       {/* FAQ Section */}
       <section id="faq-section" className="py-20 bg-white">
