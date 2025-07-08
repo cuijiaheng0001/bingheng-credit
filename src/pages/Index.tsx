@@ -82,7 +82,7 @@ const Index = () => {
       {/* What We Can Collect Section */}
       <section id="eligibility-section" className="py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-4xl font-bold text-center mb-16 text-primary">
             What We Can Collect
           </h2>
           
@@ -144,7 +144,7 @@ const Index = () => {
             Low Barrier Entry
           </div>
           
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">
+          <h2 className="text-4xl font-bold mb-4 text-primary">
             Easy to Start — No High Barriers
           </h2>
           
@@ -189,7 +189,7 @@ const Index = () => {
       {/* Why Us Section */}
       <section id="whyus-section" className="py-20 bg-white">
         <div className="container max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-4xl font-bold text-center mb-16 text-primary">
             Why Choose Bingheng Credit?
           </h2>
           
@@ -255,7 +255,7 @@ const Index = () => {
 
       {/* Performance at a Glance Section */}
       <section id="performance-section" className="container max-w-6xl mx-auto px-6 py-20 bg-white">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+        <h2 className="text-4xl font-bold text-center mb-16 text-primary">
           Performance at a Glance
         </h2>
         
@@ -303,7 +303,7 @@ const Index = () => {
       {/* Compliance & Security Section */}
       <section id="compliance-section" className="py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-4xl font-bold text-center mb-16 text-primary">
             Compliance & Security
           </h2>
           
@@ -415,30 +415,30 @@ const Index = () => {
             </div>
             
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-2">
-                <Shield className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <Shield className="w-8 h-8 text-primary" />
               </div>
               <span className="text-sm text-gray-600 font-medium">TLS 1.3</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-2">
-                <Shield className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <Shield className="w-8 h-8 text-primary" />
               </div>
               <span className="text-sm text-gray-600 font-medium">AES-256</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-2">
-                <FileCheck className="w-8 h-8 text-orange-600" />
+              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <FileCheck className="w-8 h-8 text-primary" />
               </div>
               <span className="text-sm text-gray-600 font-medium">ISO 27001</span>
               <span className="text-xs text-gray-500">(in progress)</span>
             </div>
             
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-2">
-                <FileCheck className="w-8 h-8 text-red-600" />
+              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <FileCheck className="w-8 h-8 text-primary" />
               </div>
               <span className="text-sm text-gray-600 font-medium">ACA International</span>
               <span className="text-xs text-gray-500">(applying)</span>
@@ -450,7 +450,7 @@ const Index = () => {
       {/* FAQ Section */}
       <section id="faq-section" className="py-20 bg-white">
         <div className="container max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-4xl font-bold text-center mb-16 text-primary">
             Frequently Asked Questions
           </h2>
           
@@ -488,10 +488,10 @@ const Index = () => {
           
           <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-xl">
             <CardHeader>
-              <CardTitle className="text-2xl text-center text-[#2A3470]">
+              <CardTitle className="text-2xl text-center text-primary">
                 Get in Touch
               </CardTitle>
-              <CardDescription className="text-center text-[#2A3470]/70">
+              <CardDescription className="text-center text-primary/70">
                 Ready to recover your claims? Let's discuss your case.
               </CardDescription>
             </CardHeader>
@@ -501,7 +501,7 @@ const Index = () => {
                 className="space-y-6"
               >
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-[#2A3470] font-medium">
+                  <Label htmlFor="name" className="text-primary font-medium">
                     Name
                   </Label>
                   <Input
@@ -515,7 +515,7 @@ const Index = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-[#2A3470] font-medium">
+                  <Label htmlFor="email" className="text-primary font-medium">
                     Email
                   </Label>
                   <Input
@@ -529,7 +529,7 @@ const Index = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-[#2A3470] font-medium">
+                  <Label htmlFor="message" className="text-primary font-medium">
                     Message
                   </Label>
                   <Textarea
@@ -544,7 +544,7 @@ const Index = () => {
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-[#2A3470] hover:bg-[#1A2450] text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   Send Message
                 </Button>

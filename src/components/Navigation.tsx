@@ -29,7 +29,7 @@ const Navigation = () => {
   return (
     <>
       {/* Sticky Navigation Container */}
-      <div className="sticky top-0 left-0 right-0 z-50 bg-[#2A3470] h-16">
+      <div className="sticky top-0 left-0 right-0 z-50 bg-[#2A3470] h-16 shadow-md">
         <div className="relative w-full h-full flex items-center justify-between px-4">
           {/* Logo Section - Left */}
           <a
