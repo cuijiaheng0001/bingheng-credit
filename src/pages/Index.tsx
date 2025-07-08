@@ -558,6 +558,20 @@ const Index = () => {
                 </p>
               </AccordionContent>
             </AccordionItem>
+            
+            <AccordionItem value="faq-3" className="border border-gray-200 rounded-lg">
+              <AccordionTrigger className="text-left text-primary font-semibold py-4 px-6 cursor-pointer hover:bg-primary/5 transition-colors rounded-lg [&[data-state=open]]:rounded-b-none">
+                <span className="flex items-center gap-3">
+                  <Plus className="h-4 w-4 shrink-0 transition-transform duration-200 [&[data-state=open]]:rotate-45" />
+                  How long does the collection process typically take?
+                </span>
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
+                  Most cases see first contact within 5 days and resolution within 30–60 days, depending on the debt amount and the debtor's responsiveness. We keep you updated throughout the process.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </section>
