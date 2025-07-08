@@ -22,8 +22,30 @@ const Navigation = () => {
     setIsOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
+      {/* Logo Section - Top Left */}
+      <div className="fixed top-4 left-4 z-50">
+        <a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToTop();
+          }}
+          className="cursor-pointer"
+        >
+          <img
+            src="/logo.png"
+            alt="Bingheng Credit"
+            className="h-10 w-auto"
+          />
+        </a>
+      </div>
+
       {/* Desktop Navigation - Horizontal */}
       <nav className="hidden md:block fixed top-4 right-4 z-50">
         <div className="bg-white/95 backdrop-blur-lg shadow-lg rounded-xl px-6 py-3">
