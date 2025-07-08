@@ -347,7 +347,7 @@ const Index = () => {
           </Card>
         </div>
         
-        <div className="max-w-md mx-auto p-4 bg-gray-50 rounded-md text-center text-gray-600 text-sm mt-6">
+        <div className="text-center mt-6 text-sm text-gray-500">
           <p>*Actual average recovery rate: 12.6%</p>
           <p>Premium portfolios can achieve 20%+</p>
         </div>
