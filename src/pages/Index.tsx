@@ -193,6 +193,19 @@ const Index = () => {
             Why Choose Bingheng Credit?
           </h2>
           
+          {/* Introductory text highlighting expertise and cultural understanding */}
+          <div className="max-w-4xl mx-auto text-center mb-16 space-y-4">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              We've spent 10 years navigating China's collection landscape, mastering not just the legal system but the cultural nuances of Chinese business communication.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Your Chinese debtors aren't malicious—they simply believe: "U.S. companies can't reach me here."
+            </p>
+            <p className="text-xl font-semibold text-primary leading-relaxed">
+              We make them understand: <span className="text-2xl font-bold">This debt has landed in China.</span>
+            </p>
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
