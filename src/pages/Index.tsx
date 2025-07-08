@@ -346,7 +346,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-2 border-green-200">
+            <Card className="hover:shadow-lg transition-shadow border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Cpu className="text-primary" size={24} />
@@ -361,7 +361,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-2 border-purple-200">
+            <Card className="hover:shadow-lg transition-shadow border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <FileCheck className="text-primary" size={24} />
