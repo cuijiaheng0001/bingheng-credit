@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck } from "lucide-react";
+import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck, Gavel, FileText } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { useToast } from "@/hooks/use-toast";
 
@@ -65,10 +65,10 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center bg-brand-gradient text-white">
         <div className="container max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            We bridge U.S. claims with China-ID-backed collection.
+            Licensed Chinese Law Firms Bridge Your U.S. Claims
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-100">
-            48-hour first contact • 70% reach • 25% recovery
+            72-hour legal notice • 70% reach • 25% recovery
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -144,7 +144,7 @@ const Index = () => {
           <div className="bg-primary/10 p-8 rounded-lg border-l-4 border-primary">
             <h3 className="text-2xl font-bold mb-4 text-primary">Why ID Matters</h3>
             <p className="text-lg text-primary/80">
-              Chinese ID unlocks legal phone & credit data — if we can reach the debtor, we can recover the cash.
+              Chinese ID enables law firms to issue formal legal notices and conduct attorney-verified searches through official channels.
             </p>
           </div>
         </div>
@@ -161,13 +161,13 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
-                  <Phone className="text-primary" size={24} />
-                  Real-time Phone Matching
+                  <Gavel className="text-primary" size={24} />
+                  Licensed Law Firm Network
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  ID linked to telecom APIs for fresh numbers
+                  Partner attorneys issue legal notices in Mandarin with full jurisdictional authority
                 </CardDescription>
               </CardContent>
             </Card>
@@ -175,13 +175,13 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
-                  <Clock className="text-green-600" size={24} />
-                  48-hour First Call Guarantee
+                  <FileText className="text-green-600" size={24} />
+                  72-hour Legal Notice Delivery
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Automatic dispatch to Beijing call center
+                  Formal demand letters tracked through Beijing business hours
                 </CardDescription>
               </CardContent>
             </Card>
@@ -189,13 +189,13 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
-                  <Shield className="text-purple-600" size={24} />
-                  SHA-256 Encrypted Storage
+                  <Phone className="text-purple-600" size={24} />
+                  Attorney-Verified Skip Tracing
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Hosted in Hong Kong, compliant with PIPL & GDPR
+                  Legal inquiry channels unavailable to foreign entities
                 </CardDescription>
               </CardContent>
             </Card>
@@ -209,7 +209,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  No cure, no pay
+                  No cure, no pay — zero upfront cost
                 </CardDescription>
               </CardContent>
             </Card>
@@ -252,7 +252,7 @@ const Index = () => {
                 48h
               </CardTitle>
               <CardDescription className="text-lg font-medium text-gray-700">
-                First Contact
+                Legal Notice Issued
               </CardDescription>
             </CardHeader>
           </Card>
@@ -271,13 +271,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Scale className="text-primary" size={24} />
-                  Legal Basis
+                  Legal Authority
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-700">
-                  PIPL Article 13, Items (2) & (3)<br/>
-                  Contractual necessity + legal obligation
+                  Licensed PRC law firms + Full jurisdictional compliance
                 </CardDescription>
               </CardContent>
             </Card>
@@ -286,12 +285,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Cpu className="text-green-600" size={24} />
-                  Architecture
+                  Secure Architecture
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-700">
-                  Mainland lookup → HK storage<br/>
+                  Attorney-client privilege protected<br/>
                   SHA-256 hashed + TLS 1.3 / AES-256
                 </CardDescription>
               </CardContent>
@@ -301,28 +300,28 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <FileCheck className="text-purple-600" size={24} />
-                  Certifications
+                  Professional Standards
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-700">
-                  ISO 27001 (underway)<br/>
-                  ACA Membership (Q4 2025 expected)
+                  Bar-certified attorneys + ISO 27001 (underway)
                 </CardDescription>
               </CardContent>
             </Card>
           </div>
 
           <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto mb-16">
-            <AccordionItem value="legal-basis">
+            <AccordionItem value="legal-authority">
               <AccordionTrigger className="text-lg font-semibold">
-                Legal Basis Details
+                Legal Authority & Process
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-4 text-gray-700">
-                  <p><strong>PIPL Article 13, Item (2):</strong> Processing necessary for the performance of a contract to which the individual is party</p>
-                  <p><strong>PIPL Article 13, Item (3):</strong> Processing necessary for compliance with a legal obligation</p>
-                  <p>We process debtor personal information based on contractual performance and legal obligations, ensuring the legitimacy of collection activities.</p>
+                  <p><strong>Licensed Law Firms:</strong> All partner firms maintain active PRC licenses with full legal authority</p>
+                  <p><strong>Attorney Query Rights:</strong> Licensed attorneys can conduct official searches through legal channels</p>
+                  <p><strong>Formal Legal Documents:</strong> All notices issued as official legal correspondence with jurisdictional backing</p>
+                  <p>Our network ensures all collection activities are conducted through proper legal channels with full professional authority.</p>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -333,7 +332,8 @@ const Index = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-4 text-gray-700">
-                  <p><strong>Data Flow:</strong> Mainland real-time lookup → Hong Kong data center storage → encrypted transmission</p>
+                  <p><strong>Data Flow:</strong> Law firm secure lookup → Hong Kong data center storage → encrypted transmission</p>
+                  <p><strong>Attorney-Client Privilege:</strong> All communications protected under legal professional privilege</p>
                   <p><strong>Encryption Standards:</strong> SHA-256 hashing algorithm protects sensitive information</p>
                   <p><strong>Transit Security:</strong> TLS 1.3 protocol + AES-256 end-to-end encryption</p>
                   <p><strong>Geographic Isolation:</strong> Hong Kong hosting ensures cross-border data compliance</p>
@@ -343,10 +343,11 @@ const Index = () => {
 
             <AccordionItem value="certifications">
               <AccordionTrigger className="text-lg font-semibold">
-                Certifications & Audits
+                Professional Standards
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-4 text-gray-700">
+                  <p><strong>Bar Certification:</strong> All partner attorneys maintain active PRC bar licenses</p>
                   <p><strong>ISO 27001:</strong> Information Security Management System certification (underway)</p>
                   <p><strong>ACA International:</strong> American Collectors Association membership (Q4 2025 expected)</p>
                   <p><strong>Regular Audits:</strong> Third-party security audits and compliance assessments</p>
@@ -358,6 +359,13 @@ const Index = () => {
 
           {/* Logo Grid */}
           <div className="flex flex-wrap justify-center gap-6 opacity-70">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
+                <Gavel className="w-8 h-8 text-primary" />
+              </div>
+              <span className="text-sm text-gray-600 font-medium">Licensed Attorneys</span>
+            </div>
+            
             <div className="flex flex-col items-center text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
                 <Scale className="w-8 h-8 text-primary" />
