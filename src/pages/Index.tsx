@@ -82,74 +82,102 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Eligibility Section */}
+      {/* What We Can Collect Section */}
       <section id="eligibility-section" className="py-20 bg-gray-50">
         <div className="container max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
-            Eligibility — What We Can Collect
+            What We Can Collect
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-12 mb-12">
-            <Card className="border-2 border-primary/20">
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2">
-                  <CheckCircle className="text-primary" />
-                  Claim File Requirements
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold mb-2">Must contain:</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Debtor's full name + Chinese National ID number</li>
-                      <li>• Outstanding amount and proof (invoice, contract, bill)</li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-green-200">
-              <CardHeader>
-                <CardTitle className="text-xl flex items-center gap-2">
-                  <DollarSign className="text-green-600" />
-                  We Handle All Types of China-Linked Debts
+                  <FileCheck className="text-primary" />
+                  What You'll Need
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• B2B: Unpaid invoices, service fees, commercial disputes</li>
-                  <li>• B2C: Rent defaults, medical bills, consumer debts</li>
-                  <li>• E-commerce: Seller balances, platform fees, chargebacks</li>
-                  <li>• Professional Services: Any unpaid fees from Chinese nationals</li>
+                  <li>• Debtor's full name + Chinese National ID</li>
+                  <li>• Proof of debt: invoice, contract, statement</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-2">
+                  <DollarSign className="text-primary" />
+                  China-Linked Debt Categories
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• B2B: Invoices, service fees, contract disputes</li>
+                  <li>• B2C: Rent, medical bills, consumer payments</li>
+                  <li>• E-commerce: Seller balances, chargebacks</li>
+                  <li>• Services: Legal, consulting, accounting fees owed by Chinese nationals</li>
                 </ul>
               </CardContent>
             </Card>
           </div>
 
-          <Card className="border-2 border-purple-200 mb-12">
-            <CardHeader>
-              <CardTitle className="text-xl flex items-center gap-2">
-                <Shield className="text-purple-600" />
-                No High Barriers to Entry
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Test with as few as 5 cases</li>
-                <li>• Single claims welcome (starting at $200)</li>
-                <li>• Volume discounts for 50+ accounts</li>
-                <li>• Let's discuss what works for your portfolio</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <div className="bg-primary/10 p-8 rounded-lg border-l-4 border-primary">
+          <div className="bg-primary/10 p-8 rounded-lg border-l-4 border-primary mt-12">
             <h3 className="text-2xl font-bold mb-4 text-primary">Why ID Matters</h3>
             <p className="text-lg text-primary/80">
               Chinese ID enables law firms to issue formal legal notices and conduct attorney-verified searches through official channels.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Easy to Start Section */}
+      <section className="py-20 bg-green-50 border-y-2 border-green-100">
+        <div className="container max-w-4xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center justify-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6">
+            <Shield className="w-4 h-4 mr-2" />
+            Low Barrier Entry
+          </div>
+          
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">
+            Easy to Start — No High Barriers
+          </h2>
+          
+          <p className="text-lg text-gray-600 mb-12">
+            Not sure where to begin? Start small — we're built for flexibility.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <Card className="border-2 border-green-200 hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <ul className="space-y-3 text-left text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    Try us with just 5 claims
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    Single claims welcome (from $200)
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-green-200 hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <ul className="space-y-3 text-left text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    Discounts for 50+ accounts
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    We'll customize based on your portfolio
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
