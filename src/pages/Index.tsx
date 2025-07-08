@@ -123,12 +123,19 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="bg-primary/10 p-8 rounded-lg border-l-4 border-primary mt-12">
-            <h3 className="text-2xl font-bold mb-4 text-primary">Why ID Matters</h3>
-            <p className="text-lg text-primary/80">
-              Chinese ID enables law firms to issue formal legal notices and conduct attorney-verified searches through official channels.
-            </p>
-          </div>
+          <Card className="border border-primary/10 hover:shadow-lg transition-shadow mt-8 bg-white">
+            <CardContent className="p-6 flex items-start gap-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Shield className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2 text-primary">Why Chinese ID Matters</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Chinese national ID allows licensed law firms to issue enforceable legal notices and conduct official debtor tracing in China — channels unavailable to foreign entities.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
