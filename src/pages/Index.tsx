@@ -126,7 +126,7 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Gavel className="text-primary" size={24} />
-                  Cross-Border Enforcement Network
+                  China Collection Network
                 </CardTitle>
               </CardHeader>
               <CardContent>
