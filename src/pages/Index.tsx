@@ -495,9 +495,13 @@ const Index = () => {
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                <p className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
-                  No. Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
-                </p>
+                <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
+                  <p><strong>No.</strong></p>
+                  
+                  <p>
+                    Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
+                  </p>
+                </div>
               </AccordionContent>
             </AccordionItem>
             
