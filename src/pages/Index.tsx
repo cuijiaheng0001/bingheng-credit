@@ -211,7 +211,7 @@ const Index = () => {
           </div>
 
           <Card className="border border-primary/10 hover:shadow-lg transition-shadow mt-8 bg-white">
-            <CardContent className="p-6 flex items-start gap-4">
+            <CardContent className="p-6 flex items-center gap-4">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <IdCard className="w-6 h-6 text-primary" />
               </div>
