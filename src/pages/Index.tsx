@@ -13,6 +13,7 @@ const Index = () => {
   const { toast } = useToast();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [honeypotField] = useState(`_hp_${Date.now()}`);
 
   // SEO 设置
   React.useEffect(() => {
@@ -595,7 +596,7 @@ const Index = () => {
                 className="space-y-6"
               >
                 {/* Honeypot field for spam protection */}
-                <input type="text" name="_gotcha" style={{ display: "none" }} />
+                <input type="text" name={honeypotField} style={{ display: "none" }} />
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-primary font-medium">
                     Name
@@ -605,6 +606,7 @@ const Index = () => {
                     name="name"
                     type="text"
                     required
+                    aria-required="true"
                     className="rounded-lg border-primary/20 focus:border-primary focus:ring-primary"
                     placeholder="Your full name"
                   />
@@ -619,6 +621,7 @@ const Index = () => {
                     name="email"
                     type="email"
                     required
+                    aria-required="true"
                     className="rounded-lg border-primary/20 focus:border-primary focus:ring-primary"
                     placeholder="your.email@example.com"
                   />
@@ -632,6 +635,7 @@ const Index = () => {
                     id="message"
                     name="message"
                     required
+                    aria-required="true"
                     rows={4}
                     className="rounded-lg border-primary/20 focus:border-primary focus:ring-primary"
                     defaultValue="Hi Bingheng team, I have a claim against a Chinese debtor. Please reach out to me."
