@@ -249,13 +249,18 @@ const Index = () => {
           <Card className="text-center hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="text-3xl font-bold text-orange-600 mb-2">
-                48h
+                5 Days
               </CardTitle>
               <CardDescription className="text-lg font-medium text-gray-700">
-                Legal Notice Issued
+                Legal Action Initiated
               </CardDescription>
             </CardHeader>
           </Card>
+        </div>
+        
+        <div className="text-center mt-6 text-sm text-gray-500">
+          <p>*Actual average recovery rate: 12.6%</p>
+          <p>Premium portfolios can achieve 20%+</p>
         </div>
       </section>
 
