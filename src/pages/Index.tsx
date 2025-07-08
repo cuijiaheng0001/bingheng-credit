@@ -90,14 +90,14 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+            <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow h-48 flex flex-col">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2">
                   <FileCheck className="text-primary" />
                   What You'll Need
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-1 flex items-center">
                 <ul className="space-y-2 text-gray-700">
                   <li>• Debtor's full name + Chinese National ID</li>
                   <li>• Proof of debt: invoice, contract, statement</li>
@@ -129,7 +129,7 @@ const Index = () => {
                 <Shield className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-2 text-primary">Why Chinese ID Matters</h3>
+                <h3 className="text-lg font-semibold mb-2 text-primary text-center">Why Chinese ID Matters</h3>
                 <p className="text-gray-700 leading-relaxed">
                   Chinese national ID allows licensed law firms to issue enforceable legal notices and conduct official debtor tracing in China — channels unavailable to foreign entities.
                 </p>
