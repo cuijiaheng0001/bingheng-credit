@@ -369,10 +369,10 @@ const Index = () => {
       <section className="bg-white py-12">
         <div className="container max-w-4xl mx-auto px-6 text-center">
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-2">
-            Built for Platforms Like
+            Built for Cross-Border Recovery
           </h3>
           <p className="text-lg text-gray-700 mb-6">
-            Designed for U.S. marketplace creditors and global e-commerce collection challenges.
+            Helping U.S. creditors reach Chinese nationals who can't be contacted from abroad — by phone, ID, and legal notice.
           </p>
           
           {/* Logo Cloud */}
