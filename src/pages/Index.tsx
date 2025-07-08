@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck, Gavel, FileText, IdCard, CreditCard } from "lucide-react";
+import { CheckCircle, Phone, Shield, Clock, DollarSign, Scale, Cpu, FileCheck, Gavel, FileText, IdCard, CreditCard, Plus } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -61,7 +61,7 @@ const Index = () => {
       {/* Hero Banner with brand gradient */}
       <section className="relative min-h-screen flex items-center justify-center bg-brand-gradient text-white">
         <div className="container max-w-4xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
             We Connect U.S. Claims to China's Legal Collection System
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-100">
@@ -528,9 +528,12 @@ const Index = () => {
           </h2>
           
           <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="faq-1">
-              <AccordionTrigger className="text-left text-primary font-semibold py-4 px-6 cursor-pointer hover:bg-primary/5 transition-colors rounded-lg">
-                Will my company be directly involved in Chinese legal proceedings?
+            <AccordionItem value="faq-1" className="border border-gray-200 rounded-lg">
+              <AccordionTrigger className="text-left text-primary font-semibold py-4 px-6 cursor-pointer hover:bg-primary/5 transition-colors rounded-lg [&[data-state=open]]:rounded-b-none">
+                <span className="flex items-center gap-3">
+                  <Plus className="h-4 w-4 shrink-0 transition-transform duration-200 [&[data-state=open]]:rotate-45" />
+                  Will my company be directly involved in Chinese legal proceedings?
+                </span>
               </AccordionTrigger>
               <AccordionContent>
                 <p className="text-gray-700 leading-relaxed px-6 pb-4">
@@ -539,9 +542,12 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="faq-2">
-              <AccordionTrigger className="text-left text-primary font-semibold py-4 px-6 cursor-pointer hover:bg-primary/5 transition-colors rounded-lg">
-                Is it legal to hire your team to collect from Chinese debtors?
+            <AccordionItem value="faq-2" className="border border-gray-200 rounded-lg">
+              <AccordionTrigger className="text-left text-primary font-semibold py-4 px-6 cursor-pointer hover:bg-primary/5 transition-colors rounded-lg [&[data-state=open]]:rounded-b-none">
+                <span className="flex items-center gap-3">
+                  <Plus className="h-4 w-4 shrink-0 transition-transform duration-200 [&[data-state=open]]:rotate-45" />
+                  Is it legal to hire your team to collect from Chinese debtors?
+                </span>
               </AccordionTrigger>
               <AccordionContent>
                 <p className="text-gray-700 leading-relaxed px-6 pb-4">
