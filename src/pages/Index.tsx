@@ -65,10 +65,10 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center bg-brand-gradient text-white">
         <div className="container max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Licensed Chinese Law Firms Bridge Your U.S. Claims
+            We Connect U.S. Claims to China's Legal Collection System
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-100">
-            72-hour legal notice • 70% reach • 25% recovery
+            5-day legal action • 70% contact rate • 25% recovery
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
