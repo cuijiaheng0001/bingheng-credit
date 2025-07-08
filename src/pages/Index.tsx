@@ -423,8 +423,8 @@ const Index = () => {
               <AccordionTrigger className="text-lg font-semibold">
                 Legal Authority & Process
               </AccordionTrigger>
-              <AccordionContent>
-                <div className="space-y-4 text-gray-700">
+              <AccordionContent className="px-6 pt-6 pb-6">
+                <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p><strong>Licensed Law Firms:</strong> All partner firms maintain active PRC licenses with full legal authority</p>
                   <p><strong>Attorney Query Rights:</strong> Licensed attorneys can conduct official searches through legal channels</p>
                   <p><strong>Formal Legal Documents:</strong> All notices issued as official legal correspondence with jurisdictional backing</p>
@@ -437,8 +437,8 @@ const Index = () => {
               <AccordionTrigger className="text-lg font-semibold">
                 Technical Architecture
               </AccordionTrigger>
-              <AccordionContent>
-                <div className="space-y-4 text-gray-700">
+              <AccordionContent className="px-6 pt-6 pb-6">
+                <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p><strong>Data Flow:</strong> Law firm secure lookup → Hong Kong data center storage → encrypted transmission</p>
                   <p><strong>Attorney-Client Privilege:</strong> All communications protected under legal professional privilege</p>
                   <p><strong>Encryption Standards:</strong> SHA-256 hashing algorithm protects sensitive information</p>
@@ -452,8 +452,8 @@ const Index = () => {
               <AccordionTrigger className="text-lg font-semibold">
                 Professional Standards
               </AccordionTrigger>
-              <AccordionContent>
-                <div className="space-y-4 text-gray-700">
+              <AccordionContent className="px-6 pt-6 pb-6">
+                <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p><strong>Bar Certification:</strong> All partner attorneys maintain active PRC bar licenses</p>
                   <p><strong>ISO 27001:</strong> Information Security Management System certification (underway)</p>
                   <p><strong>ACA International:</strong> American Collectors Association membership (Q4 2025 expected)</p>
@@ -539,7 +539,7 @@ const Index = () => {
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                <p className="text-gray-700 leading-relaxed px-6 pb-4">
+                <p className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
                   No. Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
                 </p>
               </AccordionContent>
@@ -553,7 +553,7 @@ const Index = () => {
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                <p className="text-gray-700 leading-relaxed px-6 pb-4">
+                <p className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
                   Yes. We operate entirely within China following Chinese legal procedures through licensed professionals. Since the collection activities occur in China with Chinese residents, U.S. collection laws don't apply. Your company simply assigns the debt to our Hong Kong entity—we handle everything else under local law.
                 </p>
               </AccordionContent>
