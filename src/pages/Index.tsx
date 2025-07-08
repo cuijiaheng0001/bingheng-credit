@@ -127,7 +127,7 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
-                  <FileText className="text-green-600" size={24} />
+                  <FileText className="text-primary" size={24} />
                   5-Day Legal Action
                 </CardTitle>
               </CardHeader>
@@ -141,7 +141,7 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
-                  <Phone className="text-purple-600" size={24} />
+                  <Phone className="text-primary" size={24} />
                   Attorney-Verified Skip Tracing
                 </CardTitle>
               </CardHeader>
@@ -247,11 +247,11 @@ const Index = () => {
               <CardContent className="p-6">
                 <ul className="space-y-3 text-left text-gray-700">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-primary" />
                     Try us with just 5 claims
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-primary" />
                     Single claims welcome (from $200)
                   </li>
                 </ul>
@@ -262,11 +262,11 @@ const Index = () => {
               <CardContent className="p-6">
                 <ul className="space-y-3 text-left text-gray-700">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-primary" />
                     Discounts for 50+ accounts
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-primary" />
                     We'll customize based on your portfolio
                   </li>
                 </ul>
@@ -297,7 +297,7 @@ const Index = () => {
 
           <Card className="text-center hover:shadow-lg transition-shadow">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold text-green-600 mb-2">
+              <CardTitle className="text-3xl font-bold text-primary mb-2">
                 25%
               </CardTitle>
               <CardDescription className="text-lg font-medium text-gray-700">
@@ -349,7 +349,7 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow border-2 border-green-200">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
-                  <Cpu className="text-green-600" size={24} />
+                  <Cpu className="text-primary" size={24} />
                   Secure Architecture
                 </CardTitle>
               </CardHeader>
@@ -364,7 +364,7 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow border-2 border-purple-200">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
-                  <FileCheck className="text-purple-600" size={24} />
+                  <FileCheck className="text-primary" size={24} />
                   Professional Standards
                 </CardTitle>
               </CardHeader>
