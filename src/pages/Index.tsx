@@ -478,28 +478,29 @@ const Index = () => {
             Frequently Asked Questions
           </h2>
           
-          <Card className="border-2 border-primary/20">
-            <CardContent className="p-8">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold text-primary mb-4">
-                    Q: Will my company be directly involved in Chinese legal proceedings?
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    A: No. Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-primary mb-4">
-                    Q: Is it legal to hire your team to collect from Chinese debtors?
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    A: Yes. We operate entirely within China following Chinese legal procedures through licensed professionals. Since the collection activities occur in China with Chinese residents, U.S. collection laws don't apply. Your company simply assigns the debt to our Hong Kong entity—we handle everything else under local law.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <Accordion type="single" collapsible className="space-y-4">
+            <AccordionItem value="faq-1">
+              <AccordionTrigger className="text-left text-primary font-semibold">
+                Will my company be directly involved in Chinese legal proceedings?
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-gray-700 leading-relaxed">
+                  No. Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+            
+            <AccordionItem value="faq-2">
+              <AccordionTrigger className="text-left text-primary font-semibold">
+                Is it legal to hire your team to collect from Chinese debtors?
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-gray-700 leading-relaxed">
+                  Yes. We operate entirely within China following Chinese legal procedures through licensed professionals. Since the collection activities occur in China with Chinese residents, U.S. collection laws don't apply. Your company simply assigns the debt to our Hong Kong entity—we handle everything else under local law.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
