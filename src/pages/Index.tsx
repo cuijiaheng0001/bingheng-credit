@@ -85,7 +85,7 @@ const Index = () => {
               size="lg" 
               className="text-lg px-8 py-4 bg-white text-[#2A3470] hover:bg-blue-50"
             >
-              Contact Us
+              Start Recovery
             </Button>
           </div>
         </div>

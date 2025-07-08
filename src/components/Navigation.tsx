@@ -80,7 +80,7 @@ const Navigation = () => {
               onClick={scrollToContact}
               className="bg-white text-[#2A3470] hover:bg-blue-50 font-semibold px-6 py-2"
             >
-              Contact Us
+              Start Recovery
             </Button>
           </div>
 
@@ -113,12 +113,12 @@ const Navigation = () => {
                     </a>
                   ))}
                   <hr className="my-2" />
-                  <Button 
-                    onClick={scrollToContact}
-                    className="bg-[#2A3470] text-white hover:bg-[#1A2450] font-semibold px-4 py-2 w-full"
-                  >
-                    Contact Us
-                  </Button>
+                   <Button 
+                     onClick={scrollToContact}
+                     className="bg-[#2A3470] text-white hover:bg-[#1A2450] font-semibold px-4 py-2 w-full"
+                   >
+                     Start Recovery
+                   </Button>
                 </div>
               </div>
             )}
