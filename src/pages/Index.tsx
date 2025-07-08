@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -10,6 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
   const { toast } = useToast();
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-section');
@@ -35,6 +37,7 @@ const Index = () => {
       });
 
       if (resp.ok) {
+        setFormSubmitted(true);
         toast({
           title: "Thank you!",
           description: "Your message has been sent. We'll reply shortly.",
@@ -42,11 +45,20 @@ const Index = () => {
           className: "bg-green-50 border-green-200 text-green-800"
         });
         form.reset();
+        
+        // Scroll to success message
+        setTimeout(() => {
+          const successMessage = document.getElementById('success-message');
+          if (successMessage) {
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 100);
       } else {
         const data = await resp.json().catch(() => ({}));
         throw new Error(data?.errors?.[0]?.message || `Status ${resp.status}`);
       }
     } catch (err) {
+      setFormSubmitted(false);
       toast({
         title: "Submission failed",
         description: "Sorry, something went wrong. Please try again later.",
@@ -347,7 +359,7 @@ const Index = () => {
           </Card>
         </div>
         
-        <div className="text-center mt-6 text-sm text-gray-500">
+        <div className="max-w-md mx-auto p-4 bg-gray-50 rounded-md text-center text-gray-600 text-sm mt-6">
           <p>*Actual average recovery rate: 12.6%</p>
           <p>Premium portfolios can achieve 20%+</p>
         </div>
@@ -575,6 +587,23 @@ const Index = () => {
                 Ready to recover your claims? Let's discuss your case.
               </CardDescription>
             </CardHeader>
+            
+            {/* Success Message */}
+            {formSubmitted && (
+              <div 
+                id="success-message"
+                className="mx-6 mb-6 p-4 bg-green-100 border border-green-200 rounded-lg text-center animate-fade-in"
+              >
+                <div className="flex items-center justify-center gap-2 text-green-800">
+                  <CheckCircle className="w-5 h-5" />
+                  <span className="font-semibold">Message sent successfully!</span>
+                </div>
+                <p className="text-green-700 text-sm mt-1">
+                  Thank you for reaching out. We'll reply to you shortly.
+                </p>
+              </div>
+            )}
+            
             <CardContent>
               <form 
                 onSubmit={handleFormSubmit}
