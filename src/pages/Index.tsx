@@ -365,44 +365,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Trust Section - Logo Cloud */}
-      <section className="bg-white py-12">
-        <div className="container max-w-4xl mx-auto px-6 text-center">
-          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-2">
-            Built for Cross-Border Recovery
-          </h3>
-          <p className="text-lg text-gray-700 mb-6">
-            Helping U.S. creditors reach Chinese nationals who can't be contacted from abroad — by phone, ID, and legal notice.
-          </p>
-          
-          {/* Logo Cloud */}
-          <div className="flex justify-center items-center gap-8">
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" 
-              alt="Amazon" 
-              className="h-8 w-auto opacity-80"
-            />
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" 
-              alt="eBay" 
-              className="h-8 w-auto opacity-80"
-            />
-            <div className="flex items-center justify-center">
-              <Gavel className="h-8 w-8 text-gray-400 opacity-80" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Decorative Divider */}
-      <div className="relative py-8">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-gray-200"></div>
-        </div>
-        <div className="relative flex justify-center">
-          <span className="px-4 bg-white text-gray-500 animate-fade-in">•••</span>
-        </div>
-      </div>
 
       {/* Compliance & Security Section */}
       <section id="compliance-section" className="py-12 md:py-20 bg-gray-50">
