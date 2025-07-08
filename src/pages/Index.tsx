@@ -91,35 +91,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Trust Section */}
-      <section className="py-8 bg-white">
-        <div className="container max-w-4xl mx-auto px-6 text-center">
-          <h3 className="text-xl font-semibold text-primary mb-2">
-            Built for Platforms Like
-          </h3>
-          <p className="text-sm text-gray-500 mb-6">
-            Designed for U.S. marketplace creditors and global e-commerce collection challenges.
-          </p>
-          
-          {/* Logo Cloud */}
-          <div className="flex justify-center items-center gap-6 opacity-50">
-            <img 
-              src="src/assets/amazon-logo.png" 
-              alt="Amazon" 
-              className="h-6 grayscale"
-            />
-            <img 
-              src="src/assets/ebay-logo.png" 
-              alt="eBay" 
-              className="h-6 grayscale"
-            />
-            <div className="flex items-center justify-center">
-              <Gavel className="h-6 w-6 text-gray-400" />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Why Us Section */}
       <section id="whyus-section" className="py-12 md:py-20 bg-white">
         <div className="container max-w-6xl mx-auto px-6">
@@ -391,6 +362,35 @@ const Index = () => {
         <div className="max-w-md mx-auto p-4 bg-gray-50 rounded-md text-center text-gray-600 text-sm mt-6">
           <p>*Actual average recovery rate: 12.6%</p>
           <p>Premium portfolios can achieve 20%+</p>
+        </div>
+      </section>
+
+      {/* Trust Section - Logo Cloud */}
+      <section className="bg-white py-12">
+        <div className="container max-w-4xl mx-auto px-6 text-center">
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-2">
+            Built for Platforms Like
+          </h3>
+          <p className="text-lg text-gray-700 mb-6">
+            Designed for U.S. marketplace creditors and global e-commerce collection challenges.
+          </p>
+          
+          {/* Logo Cloud */}
+          <div className="flex justify-center items-center gap-8">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" 
+              alt="Amazon" 
+              className="h-8 w-auto opacity-80"
+            />
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" 
+              alt="eBay" 
+              className="h-8 w-auto opacity-80"
+            />
+            <div className="flex items-center justify-center">
+              <Gavel className="h-8 w-8 text-gray-400 opacity-80" />
+            </div>
+          </div>
         </div>
       </section>
 
