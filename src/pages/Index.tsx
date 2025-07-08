@@ -337,11 +337,11 @@ const Index = () => {
                 <ul className="space-y-3 text-left text-gray-700">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    Minimum 5 claims
+                    Start with just 5 test cases
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    Low-value debt accepted
+                    Single claims from $200 accepted
                   </li>
                 </ul>
               </CardContent>
@@ -352,11 +352,11 @@ const Index = () => {
                 <ul className="space-y-3 text-left text-gray-700">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    Discounts for 50+ accounts
+                    Volume discounts at 50+ accounts
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    We'll customize based on your portfolio
+                    Custom solutions for any portfolio size
                   </li>
                 </ul>
               </CardContent>
