@@ -383,7 +383,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-700">
-                  Licensed PRC law firms + Full jurisdictional compliance
+                  Licensed PRC law firms & enforceable notices
                 </CardDescription>
               </CardContent>
             </Card>
@@ -392,13 +392,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-3">
                   <Cpu className="text-primary" size={24} />
-                  Secure Architecture
+                  Data Security
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-700">
-                  Attorney-client privilege protected<br/>
-                  SHA-256 hashed + TLS 1.3 / AES-256
+                  TLS 1.3 + AES-256 • Hong Kong hosting
                 </CardDescription>
               </CardContent>
             </Card>
@@ -412,104 +411,52 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-700">
-                  Bar-certified attorneys + ISO 27001 (underway)
+                  PRC Bar • ISO 27001 (in progress)
                 </CardDescription>
               </CardContent>
             </Card>
           </div>
 
-          <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto mb-16">
+          <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
             <AccordionItem value="legal-authority">
               <AccordionTrigger className="text-lg font-semibold">
                 Legal Authority & Process
               </AccordionTrigger>
               <AccordionContent className="px-6 pt-6 pb-6">
-                <div className="space-y-4 text-gray-700 leading-relaxed">
-                  <p><strong>Licensed Law Firms:</strong> All partner firms maintain active PRC licenses with full legal authority</p>
-                  <p><strong>Attorney Query Rights:</strong> Licensed attorneys can conduct official searches through legal channels</p>
-                  <p><strong>Formal Legal Documents:</strong> All notices issued as official legal correspondence with jurisdictional backing</p>
-                  <p>Our network ensures all collection activities are conducted through proper legal channels with full professional authority.</p>
-                </div>
+                <ul className="space-y-3 text-gray-700 leading-relaxed">
+                  <li>• Licensed PRC law firms with full jurisdictional power</li>
+                  <li>• Attorneys can query official registries & issue enforceable notices</li>
+                  <li>• All actions routed through our Hong Kong affiliate—no U.S. court filing needed</li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="tech-architecture">
+            <AccordionItem value="data-security">
               <AccordionTrigger className="text-lg font-semibold">
-                Technical Architecture
+                Data Security & Hosting
               </AccordionTrigger>
               <AccordionContent className="px-6 pt-6 pb-6">
-                <div className="space-y-4 text-gray-700 leading-relaxed">
-                  <p><strong>Data Flow:</strong> Law firm secure lookup → Hong Kong data center storage → encrypted transmission</p>
-                  <p><strong>Attorney-Client Privilege:</strong> All communications protected under legal professional privilege</p>
-                  <p><strong>Encryption Standards:</strong> SHA-256 hashing algorithm protects sensitive information</p>
-                  <p><strong>Transit Security:</strong> TLS 1.3 protocol + AES-256 end-to-end encryption</p>
-                  <p><strong>Geographic Isolation:</strong> Hong Kong hosting ensures cross-border data compliance</p>
-                </div>
+                <ul className="space-y-3 text-gray-700 leading-relaxed">
+                  <li>• TLS 1.3 + AES-256 encryption with SHA-256 hashing</li>
+                  <li>• Attorney-client privilege preserved end-to-end</li>
+                  <li>• Hong Kong data center meets PIPL & GDPR cross-border rules</li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="certifications">
               <AccordionTrigger className="text-lg font-semibold">
-                Professional Standards
+                Professional Standards & Certifications
               </AccordionTrigger>
               <AccordionContent className="px-6 pt-6 pb-6">
-                <div className="space-y-4 text-gray-700 leading-relaxed">
-                  <p><strong>Bar Certification:</strong> All partner attorneys maintain active PRC bar licenses</p>
-                  <p><strong>ISO 27001:</strong> Information Security Management System certification (underway)</p>
-                  <p><strong>ACA International:</strong> American Collectors Association membership (Q4 2025 expected)</p>
-                  <p><strong>Regular Audits:</strong> Third-party security audits and compliance assessments</p>
-                  <p><strong>Data Protection:</strong> Dual compliance with PIPL and GDPR standards</p>
-                </div>
+                <ul className="space-y-3 text-gray-700 leading-relaxed">
+                  <li>• All counsel hold active PRC bar licenses</li>
+                  <li>• ISO 27001 audit underway; third-party security reviews every 12 months</li>
+                  <li>• ACA International member (expected Q4 2025)</li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-
-          {/* Logo Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-4 gap-x-2 opacity-70 max-w-5xl mx-auto">
-            <div className="flex flex-col items-center text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <Gavel className="w-6 h-6 text-primary" />
-              </div>
-              <span className="text-sm font-medium text-gray-600">Licensed Attorneys</span>
-            </div>
-            
-            <div className="flex flex-col items-center text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <Scale className="w-6 h-6 text-primary" />
-              </div>
-              <span className="text-sm font-medium text-gray-600">PIPL Compliant</span>
-            </div>
-            
-            <div className="flex flex-col items-center text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <Shield className="w-6 h-6 text-primary" />
-              </div>
-              <span className="text-sm font-medium text-gray-600">TLS 1.3</span>
-            </div>
-            
-            <div className="flex flex-col items-center text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <Shield className="w-6 h-6 text-primary" />
-              </div>
-              <span className="text-sm font-medium text-gray-600">AES-256</span>
-            </div>
-            
-            <div className="flex flex-col items-center text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <FileCheck className="w-6 h-6 text-primary" />
-              </div>
-              <span className="text-sm font-medium text-gray-600">ISO 27001</span>
-              <span className="text-xs text-gray-500">(in progress)</span>
-            </div>
-            
-            <div className="flex flex-col items-center text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                <FileCheck className="w-6 h-6 text-primary" />
-              </div>
-              <span className="text-sm font-medium text-gray-600">ACA International</span>
-              <span className="text-xs text-gray-500">(applying)</span>
-            </div>
-          </div>
         </div>
       </section>
 
