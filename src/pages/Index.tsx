@@ -194,25 +194,18 @@ const Index = () => {
           </h2>
           
           {/* Professional legal-style introduction */}
-          <div className="max-w-3xl mx-auto mb-16 space-y-6">
-            {/* First paragraph with legal border styling */}
-            <div className="border-l-4 border-primary pl-6 py-2">
+          <div className="max-w-3xl mx-auto mb-16">
+            <div className="border-l-4 border-primary pl-8 py-6 space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed text-left">
                 We've spent 10 years navigating China's collection landscape, mastering not just the legal system but the cultural nuances of Chinese business communication.
               </p>
-            </div>
-            
-            {/* Second paragraph with italic emphasis */}
-            <div className="border-l-4 border-primary pl-6 py-2">
+              
               <p className="text-lg text-gray-700 leading-relaxed text-left italic">
                 Your Chinese debtors aren't malicious—they simply believe: "U.S. companies can't reach me here."
               </p>
-            </div>
-            
-            {/* Third paragraph with emphasized conclusion */}
-            <div className="border-l-4 border-primary pl-6 py-2">
-              <p className="text-xl font-bold text-gray-700 leading-relaxed text-left">
-                We make them understand: <span className="text-primary underline">This debt has landed in China.</span>
+              
+              <p className="text-2xl font-bold text-primary leading-loose text-left">
+                We make them understand: This debt has landed in China.
               </p>
             </div>
           </div>
