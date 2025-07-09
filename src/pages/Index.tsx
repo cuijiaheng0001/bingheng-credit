@@ -1,5 +1,6 @@
 
 import React, { useState, useCallback, useMemo } from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -15,14 +16,6 @@ const Index = () => {
   const [loading, setLoading] = useState(false);
   const [faqSearch, setFaqSearch] = useState("");
 
-  // SEO 设置
-  React.useEffect(() => {
-    document.title = "China Debt Collection | Bingheng Credit";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'We help U.S. creditors recover debt from Chinese nationals through licensed PRC legal procedures and skip tracing.');
-    }
-  }, []);
 
   const scrollToContact = useCallback(() => {
     const contactSection = document.getElementById('contact-section');
@@ -137,6 +130,22 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>China Debt Collection | Bingheng Credit</title>
+        <meta name="description" content="We help U.S. creditors recover debt from Chinese nationals through licensed PRC legal procedures and skip tracing." />
+        
+        {/* Open Graph tags */}
+        <meta property="og:title" content="China Debt Collection | Bingheng Credit" />
+        <meta property="og:description" content="Licensed PRC enforcement • 70% contact rate • 25% recovery • No cure, no pay debt collection" />
+        <meta property="og:image" content="/lovable-uploads/e291aea7-9cb6-43c1-99e9-c2018951630d.png" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="China Debt Collection | Bingheng Credit" />
+        <meta name="twitter:description" content="Licensed PRC enforcement • 70% contact rate • 25% recovery • No cure, no pay debt collection" />
+        <meta name="twitter:image" content="/lovable-uploads/e291aea7-9cb6-43c1-99e9-c2018951630d.png" />
+      </Helmet>
       {/* Hero Banner with brand gradient */}
       <section className="relative h-[85vh] sm:min-h-screen flex items-center justify-center bg-brand-gradient bg-opacity-90 text-white">
         {/* Subtle noise texture overlay */}

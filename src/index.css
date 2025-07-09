@@ -112,4 +112,19 @@ All colors MUST be HSL.
   .feature-card {
     @apply hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
   }
+
+  /* Disable animations for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-scale-in,
+    .hover:-translate-y-1,
+    .transition-all,
+    .transition-transform,
+    .transition-colors,
+    .transition-opacity {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+    }
+  }
 }
