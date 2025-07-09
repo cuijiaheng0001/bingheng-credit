@@ -134,17 +134,76 @@ const Index = () => {
         <title>China Debt Collection | Bingheng Credit</title>
         <meta name="description" content="We help U.S. creditors recover debt from Chinese nationals through licensed PRC legal procedures and skip tracing." />
         
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://binghengcredit.com/" />
+        
+        {/* Sitemap */}
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        
         {/* Open Graph tags */}
         <meta property="og:title" content="China Debt Collection | Bingheng Credit" />
         <meta property="og:description" content="Licensed PRC enforcement • 70% contact rate • 25% recovery • No cure, no pay debt collection" />
-        <meta property="og:image" content="/lovable-uploads/e291aea7-9cb6-43c1-99e9-c2018951630d.png" />
+        <meta property="og:image" content="https://binghengcredit.com/og-image.png" />
         <meta property="og:type" content="website" />
         
         {/* Twitter tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="China Debt Collection | Bingheng Credit" />
         <meta name="twitter:description" content="Licensed PRC enforcement • 70% contact rate • 25% recovery • No cure, no pay debt collection" />
-        <meta name="twitter:image" content="/lovable-uploads/e291aea7-9cb6-43c1-99e9-c2018951630d.png" />
+        <meta name="twitter:image" content="https://binghengcredit.com/og-image.png" />
+        
+        {/* JSON-LD Organization */}
+        <script type="application/ld+json">{`{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bingheng Credit",
+  "url": "https://binghengcredit.com",
+  "logo": "https://binghengcredit.com/og-image.png",
+  "description": "Licensed debt collection service for U.S. creditors recovering debts from Chinese nationals through PRC legal procedures",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "areaServed": ["US", "CN"],
+    "availableLanguage": ["English", "Chinese"]
+  },
+  "service": {
+    "@type": "Service",
+    "name": "Cross-border Debt Collection",
+    "description": "Legal debt collection from Chinese nationals using licensed PRC attorneys"
+  }
+}`}</script>
+        
+        {/* JSON-LD FAQPage */}
+        <script type="application/ld+json">{`{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will my company be directly involved in Chinese legal proceedings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it legal to hire your team to collect from Chinese debtors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We operate entirely within China's legal framework through our licensed PRC law firm partners. Since collection activities occur in China with Chinese residents, U.S. collection laws (like FDCPA) don't apply."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does the collection process typically take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most cases see first contact within 5 days and resolution within 30–60 days, depending on the debt amount and the debtor's responsiveness."
+      }
+    }
+  ]
+}`}</script>
       </Helmet>
       {/* Hero Banner with brand gradient */}
       <section className="relative h-[85vh] sm:min-h-screen flex items-center justify-center bg-brand-gradient bg-opacity-90 text-white">
