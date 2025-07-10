@@ -9,12 +9,62 @@ import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Phone, Shield, DollarSign, Scale, Cpu, FileCheck, Gavel, FileText, IdCard, Plus, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useDebounce } from "@/hooks/use-debounce";
+
+// FAQ data constant - moved outside component to avoid recreation on each render
+const FAQ_DATA = [
+  {
+    value: "faq-1",
+    question: "Will my company be directly involved in Chinese legal proceedings?",
+    content: (
+      <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
+        <p><strong>No.</strong></p>
+        <p>
+          Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
+        </p>
+      </div>
+    )
+  },
+  {
+    value: "faq-2", 
+    question: "Is it legal to hire your team to collect from Chinese debtors?",
+    content: (
+      <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
+        <p><strong>Yes.</strong></p>
+        <p>
+          We operate entirely within China's legal framework through our licensed PRC law firm partners. Since collection activities occur in China with Chinese residents, U.S. collection laws (like FDCPA) don't apply.
+        </p>
+        <p><strong>Our legal structure:</strong></p>
+        <ul className="list-disc list-inside space-y-2 ml-4">
+          <li>Your company assigns the debt to our Hong Kong affiliate</li>
+          <li>We activate claims through licensed Chinese attorneys</li>
+          <li>All actions follow PRC legal procedures</li>
+        </ul>
+        <p>
+          This model is already used by international education institutions and financial companies worldwide. It's the established, compliant way to recover debts from Chinese nationals.
+        </p>
+      </div>
+    )
+  },
+  {
+    value: "faq-3",
+    question: "How long does the collection process typically take?", 
+    content: (
+      <p className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
+        Most cases see first contact within <strong>5 days</strong> and resolution within <strong>30–60 days</strong>, depending on the debt amount and the debtor's responsiveness. We keep you updated throughout the process.
+      </p>
+    )
+  }
+];
 
 const Index = () => {
   const { toast } = useToast();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [faqSearch, setFaqSearch] = useState("");
+  
+  // Debounced search with 300ms delay
+  const debouncedFaqSearch = useDebounce(faqSearch, 300);
 
 
   const scrollToContact = useCallback(() => {
@@ -24,58 +74,12 @@ const Index = () => {
     }
   }, []);
 
-  // FAQ data for filtering
-  const faqData = [
-    {
-      value: "faq-1",
-      question: "Will my company be directly involved in Chinese legal proceedings?",
-      content: (
-        <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
-          <p><strong>No.</strong></p>
-          <p>
-            Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
-          </p>
-        </div>
-      )
-    },
-    {
-      value: "faq-2", 
-      question: "Is it legal to hire your team to collect from Chinese debtors?",
-      content: (
-        <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
-          <p><strong>Yes.</strong></p>
-          <p>
-            We operate entirely within China's legal framework through our licensed PRC law firm partners. Since collection activities occur in China with Chinese residents, U.S. collection laws (like FDCPA) don't apply.
-          </p>
-          <p><strong>Our legal structure:</strong></p>
-          <ul className="list-disc list-inside space-y-2 ml-4">
-            <li>Your company assigns the debt to our Hong Kong affiliate</li>
-            <li>We activate claims through licensed Chinese attorneys</li>
-            <li>All actions follow PRC legal procedures</li>
-          </ul>
-          <p>
-            This model is already used by international education institutions and financial companies worldwide. It's the established, compliant way to recover debts from Chinese nationals.
-          </p>
-        </div>
-      )
-    },
-    {
-      value: "faq-3",
-      question: "How long does the collection process typically take?", 
-      content: (
-        <p className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
-          Most cases see first contact within <strong>5 days</strong> and resolution within <strong>30–60 days</strong>, depending on the debt amount and the debtor's responsiveness. We keep you updated throughout the process.
-        </p>
-      )
-    }
-  ];
-
   const filteredFAQs = useMemo(() => {
-    if (!faqSearch.trim()) return faqData;
-    return faqData.filter(faq => 
-      faq.question.toLowerCase().includes(faqSearch.toLowerCase())
+    if (!debouncedFaqSearch.trim()) return FAQ_DATA;
+    return FAQ_DATA.filter(faq => 
+      faq.question.toLowerCase().includes(debouncedFaqSearch.toLowerCase())
     );
-  }, [faqSearch]);
+  }, [debouncedFaqSearch]);
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -131,6 +135,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#2A3470" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        
         <title>China Debt Collection | Bingheng Credit</title>
         <meta name="description" content="We help U.S. creditors recover debt from Chinese nationals through licensed PRC legal procedures and skip tracing." />
         
