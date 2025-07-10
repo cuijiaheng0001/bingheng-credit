@@ -134,6 +134,10 @@ const Index = () => {
         <title>China Debt Collection | Bingheng Credit</title>
         <meta name="description" content="We help U.S. creditors recover debt from Chinese nationals through licensed PRC legal procedures and skip tracing." />
         
+        {/* Application Names for PWA */}
+        <meta name="application-name" content="Bingheng Credit" />
+        <meta name="apple-mobile-web-app-title" content="Bingheng Credit" />
+        
         {/* Canonical URL */}
         <link rel="canonical" href="https://binghengcredit.com/" />
         
