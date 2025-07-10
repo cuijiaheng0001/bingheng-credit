@@ -208,6 +208,20 @@ const Index = () => {
     }
   ]
 }`}</script>
+        
+        {/* Favicon 标准尺寸 */}
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+
+        {/* iOS 设备专用 */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+        {/* Safari Pinned Tab */}
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2A3470" />
+
+        {/* 兼容旧版快捷图标 */}
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Helmet>
       {/* Hero Banner with brand gradient */}
       <section className="relative h-[85vh] sm:min-h-screen flex items-center justify-center bg-brand-gradient bg-opacity-90 text-white">
