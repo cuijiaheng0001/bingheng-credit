@@ -133,6 +133,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
           <meta property="og:url" content="https://binghengcredit.com/" />
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Bingheng Credit" />
+          <meta property="og:locale" content="en_US" />
 
           {/* Twitter tags */}
           <meta name="twitter:card" content="summary_large_image" />
@@ -165,6 +166,38 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
       "description": "Legal debt collection from Chinese nationals using 
   licensed PRC attorneys"
     }
+  }`}</script>
+
+          {/* JSON-LD WebPage */}
+          <script type="application/ld+json">{`{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "China Debt Collection for U.S. Creditors",
+    "description": "Licensed debt collection service for U.S. creditors recovering debts from Chinese nationals through PRC legal procedures",
+    "url": "https://binghengcredit.com/",
+    "mainEntity": {
+      "@type": "ProfessionalService",
+      "name": "Cross-border Debt Collection",
+      "description": "Legal debt collection from Chinese nationals using licensed PRC attorneys",
+      "provider": {
+        "@type": "Organization",
+        "name": "Bingheng Credit"
+      }
+    }
+  }`}</script>
+
+          {/* JSON-LD BreadcrumbList */}
+          <script type="application/ld+json">{`{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://binghengcredit.com/"
+      }
+    ]
   }`}</script>
 
           {/* JSON-LD FAQPage */}

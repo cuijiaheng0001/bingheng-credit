@@ -15,7 +15,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onContactClick }) => {
       }}></div>
       <div className="container max-w-4xl mx-auto px-6 text-center pt-10 relative z-10">
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          We Connect U.S. Claims to China's Legal Collection System
+          China Debt Collection for U.S. Creditors
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-blue-200">
           5-day legal action • 70% contact rate • 25% recovery
