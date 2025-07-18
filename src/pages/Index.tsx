@@ -28,8 +28,12 @@
 
   // 改进的加载组件，添加无障碍性
   const SectionLoader = () => (
-    <div className="flex justify-center items-center py-12" role="status" 
-  aria-label="Loading content">
+    <div 
+      className="flex justify-center items-center py-12" 
+      role="status" 
+      aria-label="Loading content"
+      aria-live="polite"
+    >
       <div className="animate-spin rounded-full h-8 w-8 border-b-2 
   border-primary"></div>
       <span className="sr-only">Loading...</span>
@@ -104,11 +108,11 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
           <link rel="preload" as="image" href="/og-share-image.png" />
+          <link rel="preload" as="script" href="/src/main.tsx" />
+          <link rel="modulepreload" href="/src/main.tsx" />
 
           <title>China Debt Collection | Bingheng Credit</title>
-          <meta name="description" content="We help U.S. creditors recover 
-  debt from Chinese nationals through licensed PRC legal procedures and 
-  skip tracing." />
+          <meta name="description" content="Professional China debt collection and cross-border debt recovery services. Skip tracing China specialists helping U.S. creditors recover debts through licensed PRC legal procedures." />
 
           {/* Application Names for PWA */}
           <meta name="application-name" content="Bingheng Credit" />

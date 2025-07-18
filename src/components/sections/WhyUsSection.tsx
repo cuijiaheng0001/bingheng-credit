@@ -19,7 +19,7 @@ export const WhyUsSection: React.FC = () => {
             {/* Text content with left margin */}
             <div className="ml-6 space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed text-left">
-                We've spent 10 years navigating China's collection landscape, mastering not just the legal system but the cultural nuances of Chinese business communication.
+                We've spent 10 years mastering China debt collection landscape, navigating not just the legal system but the cultural nuances of cross-border debt recovery in Chinese business communication.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed text-left italic">
@@ -43,7 +43,7 @@ export const WhyUsSection: React.FC = () => {
             </CardHeader>
             <CardContent>
               <CardDescription>
-                Bridging your U.S. claims to China's enforcement system
+                Bridging your U.S. claims to China's enforcement system through cross-border debt recovery expertise
               </CardDescription>
             </CardContent>
           </Card>
@@ -66,12 +66,12 @@ export const WhyUsSection: React.FC = () => {
             <CardHeader>
               <CardTitle className="text-xl flex items-center gap-3">
                 <Phone className="text-primary" size={24} />
-                Verified Skip Tracing
+                Skip Tracing China
               </CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
-                Reaching the 70% that U.S. companies can't find
+                Professional skip tracing China services reaching the 70% that U.S. companies can't locate
               </CardDescription>
             </CardContent>
           </Card>
