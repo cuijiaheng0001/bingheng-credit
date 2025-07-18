@@ -36,12 +36,20 @@
     </div>
   );
 
-  // 错误边界组件
-  class ErrorBoundary extends Component {
-    constructor(props) {
-      super(props);
-      this.state = { hasError: false };
-    }
+// 错误边界组件
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
     static getDerivedStateFromError(error) {
       return { hasError: true };
