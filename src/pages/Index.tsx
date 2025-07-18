@@ -1,4 +1,4 @@
-  import React, { useCallback, Suspense, lazy, Component } from "react";
+  import React, { useCallback, Suspense, lazy, Component, ReactNode, ErrorInfo } from "react";
   import { Helmet } from "react-helmet-async";
   import { HeroSection } from "@/components/sections/HeroSection";
   import { Divider } from "@/components/Divider";
@@ -38,7 +38,7 @@
 
 // 错误边界组件
 interface ErrorBoundaryProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 interface ErrorBoundaryState {
@@ -51,11 +51,11 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     this.state = { hasError: false };
   }
 
-    static getDerivedStateFromError(error) {
+    static getDerivedStateFromError(error: Error): ErrorBoundaryState {
       return { hasError: true };
     }
 
-    componentDidCatch(error, errorInfo) {
+    componentDidCatch(error: Error, errorInfo: ErrorInfo) {
       console.error('Section loading error:', error, errorInfo);
     }
 
