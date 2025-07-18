@@ -69,24 +69,37 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 }
 
-// 包装 Suspense 和 ErrorBoundary
+// 包装 Suspense 和 ErrorBoundary - 添加react-snap兼容性
 interface LazySectionProps {
   children: ReactNode;
 }
 
-const LazySection: React.FC<LazySectionProps> = ({ children }) => (
-  <ErrorBoundary>
-    <Suspense fallback={<SectionLoader />}>
-      {children}
-    </Suspense>
-  </ErrorBoundary>
-);
+const LazySection: React.FC<LazySectionProps> = ({ children }) => {
+  // 检测是否在预渲染环境中
+  const isPrerendering = typeof navigator !== 'undefined' && navigator.userAgent === 'ReactSnap';
+  
+  if (isPrerendering) {
+    // 预渲染时直接返回children，跳过Suspense
+    return <>{children}</>;
+  }
+  
+  return (
+    <ErrorBoundary>
+      <Suspense fallback={<SectionLoader />}>
+        {children}
+      </Suspense>
+    </ErrorBoundary>
+  );
+};
 
 const Index = () => {
   const scrollToContact = useCallback(() => {
-    const contactSection = document.getElementById('contact-section');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+    // 添加预渲染环境检查
+    if (typeof window !== 'undefined' && navigator.userAgent !== 'ReactSnap') {
+      const contactSection = document.getElementById('contact-section');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }, []);
 
