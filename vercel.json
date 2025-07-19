@@ -4,27 +4,7 @@
   "framework": "vite",
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "/api/:path*"
-    },
-    {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
-    },
-    {
-      "source": "/robots.txt",
-      "destination": "/robots.txt"
-    },
-    {
-      "source": "/manifest.webmanifest",
-      "destination": "/manifest.webmanifest"
-    },
-    {
-      "source": "/assets/:path*",
-      "destination": "/assets/:path*"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/((?!api/|sitemap\\.xml|robots\\.txt|manifest\\.webmanifest|assets/|test\\.txt|.*\\.png|.*\\.jpg|.*\\.ico|.*\\.svg).*)",
       "destination": "/index.html"
     }
   ],
