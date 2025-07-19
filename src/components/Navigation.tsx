@@ -49,7 +49,7 @@ const Navigation = () => {
             className="cursor-pointer"
           >
             <img
-              src="/lovable-uploads/a1f3c6e0-6384-44b0-9452-4265b6e94671.png"
+              src="/assets/a1f3c6e0-6384-44b0-9452-4265b6e94671.png"
               alt="Bingheng Credit - China Debt Collection Services"
               className="h-10 w-auto"
               loading="lazy"
