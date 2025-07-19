@@ -75,8 +75,6 @@ export default defineConfig(({ mode }) => ({
       },
     },
     
-    // Minification options
-    minify: mode === "production" ? "esbuild" : false,
     
     // Performance optimization
     cssCodeSplit: true,          // Split CSS into separate files
