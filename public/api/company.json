@@ -1,0 +1,78 @@
+{
+  "lastUpdated": "2025-07-19T08:00:00Z",
+  "company": {
+    "name": "Bingheng Credit",
+    "legalName": "Bingheng Credit Services LLC",
+    "type": "Professional Debt Collection Agency",
+    "founded": "2020",
+    "headquarters": {
+      "country": "United States",
+      "servingRegions": ["China", "United States", "Hong Kong", "Macau"]
+    },
+    "description": "Bingheng Credit is a specialized debt collection agency that bridges the gap between U.S. creditors and Chinese debtors. We combine deep understanding of Chinese legal systems with advanced skip-tracing technology to deliver results where others fail.",
+    "mission": "To provide ethical, effective, and legally compliant debt recovery services that help U.S. businesses recover funds from Chinese nationals while maintaining professional standards and cultural sensitivity.",
+    "coreValues": [
+      "Integrity in all dealings",
+      "Cultural bridge between East and West",
+      "Results-driven approach",
+      "Legal compliance in both jurisdictions",
+      "Client success is our success"
+    ],
+    "expertise": [
+      {
+        "area": "Chinese Legal System",
+        "description": "Licensed to operate within PRC legal framework"
+      },
+      {
+        "area": "Skip Tracing Technology",
+        "description": "Advanced debtor location using Chinese ID system"
+      },
+      {
+        "area": "Cross-Cultural Communication",
+        "description": "Native Chinese speakers for effective negotiation"
+      },
+      {
+        "area": "International Debt Law",
+        "description": "Expert knowledge of cross-border debt collection regulations"
+      }
+    ],
+    "differentiators": [
+      "Only agency specializing in China debt collection for U.S. creditors",
+      "70% contact rate using Chinese National ID tracking",
+      "25% average recovery rate",
+      "No upfront fees - purely success-based",
+      "Licensed PRC legal procedures",
+      "48-hour first contact guarantee"
+    ],
+    "partnerships": [
+      {
+        "type": "Legal",
+        "description": "Licensed PRC law firms"
+      },
+      {
+        "type": "Technology",
+        "description": "Chinese skip-tracing databases"
+      },
+      {
+        "type": "Financial",
+        "description": "International payment processors"
+      }
+    ],
+    "certifications": [
+      "Licensed Debt Collection Agency",
+      "PRC Legal Compliance Certified",
+      "International Collection Standards"
+    ],
+    "languages": ["English", "Mandarin Chinese", "Cantonese"],
+    "contact": {
+      "website": "https://binghengcredit.com",
+      "email": "contact@binghengcredit.com",
+      "businessHours": "24/7 (covering both US and China time zones)"
+    },
+    "socialResponsibility": {
+      "ethicalDebtCollection": "We follow strict ethical guidelines in all collection activities",
+      "culturalSensitivity": "Respecting both American and Chinese business customs",
+      "legalCompliance": "100% compliant with laws in both jurisdictions"
+    }
+  }
+}

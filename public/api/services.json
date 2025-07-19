@@ -1,0 +1,95 @@
+{
+  "lastUpdated": "2025-07-19T08:00:00Z",
+  "services": [
+    {
+      "id": "debt-collection-china",
+      "name": "China Debt Collection",
+      "description": "Professional debt recovery service specializing in collecting debts from Chinese nationals for U.S. creditors",
+      "category": "Financial Services",
+      "targetMarket": "U.S. Companies with Chinese Debtors",
+      "features": [
+        {
+          "name": "Skip Tracing",
+          "description": "Advanced tracking of Chinese debtors using national ID numbers",
+          "successRate": "70%"
+        },
+        {
+          "name": "Legal Action",
+          "description": "Licensed PRC legal procedures within 5 days",
+          "timeframe": "5 days average"
+        },
+        {
+          "name": "Asset Recovery",
+          "description": "Asset identification and recovery through legal channels",
+          "coverage": "All major Chinese cities"
+        },
+        {
+          "name": "Payment Negotiation",
+          "description": "Professional negotiation with debtors in native language",
+          "languages": ["Chinese", "English"]
+        }
+      ],
+      "pricing": {
+        "model": "No-cure-no-pay",
+        "upfrontCost": "$0",
+        "successFee": "Percentage of recovered amount",
+        "minimumDebt": "$1,000"
+      },
+      "requirements": [
+        "Chinese National ID Number",
+        "Debt documentation",
+        "Proof of debt validity"
+      ],
+      "processSteps": [
+        {
+          "step": 1,
+          "name": "Submit Case",
+          "description": "Provide debtor information and documentation",
+          "timeframe": "Same day"
+        },
+        {
+          "step": 2,
+          "name": "Skip Tracing",
+          "description": "Locate and verify debtor contact information",
+          "timeframe": "48 hours"
+        },
+        {
+          "step": 3,
+          "name": "First Contact",
+          "description": "Professional outreach to debtor",
+          "timeframe": "Within 72 hours"
+        },
+        {
+          "step": 4,
+          "name": "Negotiation",
+          "description": "Work towards payment arrangement",
+          "timeframe": "1-2 weeks"
+        },
+        {
+          "step": 5,
+          "name": "Legal Action",
+          "description": "If needed, initiate legal proceedings",
+          "timeframe": "5 days from decision"
+        }
+      ],
+      "coverage": {
+        "geographic": ["China", "Hong Kong", "Macau"],
+        "industries": [
+          "E-commerce",
+          "Manufacturing",
+          "Technology",
+          "Import/Export",
+          "Education",
+          "Healthcare"
+        ]
+      }
+    }
+  ],
+  "specializations": [
+    "Cross-border B2B debt collection",
+    "E-commerce payment disputes",
+    "International trade receivables",
+    "Supplier payment defaults",
+    "Service contract breaches"
+  ]
+}

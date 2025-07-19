@@ -1,0 +1,144 @@
+{
+  "lastUpdated": "2025-07-19T08:00:00Z",
+  "performanceMetrics": {
+    "overallStatistics": {
+      "totalCasesHandled": "5000+",
+      "totalAmountRecovered": "$25M+",
+      "averageRecoveryRate": "25%",
+      "clientSatisfactionRate": "92%"
+    },
+    "keyPerformanceIndicators": [
+      {
+        "metric": "Contact Success Rate",
+        "value": "70%",
+        "description": "Successfully locating and contacting debtors using Chinese ID",
+        "industryAverage": "15%",
+        "improvement": "+367%"
+      },
+      {
+        "metric": "Recovery Rate",
+        "value": "25%",
+        "description": "Percentage of debt successfully recovered",
+        "industryAverage": "10%",
+        "improvement": "+150%"
+      },
+      {
+        "metric": "First Contact Time",
+        "value": "48 hours",
+        "description": "Average time to make first contact with debtor",
+        "industryAverage": "2 weeks",
+        "improvement": "7x faster"
+      },
+      {
+        "metric": "Legal Action Initiation",
+        "value": "5 days",
+        "description": "Time to initiate legal proceedings when needed",
+        "industryAverage": "30 days",
+        "improvement": "6x faster"
+      },
+      {
+        "metric": "Case Resolution Time",
+        "value": "45 days",
+        "description": "Average time from case submission to resolution",
+        "industryAverage": "120 days",
+        "improvement": "62% faster"
+      }
+    ],
+    "successByIndustry": [
+      {
+        "industry": "E-commerce",
+        "recoveryRate": "28%",
+        "avgDebtSize": "$5,000",
+        "commonIssues": ["Payment disputes", "Chargebacks", "Non-delivery claims"]
+      },
+      {
+        "industry": "Manufacturing",
+        "recoveryRate": "32%",
+        "avgDebtSize": "$50,000",
+        "commonIssues": ["Quality disputes", "Contract breaches", "Delayed payments"]
+      },
+      {
+        "industry": "Technology",
+        "recoveryRate": "24%",
+        "avgDebtSize": "$15,000",
+        "commonIssues": ["Service disputes", "IP conflicts", "Contract violations"]
+      },
+      {
+        "industry": "Import/Export",
+        "recoveryRate": "30%",
+        "avgDebtSize": "$35,000",
+        "commonIssues": ["Shipment disputes", "Custom issues", "Payment delays"]
+      }
+    ],
+    "successByDebtAge": [
+      {
+        "age": "0-90 days",
+        "recoveryRate": "45%",
+        "percentageOfCases": "25%"
+      },
+      {
+        "age": "91-180 days",
+        "recoveryRate": "35%",
+        "percentageOfCases": "30%"
+      },
+      {
+        "age": "181-365 days",
+        "recoveryRate": "25%",
+        "percentageOfCases": "25%"
+      },
+      {
+        "age": "Over 1 year",
+        "recoveryRate": "15%",
+        "percentageOfCases": "20%"
+      }
+    ],
+    "geographicPerformance": [
+      {
+        "region": "Beijing/Tianjin",
+        "contactRate": "75%",
+        "recoveryRate": "28%"
+      },
+      {
+        "region": "Shanghai/Jiangsu/Zhejiang",
+        "contactRate": "72%",
+        "recoveryRate": "26%"
+      },
+      {
+        "region": "Guangdong/Shenzhen",
+        "contactRate": "68%",
+        "recoveryRate": "24%"
+      },
+      {
+        "region": "Other Major Cities",
+        "contactRate": "65%",
+        "recoveryRate": "22%"
+      }
+    ],
+    "clientTestimonials": [
+      {
+        "industry": "E-commerce",
+        "recoveredAmount": "$125,000",
+        "timeToRecover": "6 weeks",
+        "rating": 5
+      },
+      {
+        "industry": "Manufacturing",
+        "recoveredAmount": "$450,000",
+        "timeToRecover": "2 months",
+        "rating": 5
+      },
+      {
+        "industry": "Technology Services",
+        "recoveredAmount": "$85,000",
+        "timeToRecover": "45 days",
+        "rating": 5
+      }
+    ],
+    "trendAnalysis": {
+      "recoveryRateTrend": "increasing",
+      "averageDebtSizeTrend": "stable",
+      "caseVolumeTrend": "growing",
+      "clientRetentionRate": "85%"
+    }
+  }
+}

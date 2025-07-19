@@ -1,13 +1,121 @@
+# Bingheng Credit Robots.txt
+# Last Updated: 2025-07-19
+# This file optimized for AI discovery and respectful crawling
+
+# Default rules for all bots
 User-agent: *
 Allow: /
+Allow: /api/
+Crawl-delay: 1
 
+# Google bot specific rules
 User-agent: Googlebot
 Allow: /
+Allow: /api/
+Crawl-delay: 0
 
+# Bing bot specific rules
 User-agent: Bingbot
 Allow: /
+Allow: /api/
+Crawl-delay: 0
 
+# Baidu bot specific rules
 User-agent: Baiduspider
 Allow: /
+Allow: /api/
+Crawl-delay: 2
 
+# AI and Language Model crawlers
+User-agent: GPTBot
+Allow: /
+Allow: /api/
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /api/
+Crawl-delay: 2
+
+User-agent: CCBot
+Allow: /
+Allow: /api/
+Crawl-delay: 2
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /api/
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+Allow: /api/
+Crawl-delay: 2
+
+# Social Media Crawlers
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 1
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 1
+
+# SEO Tool Crawlers
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 10
+
+# Block bad bots
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+# Specific paths guidance
+User-agent: *
+Allow: /assets/
+Allow: /#hero
+Allow: /#whyus-section
+Allow: /#what-we-handle
+Allow: /#performance
+Allow: /#easy-start
+Allow: /#compliance
+Allow: /#faq
+Allow: /#contact
+
+# API endpoints explicitly allowed for AI discovery
+User-agent: *
+Allow: /api/services.json
+Allow: /api/company.json
+Allow: /api/performance.json
+
+# Sitemap location
 Sitemap: https://binghengcredit.com/sitemap.xml
+
+# Additional directives for responsible crawling
+# Host preference (for bots that support it)
+Host: https://binghengcredit.com
+
+# Clean-param (tells bots which URL parameters to ignore)
+Clean-param: utm_source&utm_medium&utm_campaign&ref
+
+# Request-rate (for bots that support it)
+# 1 request per second, with burst of 5
+Request-rate: 1/1 5/5
