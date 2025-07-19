@@ -14,10 +14,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onContactClick }) => {
         backgroundRepeat: 'repeat'
       }}></div>
       <div className="container max-w-4xl mx-auto px-6 text-center pt-10 relative z-10">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        <h1 className="hero-title text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
           China Debt Collection for U.S. Creditors
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-blue-200">
+        <p className="hero-subtitle text-xl md:text-2xl mb-8 text-blue-200">
           5-day legal action • 70% contact rate • 25% recovery
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

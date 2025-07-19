@@ -64,3 +64,233 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 100%;
 }
+
+/* ===== 响应式字体系统 ===== */
+
+/* 基础字体大小 - 使用 clamp() 实现流体排版 */
+html {
+  font-size: clamp(14px, 2.5vw, 16px);
+}
+
+/* 标题响应式字体大小 */
+h1 {
+  font-size: clamp(1.75rem, 5vw, 3.75rem);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  line-height: 1.4;
+}
+
+h5, h6 {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.5;
+}
+
+/* 段落和正文文字 */
+p, li, td {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  line-height: 1.6;
+}
+
+/* 小字体文本 */
+small, .text-sm {
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+}
+
+/* ===== 响应式按钮系统 ===== */
+
+/* 确保所有按钮有最小点击区域 (44px x 44px 是 Apple 的推荐标准) */
+button, 
+a.button,
+[role="button"],
+.btn {
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation; /* 防止双击缩放 */
+}
+
+/* 移动端按钮优化 */
+@media (max-width: 768px) {
+  /* 增加按钮内边距 */
+  button,
+  .btn,
+  [role="button"] {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* 导航链接增大点击区域 */
+  nav a {
+    padding: 0.75rem 1rem;
+    display: inline-block;
+  }
+  
+  /* 表单元素优化 */
+  input,
+  select,
+  textarea {
+    font-size: 16px; /* 防止 iOS 缩放 */
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+  }
+  
+  /* 增加行间距提高可读性 */
+  p {
+    line-height: 1.7;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  button,
+  .btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+}
+
+/* ===== 特定组件的响应式调整 ===== */
+
+/* Hero Section 标题 */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+  }
+}
+
+/* Section 标题 */
+@media (max-width: 768px) {
+  section h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 1rem;
+  }
+  
+  section h3 {
+    font-size: clamp(1.125rem, 4vw, 1.5rem);
+  }
+}
+
+/* 卡片内容 */
+@media (max-width: 640px) {
+  .card h3,
+  .card-title {
+    font-size: clamp(1.125rem, 4vw, 1.375rem);
+  }
+  
+  .card p,
+  .card-description {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+  }
+}
+
+/* ===== 可访问性增强 ===== */
+
+/* 焦点样式优化 */
+*:focus {
+  outline: 2px solid #2A3470;
+  outline-offset: 2px;
+}
+
+/* 移动端点击反馈 */
+@media (hover: none) {
+  button:active,
+  a:active,
+  [role="button"]:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* 防止文字选择在按钮上 */
+button,
+[role="button"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* 确保链接在移动端易于点击 */
+@media (max-width: 768px) {
+  a:not(.button):not(.btn) {
+    position: relative;
+    padding: 0.25rem 0;
+  }
+  
+  /* 增加链接的点击区域 */
+  a:not(.button):not(.btn)::after {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    bottom: -0.5rem;
+    left: -0.5rem;
+  }
+}
+
+/* ===== 手风琴组件优化 ===== */
+@media (max-width: 768px) {
+  /* 增加手风琴触发器的点击区域 */
+  [data-state][data-accordion-trigger] {
+    min-height: 48px;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* 手风琴内容字体优化 */
+  [data-state][data-accordion-content] {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    padding: 1rem;
+  }
+}
+
+/* ===== 卡片组件间距优化 ===== */
+@media (max-width: 640px) {
+  /* 减少卡片之间的间距 */
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+  
+  /* 卡片内部间距 */
+  .card,
+  [data-card] {
+    padding: 1.25rem;
+  }
+}
+
+/* ===== 导航菜单优化 ===== */
+@media (max-width: 1024px) {
+  /* 移动端导航项 */
+  nav a,
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.875rem 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* 移动端菜单按钮 */
+  .mobile-menu-toggle,
+  [aria-label*="menu" i] {
+    min-width: 48px;
+    min-height: 48px;
+  }
+}
