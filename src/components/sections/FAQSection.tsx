@@ -64,7 +64,7 @@ export const FAQSection: React.FC = () => {
   }, [debouncedFaqSearch]);
 
   return (
-    <section id="faq-section" className="py-12 md:py-20 bg-white">
+    <section id="faq" className="py-12 md:py-20 bg-white">
       <div className="container max-w-4xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16 text-primary">
           Frequently Asked Questions

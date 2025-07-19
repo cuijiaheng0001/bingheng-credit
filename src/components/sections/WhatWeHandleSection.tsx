@@ -4,7 +4,7 @@ import { FileCheck, DollarSign, IdCard } from "lucide-react";
 
 export const WhatWeHandleSection: React.FC = () => {
   return (
-    <section id="eligibility-section" className="py-12 md:py-20 bg-gray-50">
+    <section id="services" className="py-12 md:py-20 bg-gray-50">
       <div className="container max-w-6xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16 text-primary">
           What We Handle

@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && react-snap",
     "build:dev": "vite build --mode development",
+    "build:seo": "vite build --mode production && react-snap",
     "lint": "eslint .",
     "preview": "vite preview",
-    "postbuild": "react-snap"
+    "serve": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -86,11 +87,13 @@
   "reactSnap": {
     "puppeteerArgs": [
       "--no-sandbox",
-      "--disable-setuid-sandbox"
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage"
     ],
     "skipThirdPartyRequests": true,
     "headless": true,
     "crawl": true,
+    "waitFor": 2000,
     "include": [
       "/"
     ],
@@ -98,6 +101,12 @@
     "removeStyleTags": false,
     "fixInsertRule": true,
     "preloadResources": true,
-    "cacheAjaxRequests": true
+    "cacheAjaxRequests": true,
+    "minifyHtml": {
+      "removeComments": false,
+      "collapseWhitespace": false
+    },
+    "asyncScriptTags": true,
+    "userAgent": "ReactSnap"
   }
 }

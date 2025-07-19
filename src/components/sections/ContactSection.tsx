@@ -77,7 +77,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact-section" className="py-12 md:py-20 bg-brand-gradient">
+    <section id="contact" className="py-12 md:py-20 bg-brand-gradient">
       <div className="container max-w-2xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-12 text-white">
           Contact Us

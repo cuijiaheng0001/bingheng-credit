@@ -198,6 +198,30 @@ const Index = () => {
       "position": 1,
       "name": "Home",
       "item": "https://binghengcredit.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://binghengcredit.com/#services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Performance",
+      "item": "https://binghengcredit.com/#performance"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "FAQ",
+      "item": "https://binghengcredit.com/#faq"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Contact",
+      "item": "https://binghengcredit.com/#contact"
     }
   ]
 }`}</script>
@@ -251,10 +275,7 @@ const Index = () => {
       </Helmet>
 
       <main>
-        {/* SEO优化的H1标签 - 包含主关键词 */}
-        <h1 className="sr-only">China Debt Collection for U.S. Creditors</h1>
-        
-        {/* Hero Section */}
+        {/* Hero Section - 包含主H1标签 */}
         <HeroSection onContactClick={scrollToContact} />
 
         {/* Why Us Section */}

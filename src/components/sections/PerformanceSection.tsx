@@ -3,7 +3,7 @@ import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/ca
 
 export const PerformanceSection: React.FC = () => {
   return (
-    <section id="performance-section" className="container max-w-6xl mx-auto px-6 py-12 md:py-20 bg-white">
+    <section id="performance" className="container max-w-6xl mx-auto px-6 py-12 md:py-20 bg-white">
       <h2 className="text-4xl font-bold text-center mb-16 text-primary">
         How We Perform
       </h2>
