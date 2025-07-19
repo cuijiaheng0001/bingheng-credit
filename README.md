@@ -1,56 +1,14 @@
-# Welcome to your Lovable project
+# Bingheng Credit - China Debt Collection Website
 
-## Project info
+## Project Info
 
-**URL**: https://lovable.dev/projects/3b858380-e007-4c83-9916-fe10dcc18eff
+**Live Site**: https://binghengcredit.com
 
-## How can I edit this code?
+## About
 
-There are several ways of editing your application.
+This is the official website for Bingheng Credit, a professional debt collection service specializing in recovering debts from Chinese nationals for U.S. creditors.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/3b858380-e007-4c83-9916-fe10dcc18eff) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
@@ -60,14 +18,73 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Development
 
-Simply open [Lovable](https://lovable.dev/projects/3b858380-e007-4c83-9916-fe10dcc18eff) and click on Share -> Publish.
+### Prerequisites
 
-## Can I connect a custom domain to my Lovable project?
+- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Yes, you can!
+### Getting Started
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+# Step 1: Clone the repository
+git clone https://github.com/cuijiaheng0001/bingheng-credit.git
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# Step 2: Navigate to the project directory
+cd bingheng-credit
+
+# Step 3: Install dependencies
+npm install
+
+# Step 4: Start the development server
+npm run dev
+```
+
+The development server will start at `http://localhost:8080`
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Deployment
+
+This project is deployed on Vercel and automatically deploys when changes are pushed to the main branch.
+
+## Project Structure
+
+```
+bingheng-credit/
+├── public/
+│   └── assets/         # Images and static assets
+├── src/
+│   ├── components/     # React components
+│   │   ├── sections/   # Page sections
+│   │   └── ui/         # UI components
+│   ├── pages/          # Page components
+│   └── main.tsx        # Entry point
+├── index.html          # HTML template
+└── package.json        # Dependencies and scripts
+```
+
+## Features
+
+- Responsive design
+- SEO optimized
+- Fast loading with Vite
+- Type-safe with TypeScript
+- Accessible UI components with shadcn-ui
+
+## Documentation
+
+For detailed documentation, please refer to our [Documentation Center](./docs/index.md). Key documents include:
+
+- [SEO Optimization Guide](./docs/seo/SEO_优化说明.md)
+- [Development Documentation](./docs/index.md#-开发文档)
+- [Deployment Guide](./docs/index.md#-部署文档)
+
+## Contact
+
+For inquiries about the website, please contact through the form on https://binghengcredit.com
