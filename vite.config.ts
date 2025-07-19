@@ -76,17 +76,7 @@ export default defineConfig(({ mode }) => ({
     },
     
     // Minification options
-    minify: mode === "production" ? "terser" : false,
-    terserOptions: mode === "production" ? {
-      compress: {
-        drop_console: true,      // Remove console logs in production
-        drop_debugger: true,     // Remove debugger statements
-        pure_funcs: ["console.log", "console.info"], // Remove specific functions
-      },
-      format: {
-        comments: false,         // Remove all comments
-      },
-    } : undefined,
+    minify: mode === "production" ? "esbuild" : false,
     
     // Performance optimization
     cssCodeSplit: true,          // Split CSS into separate files
