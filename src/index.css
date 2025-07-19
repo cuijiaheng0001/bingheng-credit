@@ -3,6 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 全局响应式修复 */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */

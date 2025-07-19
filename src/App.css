@@ -1,42 +1,66 @@
+/* 防止横向滚动 */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* 重置根元素样式，移除固定宽度和内边距 */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* 确保所有内容不超出视口宽度 */
+* {
+  max-width: 100vw;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* 修复移动端导航下拉菜单位置 */
+@media (max-width: 1023px) {
+  .mobile-menu-dropdown {
+    right: 1rem;
+    left: auto;
+    max-width: calc(100vw - 2rem);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* 优化容器在不同屏幕尺寸下的内边距 */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 }
 
-.card {
-  padding: 2em;
+/* 确保图片响应式 */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.read-the-docs {
-  color: #888;
+/* 防止按钮和表单元素溢出 */
+button, input, textarea, select {
+  max-width: 100%;
+}
+
+/* 优化网格布局在移动端的间距 */
+@media (max-width: 768px) {
+  .grid {
+    gap: 1rem !important;
+  }
+}
+
+/* 确保文本内容不会造成横向滚动 */
+p, h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* 修复可能的固定宽度元素 */
+.fixed-width-element {
+  width: 100%;
+  max-width: 100%;
 }

@@ -99,7 +99,7 @@ const Navigation = () => {
 
             {/* Mobile Menu Dropdown */}
             {isOpen && (
-              <div className="absolute top-full right-4 mt-2 bg-white shadow-lg rounded-xl py-4 px-6 min-w-[200px]">
+              <div className="absolute top-full right-4 mt-2 bg-white shadow-lg rounded-xl py-4 px-6 min-w-[200px] mobile-menu-dropdown">
                 <div className="flex flex-col space-y-3">
                   {menuItems.map((item) => (
                     <a
