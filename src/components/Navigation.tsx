@@ -81,7 +81,7 @@ const Navigation = () => {
           <div className="hidden lg:block">
             <Button 
               onClick={scrollToContact}
-              className="bg-white text-[#2A3470] hover:bg-blue-50 font-semibold px-6 py-2"
+              className="bg-white text-[#2A3470] hover:bg-blue-50 font-semibold px-6 py-2 hover-scale"
             >
               Start Recovery
             </Button>

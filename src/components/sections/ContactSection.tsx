@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,6 +12,32 @@ export const ContactSection: React.FC = () => {
   const { toast } = useToast();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const nameInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    // Auto-focus the name input when the component is visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && nameInputRef.current) {
+            nameInputRef.current.focus();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const section = document.getElementById('contact');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -122,6 +148,7 @@ export const ContactSection: React.FC = () => {
                   Name
                 </Label>
                 <Input
+                  ref={nameInputRef}
                   id="name"
                   name="name"
                   type="text"

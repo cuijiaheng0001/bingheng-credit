@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import Navigation from "./components/Navigation";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 // Lazy load pages
 const Index = lazy(() => import("./pages/Index"));
@@ -24,6 +25,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Navigation />
+          <ScrollToTop />
           <Suspense 
             fallback={
               <div className="min-h-screen flex items-center justify-center">

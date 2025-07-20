@@ -20,7 +20,7 @@ export const EasyStartSection: React.FC = () => {
         </p>
 
         <div className="grid md:grid-cols-2 gap-y-4 md:gap-8 max-w-3xl mx-auto">
-          <Card className="border-2 border-green-200 hover:shadow-lg transition-shadow">
+          <Card className="border-2 border-green-200 card-hover">
             <CardContent className="p-6">
               <ul className="space-y-3 text-left text-gray-700">
                 <li className="flex items-center gap-2">
@@ -35,7 +35,7 @@ export const EasyStartSection: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-2 border-green-200 hover:shadow-lg transition-shadow">
+          <Card className="border-2 border-green-200 card-hover">
             <CardContent className="p-6">
               <ul className="space-y-3 text-left text-gray-700">
                 <li className="flex items-center gap-2">

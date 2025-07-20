@@ -11,7 +11,7 @@ export const WhatWeHandleSection: React.FC = () => {
         </h2>
         
         <div className="grid md:grid-cols-2 gap-y-4 md:gap-8">
-          <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow flex flex-col">
+          <Card className="border-2 border-primary/20 card-hover flex flex-col">
             <CardHeader>
               <CardTitle className="text-xl flex items-center gap-2">
                 <FileCheck className="text-primary" />
@@ -26,7 +26,7 @@ export const WhatWeHandleSection: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+          <Card className="border-2 border-primary/20 card-hover">
             <CardHeader>
               <CardTitle className="text-xl flex items-center gap-2">
                 <DollarSign className="text-primary" />
@@ -44,7 +44,7 @@ export const WhatWeHandleSection: React.FC = () => {
           </Card>
         </div>
 
-        <Card className="border border-primary/10 hover:shadow-lg transition-shadow mt-8 bg-white">
+        <Card className="border border-primary/10 card-hover mt-8 bg-white">
           <CardContent className="p-6 flex flex-col gap-4">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">

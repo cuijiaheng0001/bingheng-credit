@@ -126,6 +126,30 @@ All colors MUST be HSL.
     @apply hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
   }
 
+  /* Enhanced button interactions */
+  .btn-primary {
+    @apply relative overflow-hidden transition-all duration-300 hover:shadow-md active:scale-95;
+  }
+
+  .btn-primary::before {
+    @apply absolute inset-0 bg-white/10 transform -translate-x-full transition-transform duration-300;
+    content: '';
+  }
+
+  .btn-primary:hover::before {
+    @apply translate-x-0;
+  }
+
+  /* Card hover animations */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  /* Smooth scale animations */
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105 active:scale-95;
+  }
+
   /* Disable animations for users who prefer reduced motion */
   @media (prefers-reduced-motion: reduce) {
     .animate-fade-in,
