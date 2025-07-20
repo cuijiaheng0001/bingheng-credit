@@ -20,6 +20,10 @@
       "destination": "/hello.txt"
     },
     {
+      "source": "/privacy-policy",
+      "destination": "/index.html"
+    },
+    {
       "source": "/robots.txt",
       "destination": "/robots.txt"
     },

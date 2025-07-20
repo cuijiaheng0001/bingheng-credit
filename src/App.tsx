@@ -8,12 +8,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import Navigation from "./components/Navigation";
+import { Footer } from "./components/Footer";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 // Lazy load pages
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 
 const queryClient = new QueryClient();
 
@@ -24,24 +26,30 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Navigation />
-          <ScrollToTop />
-          <Suspense 
-            fallback={
-              <div className="min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                  <Skeleton className="h-12 w-48 mx-auto mb-4" />
-                  <Skeleton className="h-4 w-32 mx-auto" />
-                </div>
-              </div>
-            }
-          >
-            <Routes>
-              <Route path="/" element={<Index />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
+          <div className="flex flex-col min-h-screen">
+            <Navigation />
+            <ScrollToTop />
+            <main className="flex-grow">
+              <Suspense 
+                fallback={
+                  <div className="min-h-screen flex items-center justify-center">
+                    <div className="text-center">
+                      <Skeleton className="h-12 w-48 mx-auto mb-4" />
+                      <Skeleton className="h-4 w-32 mx-auto" />
+                    </div>
+                  </div>
+                }
+              >
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
