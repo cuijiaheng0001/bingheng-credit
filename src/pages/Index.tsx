@@ -53,8 +53,11 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="text-center py-8">
-          <p className="text-muted-foreground">Failed to load this section. Please refresh the page.</p>
+        <div className="min-h-[200px] flex items-center justify-center p-8">
+          <div className="text-center">
+            <h3 className="text-lg font-semibold text-red-600 mb-2">加载出错</h3>
+            <p className="text-gray-600">部分内容加载失败，请刷新页面重试</p>
+          </div>
         </div>
       );
     }
@@ -63,259 +66,171 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 }
 
-// 包装 Suspense 和 ErrorBoundary - 添加react-snap兼容性
-interface LazySectionProps {
-  children: ReactNode;
-}
-
-const LazySection: React.FC<LazySectionProps> = ({ children }) => {
-  // 检测是否在预渲染环境中
-  const isPrerendering = typeof navigator !== 'undefined' && navigator.userAgent === 'ReactSnap';
-  
-  if (isPrerendering) {
-    // 预渲染时直接返回children，跳过Suspense
-    return <>{children}</>;
-  }
-  
-  return (
-    <ErrorBoundary>
-      <Suspense fallback={<SectionLoader />}>
-        {children}
-      </Suspense>
-    </ErrorBoundary>
-  );
-};
-
 const Index = () => {
-  const scrollToContact = useCallback(() => {
-    // 添加预渲染环境检查
-    if (typeof window !== 'undefined' && navigator.userAgent !== 'ReactSnap') {
-      const contactSection = document.getElementById('contact-section');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      }
+  const scrollToSection = useCallback((sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80; // Navigation height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <Helmet>
-        <html lang="en" />
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#2A3470" />
-        <link rel="manifest" href="/manifest.webmanifest" />
-
-        {/* 预加载关键资源 */}
+        {/* Performance optimizations */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        
+        {/* Preload critical resources */}
+        <link rel="preload" as="image" href="/assets/a1f3c6e0-6384-44b0-9452-4265b6e94671.png" />
+        
+        {/* Mobile optimization */}
+        <meta name="theme-color" content="#2A3470" />
+        
+        {/* Enhanced SEO tags */}
         <link rel="preload" as="image" href="/og-share-image.png" />
-        <link rel="preload" as="script" href="/src/main.tsx" />
-        <link rel="modulepreload" href="/src/main.tsx" />
-
-        <title>China Debt Collection | Bingheng Credit</title>
-        <meta name="description" content="Professional China debt collection and cross-border debt recovery services. Skip tracing China specialists helping U.S. creditors recover debts through licensed PRC legal procedures." />
-
-        {/* Application Names for PWA */}
-        <meta name="application-name" content="Bingheng Credit" />
-        <meta name="apple-mobile-web-app-title" content="Bingheng Credit" />
-
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://binghengcredit.com/" />
-
-        {/* Sitemap */}
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-
-        {/* Open Graph tags - 改进版 */}
-        <meta property="og:title" content="China Debt Collection | Bingheng Credit" />
-        <meta property="og:description" content="Licensed PRC enforcement • 70% contact rate • 25% recovery • No cure, no pay debt collection" />
+        <meta property="og:url" content="https://binghengcredit.com/" />
+        <meta property="og:site_name" content="Bingheng Credit" />
         <meta property="og:image" content="https://binghengcredit.com/og-share-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://binghengcredit.com/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Bingheng Credit" />
         <meta property="og:locale" content="en_US" />
-
-        {/* Twitter tags */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:locale:alternate" content="zh_CN" />
+        
         <meta name="twitter:title" content="China Debt Collection | Bingheng Credit" />
-        <meta name="twitter:description" content="Licensed PRC enforcement • 70% contact rate • 25% recovery • No cure, no pay debt collection" />
+        <meta name="twitter:description" content="Professional debt recovery from Chinese nationals. No upfront fees." />
         <meta name="twitter:image" content="https://binghengcredit.com/og-share-image.png" />
-
-        {/* JSON-LD Organization */}
-        <script type="application/ld+json">{`{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Bingheng Credit",
-  "url": "https://binghengcredit.com",
-  "logo": "https://binghengcredit.com/logo.png",
-  "description": "Licensed debt collection service for U.S. creditors recovering debts from Chinese nationals through PRC legal procedures",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer service",
-    "areaServed": ["US", "CN"],
-    "availableLanguage": ["English", "Chinese"]
-  },
-  "service": {
-    "@type": "Service",
-    "name": "Cross-border Debt Collection",
-    "description": "Legal debt collection from Chinese nationals using licensed PRC attorneys"
-  }
-}`}</script>
-
-        {/* JSON-LD WebPage */}
-        <script type="application/ld+json">{`{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "China Debt Collection for U.S. Creditors",
-  "description": "Licensed debt collection service for U.S. creditors recovering debts from Chinese nationals through PRC legal procedures",
-  "url": "https://binghengcredit.com/",
-  "mainEntity": {
-    "@type": "ProfessionalService",
-    "name": "Cross-border Debt Collection",
-    "description": "Legal debt collection from Chinese nationals using licensed PRC attorneys",
-    "provider": {
-      "@type": "Organization",
-      "name": "Bingheng Credit"
-    }
-  }
-}`}</script>
-
-        {/* JSON-LD BreadcrumbList */}
-        <script type="application/ld+json">{`{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://binghengcredit.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://binghengcredit.com/#services"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Performance",
-      "item": "https://binghengcredit.com/#performance"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "FAQ",
-      "item": "https://binghengcredit.com/#faq"
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
-      "name": "Contact",
-      "item": "https://binghengcredit.com/#contact"
-    }
-  ]
-}`}</script>
-
-        {/* JSON-LD FAQPage */}
-        <script type="application/ld+json">{`{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Will my company be directly involved in Chinese legal proceedings?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is it legal to hire your team to collect from Chinese debtors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We operate entirely within China's legal framework through our licensed PRC law firm partners. Since collection activities occur in China with Chinese residents, U.S. collection laws (like FDCPA) don't apply."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does the collection process typically take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most cases see first contact within 5 days and resolution within 30–60 days, depending on the debt amount and the debtor's responsiveness."
-      }
-    }
-  ]
-}`}</script>
-
-        {/* Favicon 标准尺寸 */}
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
-
-        {/* iOS 设备专用 */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
-        {/* Safari Pinned Tab */}
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2A3470" />
-
-        {/* 兼容旧版快捷图标 */}
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="twitter:creator" content="@BinghengCredit" />
+        
+        {/* Additional structured data for enhanced AI discovery */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is your success rate for debt collection in China?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We achieve a 70% contact rate and 25% full recovery rate for debts from Chinese nationals."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you charge upfront fees?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, we operate on a no-cure-no-pay basis. You only pay when we successfully recover your debt."
+                  }
+                }
+              ]
+            }
+          `}
+        </script>
       </Helmet>
 
-      <main>
-        {/* Hero Section - 包含主H1标签 */}
-        <HeroSection onContactClick={scrollToContact} />
-
-        {/* Why Us Section */}
-        <LazySection>
+      <HeroSection onScrollToContact={() => scrollToSection('contact-section')} />
+      
+      <ErrorBoundary>
+        <Suspense fallback={<SectionLoader />}>
           <WhyUsSection />
-        </LazySection>
-
-        <Divider />
-
-        {/* What We Handle Section */}
-        <LazySection>
-          <WhatWeHandleSection />
-        </LazySection>
-
-        <Divider className="bg-gray-50" />
-
-        {/* Performance Section */}
-        <LazySection>
-          <PerformanceSection />
-        </LazySection>
-
-        <Divider />
-
-        {/* Easy Start Section */}
-        <LazySection>
+        </Suspense>
+      </ErrorBoundary>
+      
+      <Divider bgClass="bg-gray-50" />
+      
+      <ErrorBoundary>
+        <Suspense fallback={<SectionLoader />}>
+          <div id="eligibility-section">
+            <WhatWeHandleSection />
+          </div>
+        </Suspense>
+      </ErrorBoundary>
+      
+      <Divider bgClass="bg-white" />
+      
+      <ErrorBoundary>
+        <Suspense fallback={<SectionLoader />}>
+          <div id="performance-section">
+            <PerformanceSection />
+          </div>
+        </Suspense>
+      </ErrorBoundary>
+      
+      <Divider bgClass="bg-gray-50" />
+      
+      <ErrorBoundary>
+        <Suspense fallback={<SectionLoader />}>
           <EasyStartSection />
-        </LazySection>
+        </Suspense>
+      </ErrorBoundary>
+      
+      <Divider bgClass="bg-white" />
+      
+      <ErrorBoundary>
+        <Suspense fallback={<SectionLoader />}>
+          <div id="compliance-section">
+            <ComplianceSection />
+          </div>
+        </Suspense>
+      </ErrorBoundary>
+      
+      <Divider bgClass="bg-gray-50" />
+      
+      <ErrorBoundary>
+        <Suspense fallback={<SectionLoader />}>
+          <div id="faq-section">
+            <FAQSection />
+          </div>
+        </Suspense>
+      </ErrorBoundary>
+      
+      <Divider bgClass="bg-white" />
+      
+      <ErrorBoundary>
+        <Suspense fallback={<ContactSkeleton />}>
+          <div id="contact-section">
+            <ContactSection />
+          </div>
+        </Suspense>
+      </ErrorBoundary>
 
-        {/* Compliance Section */}
-        <LazySection>
-          <ComplianceSection />
-        </LazySection>
-
-        <Divider className="bg-gray-50" />
-
-        {/* FAQ Section */}
-        <LazySection>
-          <FAQSection />
-        </LazySection>
-
-        {/* Contact Section */}
-        <LazySection>
-          <ContactSection />
-        </LazySection>
-      </main>
-    </div>
+      {/* Performance monitoring for Core Web Vitals */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            if ('PerformanceObserver' in window) {
+              try {
+                const po = new PerformanceObserver((list) => {
+                  for (const entry of list.getEntries()) {
+                    // Log to analytics if available
+                    if (window.gtag) {
+                      window.gtag('event', entry.name, {
+                        event_category: 'Web Vitals',
+                        value: Math.round(entry.startTime + entry.duration),
+                        non_interaction: true,
+                      });
+                    }
+                  }
+                });
+                po.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'cumulative-layout-shift'] });
+              } catch (e) {
+                // Silently fail for older browsers
+              }
+            }
+          `,
+        }}
+      />
+    </>
   );
 };
 
