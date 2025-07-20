@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Loader2 } from "lucide-react";
+import { CheckCircle, Loader2, Mail, Phone, MessageCircle, Shield } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { ContactSkeleton } from "@/components/SectionSkeleton";
 
@@ -105,10 +105,56 @@ export const ContactSection: React.FC = () => {
 
   return (
     <section id="contact" className="py-12 md:py-20 bg-brand-gradient">
-      <div className="container max-w-2xl mx-auto px-6">
+      <div className="container max-w-4xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-12 text-white">
           Contact Us
         </h2>
+        
+        {/* Contact Information Cards */}
+        <div className="grid md:grid-cols-3 gap-4 mb-8">
+          <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-lg">
+            <CardContent className="p-6 text-center">
+              <Mail className="w-8 h-8 text-primary mx-auto mb-3" />
+              <h3 className="font-semibold text-primary mb-2">Email</h3>
+              <a 
+                href="mailto:Jiahengc@binghengcredit.com" 
+                className="text-sm text-gray-700 hover:text-primary transition-colors break-all"
+              >
+                Jiahengc@binghengcredit.com
+              </a>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-lg">
+            <CardContent className="p-6 text-center">
+              <Phone className="w-8 h-8 text-primary mx-auto mb-3" />
+              <h3 className="font-semibold text-primary mb-2">Phone</h3>
+              <a 
+                href="tel:+8616653086767" 
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
+              >
+                +86 166 5308 6767
+              </a>
+              <p className="text-xs text-gray-500 mt-1">Available on WhatsApp</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-lg">
+            <CardContent className="p-6 text-center">
+              <MessageCircle className="w-8 h-8 text-primary mx-auto mb-3" />
+              <h3 className="font-semibold text-primary mb-2">WhatsApp</h3>
+              <a 
+                href="https://wa.me/8616653086767" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-gray-700 hover:text-primary transition-colors"
+              >
+                +86 166 5308 6767
+              </a>
+              <p className="text-xs text-gray-500 mt-1">Click to chat</p>
+            </CardContent>
+          </Card>
+        </div>
         
         <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-xl">
           <CardHeader>
@@ -137,6 +183,14 @@ export const ContactSection: React.FC = () => {
           )}
           
           <CardContent>
+            {/* Privacy Promise */}
+            <div className="flex items-center gap-2 mb-6 p-4 bg-primary/5 rounded-lg">
+              <Shield className="w-5 h-5 text-primary flex-shrink-0" />
+              <p className="text-sm text-gray-700">
+                Your information is safe with us. We respect your privacy and will only use your contact details to discuss your debt recovery case.
+              </p>
+            </div>
+            
             <form 
               onSubmit={handleFormSubmit}
               className="space-y-6"

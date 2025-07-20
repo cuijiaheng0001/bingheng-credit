@@ -108,7 +108,6 @@ Allow: /api/performance.json
 
 # Sitemap location
 Sitemap: https://binghengcredit.com/sitemap.xml
-Sitemap: https://www.binghengcredit.com/sitemap.xml
 
 # Additional directives for responsible crawling
 # Host preference (for bots that support it)

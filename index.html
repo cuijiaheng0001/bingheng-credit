@@ -23,6 +23,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="apple-touch-icon" href="/assets/53387df3-9937-485e-8b89-86a3091038e4.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
+    
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Critical CSS will be inlined by build process -->
+    <!-- Non-critical CSS will be loaded asynchronously -->
 
     <meta property="og:title" content="Bingheng Credit – ID-Driven Debt Recovery in China" />
     <meta property="og:description" content="No-cure-no-pay cross-border debt collection for U.S. creditors. 48-hour first contact, 70% reach, data-driven by Chinese ID numbers." />
@@ -48,6 +55,13 @@
           "image": "https://binghengcredit.com/assets/a1f3c6e0-6384-44b0-9452-4265b6e94671.png",
           "priceRange": "Success-based fees only",
           "serviceType": "Debt Collection",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "email": "Jiahengc@binghengcredit.com",
+            "telephone": "+86-166-5308-6767",
+            "availableLanguage": ["English", "Chinese"]
+          },
           "areaServed": [
             {
               "@type": "Country",
