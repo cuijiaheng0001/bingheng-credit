@@ -95,10 +95,9 @@ const Index = () => {
         <meta name="theme-color" content="#2A3470" />
         
         {/* Enhanced SEO tags */}
-        <link rel="preload" as="image" href="/og-share-image.png" />
         <meta property="og:url" content="https://binghengcredit.com/" />
         <meta property="og:site_name" content="Bingheng Credit" />
-        <meta property="og:image" content="https://binghengcredit.com/og-share-image.png" />
+        <meta property="og:image" content="https://binghengcredit.com/assets/a1f3c6e0-6384-44b0-9452-4265b6e94671.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -106,7 +105,7 @@ const Index = () => {
         
         <meta name="twitter:title" content="China Debt Collection | Bingheng Credit" />
         <meta name="twitter:description" content="Professional debt recovery from Chinese nationals. No upfront fees." />
-        <meta name="twitter:image" content="https://binghengcredit.com/og-share-image.png" />
+        <meta name="twitter:image" content="https://binghengcredit.com/assets/a1f3c6e0-6384-44b0-9452-4265b6e94671.png" />
         <meta name="twitter:creator" content="@BinghengCredit" />
         
         {/* Additional structured data for enhanced AI discovery */}
