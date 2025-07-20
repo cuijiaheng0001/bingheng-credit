@@ -48,7 +48,7 @@
   <url>
     <loc>https://binghengcredit.com/#compliance</loc>
     <lastmod>2025-07-19</lastmod>
-    <changefreq>quarterly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
@@ -66,6 +66,20 @@
     <priority>0.8</priority>
   </url>
   
+  <url>
+    <loc>https://binghengcredit.com/privacy-policy</loc>
+    <lastmod>2025-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.binghengcredit.com/privacy-policy</loc>
+    <lastmod>2025-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
   <!-- API Endpoints for AI Discovery -->
   <url>
     <loc>https://binghengcredit.com/api/services.json</loc>
@@ -77,7 +91,7 @@
   <url>
     <loc>https://binghengcredit.com/api/company.json</loc>
     <lastmod>2025-07-19</lastmod>
-    <changefreq>quarterly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
