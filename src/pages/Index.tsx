@@ -19,17 +19,11 @@ const FAQSection = lazy(() =>
 const ContactSection = lazy(() =>
   import("@/components/sections/ContactSection").then(m => ({ default: m.ContactSection })));
 
+import { SectionSkeleton, ContactSkeleton } from "@/components/SectionSkeleton";
+
 // 改进的加载组件，添加无障碍性
 const SectionLoader = () => (
-  <div 
-    className="flex justify-center items-center py-12" 
-    role="status" 
-    aria-label="Loading content"
-    aria-live="polite"
-  >
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-    <span className="sr-only">Loading...</span>
-  </div>
+  <SectionSkeleton />
 );
 
 // 错误边界组件

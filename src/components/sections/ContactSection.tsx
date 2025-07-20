@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { ContactSkeleton } from "@/components/SectionSkeleton";
 
 export const ContactSection: React.FC = () => {
   const { toast } = useToast();
