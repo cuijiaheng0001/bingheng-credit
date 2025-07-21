@@ -18,6 +18,8 @@ const FAQSection = lazy(() =>
   import("@/components/sections/FAQSection").then(m => ({ default: m.FAQSection })));
 const ContactSection = lazy(() =>
   import("@/components/sections/ContactSection").then(m => ({ default: m.ContactSection })));
+const ClientStoriesSection = lazy(() =>
+  import("@/components/sections/ClientStoriesSection").then(m => ({ default: m.ClientStoriesSection })));
 
 import { SectionSkeleton, ContactSkeleton } from "@/components/SectionSkeleton";
 
@@ -166,6 +168,14 @@ const Index = () => {
       </ErrorBoundary>
       
       <Divider bgClass="bg-gray-50" />
+      
+      <ErrorBoundary>
+        <Suspense fallback={<SectionLoader />}>
+          <ClientStoriesSection />
+        </Suspense>
+      </ErrorBoundary>
+      
+      <Divider bgClass="bg-white" />
       
       <ErrorBoundary>
         <Suspense fallback={<SectionLoader />}>

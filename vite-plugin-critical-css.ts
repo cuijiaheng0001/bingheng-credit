@@ -6,8 +6,8 @@ export function criticalCSS(): Plugin {
   return {
     name: 'critical-css',
     transformIndexHtml: {
-      enforce: 'post',
-      transform(html, { bundle }) {
+      order: 'post',
+      handler(html, { bundle }) {
         if (!bundle) return html;
         
         // Find the main CSS file
