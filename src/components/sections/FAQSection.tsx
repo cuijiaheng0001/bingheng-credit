@@ -10,7 +10,7 @@ const FAQ_DATA = [
     value: "faq-1",
     question: "Will my company be directly involved in Chinese legal proceedings?",
     content: (
-      <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
+      <div className="px-6 pt-6 pb-6 text-gray-700 text-base leading-relaxed space-y-4">
         <p><strong>No.</strong></p>
         <p>
           Your claim is assigned to our Hong Kong affiliate for processing, and all in-China activities are conducted by our local subsidiary and licensed professionals under Chinese law. Your company name is not used in any direct enforcement action.
@@ -22,7 +22,7 @@ const FAQ_DATA = [
     value: "faq-2", 
     question: "Is it legal to hire your team to collect from Chinese debtors?",
     content: (
-      <div className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed space-y-4">
+      <div className="px-6 pt-6 pb-6 text-gray-700 text-base leading-relaxed space-y-4">
         <p><strong>Yes.</strong></p>
         <p>
           We operate entirely within China's legal framework through our licensed PRC law firm partners. Since collection activities occur in China with Chinese residents, U.S. collection laws (like FDCPA) don't apply.
@@ -43,7 +43,7 @@ const FAQ_DATA = [
     value: "faq-3",
     question: "How long does the collection process typically take?", 
     content: (
-      <p className="px-6 pt-6 pb-6 text-gray-700 leading-relaxed">
+      <p className="px-6 pt-6 pb-6 text-gray-700 text-base leading-relaxed">
         Most cases see first contact within <strong>5 days</strong> and resolution within <strong>30–60 days</strong>, depending on the debt amount and the debtor's responsiveness. We keep you updated throughout the process.
       </p>
     )
@@ -66,7 +66,7 @@ export const FAQSection: React.FC = () => {
   return (
     <section id="faq" className="py-12 md:py-20 bg-white">
       <div className="container max-w-4xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-16 text-primary">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
           Frequently Asked Questions
         </h2>
         
@@ -84,12 +84,12 @@ export const FAQSection: React.FC = () => {
           {filteredFAQs.map((faq) => (
             <AccordionItem key={faq.value} value={faq.value} className="border border-gray-200 rounded-lg">
               <AccordionTrigger 
-                className="text-left text-primary font-semibold py-4 px-6 cursor-pointer hover:bg-primary/5 transition-colors rounded-lg [&[data-state=open]]:rounded-b-none"
+                className="text-left text-gray-700 font-medium text-base md:text-lg py-4 px-6 cursor-pointer hover:bg-primary/5 hover:text-primary transition-colors rounded-lg [&[data-state=open]]:rounded-b-none [&[data-state=open]]:text-primary"
                 aria-expanded={false}
               >
-                <span className="flex items-center gap-3">
-                  <Plus className="h-4 w-4 shrink-0 transition-transform duration-200 [&[data-state=open]]:rotate-45" />
-                  {faq.question}
+                <span className="flex items-center gap-3 pr-4">
+                  <Plus className="h-4 w-4 shrink-0 transition-transform duration-200 text-primary [&[data-state=open]]:rotate-45" />
+                  <span className="text-left">{faq.question}</span>
                 </span>
               </AccordionTrigger>
               <AccordionContent>

@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const menuItems = [
     { label: 'Why Us', href: '#whyus-section' },
@@ -16,17 +18,26 @@ const Navigation = () => {
   ];
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // If we're not on the home page, navigate to home first
+    if (window.location.pathname !== '/') {
+      navigate('/' + href);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsOpen(false);
   };
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact-section');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+    if (window.location.pathname !== '/') {
+      navigate('/#contact-section');
+    } else {
+      const contactSection = document.getElementById('contact-section');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -40,11 +51,15 @@ const Navigation = () => {
       <div className="sticky top-0 left-0 right-0 z-50 bg-[#2A3470] h-16 shadow-md">
         <div className="container mx-auto h-full flex items-center justify-between px-6">
           {/* Logo Section - Left */}
-          <a
-            href="/"
+          <Link
+            to="/"
             onClick={(e) => {
-              e.preventDefault();
-              scrollToTop();
+              // If we're already on the home page, just scroll to top
+              if (window.location.pathname === '/') {
+                e.preventDefault();
+                scrollToTop();
+              }
+              // Otherwise, let React Router handle the navigation
             }}
             className="cursor-pointer"
           >
@@ -56,7 +71,7 @@ const Navigation = () => {
               decoding="async"
               fetchPriority="high"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation - Center */}
           <nav className="hidden lg:block">
