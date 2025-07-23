@@ -47,8 +47,8 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Sticky Navigation Container */}
-      <div className="sticky top-0 left-0 right-0 z-50 bg-[#2A3470] h-16 shadow-md">
+      {/* Fixed Navigation Container */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-[#2A3470] h-16 shadow-md">
         <div className="container mx-auto h-full flex items-center justify-between px-6">
           {/* Logo Section - Left */}
           <Link

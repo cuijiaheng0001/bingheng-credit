@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ChevronLeft, ChevronRight, DollarSign, Clock, CheckCircle2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, DollarSign, Clock, CheckCircle2, TrendingUp, Trophy, Sparkles } from "lucide-react";
 
 interface ClientStory {
   id: number;
@@ -129,27 +129,41 @@ export const ClientStoriesSection: React.FC = () => {
             {clientStories.map((story) => (
               <Card 
                 key={story.id} 
-                className="flex-none w-full md:w-[500px] snap-center bg-white hover:shadow-xl transition-shadow duration-300"
+                className="flex-none w-full md:w-[500px] snap-center bg-gradient-to-br from-white to-gray-50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-gray-100 overflow-hidden relative"
               >
-                <CardHeader className="space-y-3">
-                  <div className="flex items-start justify-between gap-4">
-                    <CardTitle className="text-xl font-bold text-primary leading-tight">
-                      {story.title}
-                    </CardTitle>
-                    <Badge variant="secondary" className="shrink-0">
+                {/* Success Badge */}
+                <div className="absolute top-4 right-4">
+                  <div className="bg-green-500 text-white p-2 rounded-full shadow-lg animate-pulse">
+                    <Trophy className="w-5 h-5" />
+                  </div>
+                </div>
+                
+                {/* Highlight Section - Most Important Info First */}
+                <div className="bg-gradient-to-r from-primary to-primary/80 text-white p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <Badge className="bg-white/20 text-white border-white/30 backdrop-blur">
                       {story.industry}
                     </Badge>
+                    <Sparkles className="w-5 h-5 text-yellow-300" />
                   </div>
-                  <div className="flex items-center gap-4 text-sm">
-                    <div className="flex items-center gap-1">
-                      <DollarSign className="w-4 h-4 text-green-600" />
-                      <span className="font-semibold text-green-600">{story.amount}</span>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center p-3 bg-white/10 rounded-lg backdrop-blur">
+                      <DollarSign className="w-8 h-8 mx-auto mb-1 text-green-300" />
+                      <div className="text-3xl font-bold">{story.amount}</div>
+                      <div className="text-xs opacity-90">Recovered</div>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4 text-orange-600" />
-                      <span className="font-semibold text-orange-600">{story.timeframe}</span>
+                    <div className="text-center p-3 bg-white/10 rounded-lg backdrop-blur">
+                      <Clock className="w-8 h-8 mx-auto mb-1 text-orange-300" />
+                      <div className="text-3xl font-bold">{story.timeframe}</div>
+                      <div className="text-xs opacity-90">Time to Recovery</div>
                     </div>
                   </div>
+                </div>
+                
+                <CardHeader className="pt-4 pb-2">
+                  <CardTitle className="text-lg font-bold text-gray-800 leading-tight">
+                    {story.title}
+                  </CardTitle>
                 </CardHeader>
                 
                 <CardContent className="space-y-4">
@@ -170,15 +184,17 @@ export const ClientStoriesSection: React.FC = () => {
                     </ul>
                   </div>
                   
-                  <div className="pt-2 border-t">
-                    <h4 className="font-semibold text-sm text-gray-900 mb-2 flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-600" />
-                      Outcome
+                  <div className="pt-3 mt-2 border-t-2 border-green-100 bg-green-50 -mx-6 px-6 pb-6 -mb-6 rounded-b-lg">
+                    <h4 className="font-bold text-sm text-green-800 mb-3 flex items-center gap-2">
+                      <div className="bg-green-500 text-white p-1 rounded">
+                        <CheckCircle2 className="w-4 h-4" />
+                      </div>
+                      SUCCESS OUTCOME
                     </h4>
-                    <ul className="space-y-1">
+                    <ul className="space-y-2">
                       {story.outcome.map((result, index) => (
-                        <li key={index} className="text-sm text-gray-700 font-medium flex items-start gap-2">
-                          <span className="text-green-600 mt-0.5">✓</span>
+                        <li key={index} className="text-sm text-green-900 font-medium flex items-start gap-2">
+                          <TrendingUp className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
                           <span>{result}</span>
                         </li>
                       ))}

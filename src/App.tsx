@@ -26,10 +26,10 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen relative">
             <Navigation />
             <ScrollToTop />
-            <main className="flex-grow">
+            <main className="flex-grow pt-16">
               <Suspense 
                 fallback={
                   <div className="min-h-screen flex items-center justify-center">
