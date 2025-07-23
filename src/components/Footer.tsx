@@ -55,6 +55,12 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/trust" className="text-blue-100 hover:text-white transition-colors flex items-center gap-2">
+                  <Shield className="w-4 h-4" />
+                  Trust Center
+                </Link>
+              </li>
+              <li>
                 <a href="mailto:contact@binghengcredit.com" className="text-blue-100 hover:text-white transition-colors flex items-center gap-2">
                   <Mail className="w-4 h-4" />
                   contact@binghengcredit.com

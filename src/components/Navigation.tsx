@@ -12,7 +12,7 @@ const Navigation = () => {
     { label: 'Why Us', href: '#whyus-section' },
     { label: 'What We Collect', href: '#eligibility-section' },
     { label: 'Performance', href: '#performance-section' },
-    { label: 'Compliance', href: '#compliance-section' },
+    { label: 'Trust Center', href: '/trust', isRoute: true },
     { label: 'FAQ', href: '#faq-section' },
     { label: 'Contact', href: '#contact-section' },
   ];
@@ -77,17 +77,27 @@ const Navigation = () => {
           <nav className="hidden lg:block">
             <div className="flex items-center space-x-8">
               {menuItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.href);
-                  }}
-                  className="text-sm font-medium text-white hover:text-blue-200 transition-colors cursor-pointer"
-                >
-                  {item.label}
-                </a>
+                item.isRoute ? (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="text-sm font-medium text-white hover:text-blue-200 transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.href);
+                    }}
+                    className="text-sm font-medium text-white hover:text-blue-200 transition-colors cursor-pointer"
+                  >
+                    {item.label}
+                  </a>
+                )
               ))}
             </div>
           </nav>
@@ -118,17 +128,28 @@ const Navigation = () => {
               <div className="absolute top-full right-4 mt-2 bg-white shadow-lg rounded-xl py-4 px-6 min-w-[200px] mobile-menu-dropdown z-50">
                 <div className="flex flex-col space-y-3">
                   {menuItems.map((item) => (
-                    <a
-                      key={item.href}
-                      href={item.href}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        scrollToSection(item.href);
-                      }}
-                      className="text-sm font-medium text-[#2A3470] hover:text-[#1A2450] transition-colors cursor-pointer"
-                    >
-                      {item.label}
-                    </a>
+                    item.isRoute ? (
+                      <Link
+                        key={item.href}
+                        to={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className="text-sm font-medium text-[#2A3470] hover:text-[#1A2450] transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          scrollToSection(item.href);
+                        }}
+                        className="text-sm font-medium text-[#2A3470] hover:text-[#1A2450] transition-colors cursor-pointer"
+                      >
+                        {item.label}
+                      </a>
+                    )
                   ))}
                   <hr className="my-2" />
                    <Button 

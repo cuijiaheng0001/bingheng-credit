@@ -1,0 +1,7 @@
+This directory will contain:
+- Compliance Whitepaper PDF
+- Legal Opinion Letter PDF  
+- Capacity Statement PDF
+- Service Overview PDF
+
+Please add the actual PDF files when they are ready.

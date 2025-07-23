@@ -16,6 +16,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TrustCenter = lazy(() => import("./pages/TrustCenter"));
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => (
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  <Route path="/trust" element={<TrustCenter />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
