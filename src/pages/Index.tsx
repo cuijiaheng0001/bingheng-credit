@@ -97,6 +97,7 @@ const Index = () => {
         <meta name="theme-color" content="#2A3470" />
         
         {/* Enhanced SEO tags */}
+        <link rel="canonical" href="https://binghengcredit.com/" />
         <meta property="og:url" content="https://binghengcredit.com/" />
         <meta property="og:site_name" content="Bingheng Credit" />
         <meta property="og:image" content="https://binghengcredit.com/assets/a1f3c6e0-6384-44b0-9452-4265b6e94671.png" />

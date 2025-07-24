@@ -10,6 +10,7 @@ const TrustCenter: React.FC = () => {
       <Helmet>
         <title>Trust Center | Bingheng Credit</title>
         <meta name="description" content="Compliance, legal assurance, testimonials, and credentials for Bingheng Credit's U.S.-China debt recovery services." />
+        <link rel="canonical" href="https://binghengcredit.com/trust" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">

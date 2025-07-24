@@ -90,6 +90,9 @@ Disallow: /
 
 # Specific paths guidance
 User-agent: *
+Allow: /
+Allow: /privacy-policy
+Allow: /trust
 Allow: /assets/
 Allow: /#hero
 Allow: /#whyus-section

@@ -49,15 +49,18 @@
           "value": "index, follow"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
     },
     {
-      "source": "/404",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex"
-        }
-      ]
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
